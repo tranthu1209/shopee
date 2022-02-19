@@ -1,0 +1,40 @@
+:root{
+    --black-color: rgb(48, 46, 46);
+    --white-color: rgb(255, 255, 255);
+    --gray-color: rgb(168, 168, 168);
+    --red-color: rgb(255, 0, 0);
+    --primary-color: rgb(252, 104, 6);
+}
+*{
+    box-sizing: inherit;    
+}
+html {
+    /* 16px */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    font-weight: 300;
+    background-color: #f5f5f5;
+    color: var(--black-color);
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+button{
+    border: none;
+}
+@keyframes fadeIn{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
