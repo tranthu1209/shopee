@@ -1,9 +1,9 @@
 :root{
     --black-color: rgb(48, 46, 46);
     --white-color: rgb(255, 255, 255);
-    --gray-color: rgb(168, 168, 168);
+    --gray-color: rgb(143, 143, 143);
     --red-color: rgb(255, 0, 0);
-    --primary-color: rgb(252, 104, 6);
+    --primary-color: rgb(252, 63, 6);
 }
 *{
     box-sizing: inherit;    
@@ -30,11 +30,27 @@ a{
 button{
     border: none;
 }
+.box{
+    display: none;
+    position: absolute;
+    border-radius: 2px;
+    background:var(--white-color);
+    top: calc(100% + 5px);
+    animation: fadeIn ease-in-out 0.4s;
+}
 @keyframes fadeIn{
     from{
         opacity: 0;
     }
     to{
         opacity: 1;
+    }
+}
+@keyframes moveOn{
+    from{
+        color: var(--black-color);
+    }
+    to{
+        color: var(--primary-color);
     }
 }

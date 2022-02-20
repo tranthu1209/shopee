@@ -45,28 +45,22 @@
 
 /* QR code */
 .qr{
-    display: none;
-    position: absolute;
-    background-color: var(--white-color);
-    top: calc(100% + 8px);
-    width: 170px;
-    border-radius: 5px;
+    width: 180px;
     padding: 3px;
-    animation: fadeIn ease-in-out 0.4s;
+    left: 0;
 }
 .qr::before{
     content: "";
     display: block;
     position:absolute;
     height: 20px;
-    width: 80px;
+    width: 90px;
     left: 0px;
     top: -20px;
 }
 
 .navbar-qr:hover .qr{
     display: block;
-    z-index: 3;
 }
 .qr__img{
     width: 100%;
@@ -81,15 +75,9 @@
 
 /* Notice */
 .notice{
-    display: none;
-    position: absolute;
     width: 430px;
-    top: calc(100% + 8px);
-    right: 10px;
-    background: white;
-    border-radius: 2px;
-    border: 1px solid rgba(209, 207, 207, 0.753);
-    animation: fadeIn ease-in-out 0.4s;
+    right: 8px;
+    border: 1px solid rgb(230, 230, 230);
 }
 .notice::after{
     content: "";
@@ -97,7 +85,7 @@
     top: -20px;
     right: 10px;
     position: absolute;
-    border-color: transparent transparent white transparent;
+    border-color: transparent transparent var(--white-color) transparent;
     border-width: 10px 12px;
     border-style: solid;
 }
@@ -146,13 +134,12 @@
 .notice__title{
     margin: 0;
     font-size: 1.4rem;
-    
     color: var(--black-color);
 }
 .notice__desc{
     font-size: 1.1rem;
     margin: 5px 0 0 0;
-    color: gray;
+    color: var(--gray-color);
 }
 .notice__more-btn{
     width: 100%;
@@ -163,6 +150,47 @@
 
 .notice__more-btn:hover {
     color: orangered;
+}
+/* Languages sellection */
+.languages{
+    width: 200px;
+    right: 0;
+    padding: 10px;
+    cursor: pointer;
+
+}
+.languages::after{
+    content: "";
+    position: absolute;
+    top: -20px;
+    border-color: transparent transparent var(--white-color) transparent;
+    border-width: 10px 12px;
+    border-style: solid;
+    right: 45px;
+}
+.languages::before{
+    content: "";
+    display: block;
+    position:absolute;
+    height: 20px;
+    width: 120px;
+    right: 0px;
+    top: -20px;
+}
+.navbar-languages:hover .languages{
+    display: block;
+}
+.languages__option{
+    font-size: 1.4rem;
+    color: var(--black-color);
+    transition: color ease-in-out;
+}
+
+.languages__option:hover{
+    color: var(--primary-color);
+}
+.languages__option--active{
+    color: var(--primary-color);
 }
 /* Header with search */
 .header-with-search{
@@ -183,7 +211,7 @@
     
 }
 .search__searchbar{
-    background-color: white;
+    background-color: var(--white-color);
     height: 40px;
     border-radius: 2px;
     padding: 2px;
@@ -196,15 +224,18 @@
     outline: none;
     font-size: 1.4rem;
     padding: 0 10px;
+    color: var(--gray-color);
+    padding: 10px;
+    font-weight: 300;
 }
 .search__searchbar-btn{
-    background-color: orangered;
+    background-color: var(--primary-color);
     border: none;
-    width: 50px;
+    width: 60px;
     cursor: pointer;
 }
 .search-btn-icon{
-    color: white;
+    color: var(--white-color);
     font-size: 1.4rem;
 }
 .search__history{
@@ -212,7 +243,7 @@
     display: flex;
 }
 .search__history-item{
-    color: white;
+    color: var(--white-color);
     font-size: 1.3rem;
     margin-right: 10px;
     
@@ -222,6 +253,6 @@
     text-align: center;
 }
 .cart-icon{
-    color: white;
+    color: var(--white-color);
     font-size: 2rem;
 }
