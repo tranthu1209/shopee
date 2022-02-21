@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./assets/css/layout.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-6.0.0-web/css/all.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <script src="./assets/js/home.js"></script>
 </head>
 
 <body>
@@ -167,8 +168,19 @@
             <div class="wrapper">
                 <div class="banner-with-slider">
                     <div class="slider">
-                        <img src="https://eu94j8zj53i.exactdn.com/wp-content/uploads/2021/12/Shopee-12.12.jpg?strip=all&lossy=1&resize=840%2C420&ssl=1"
+                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img1.jpg"
                             alt="">
+                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img2.png"
+                            alt="">
+                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img3.jpg"
+                            alt="">
+                        <div class="slider-list-btn">
+                            <div style="left: 0" class="slider-btn" onclick="plusDivs(-1)">&#10094;</div>
+                            <div style="right: 0;" class="slider-btn" onclick="plusDivs(1)">&#10095;</div>
+                            <span style="left: calc(50% - 20px);" class="slider-btn-index" onclick="currentDiv(1)"></span>
+                            <span class="slider-btn-index" onclick="currentDiv(2)"></span>
+                            <span style="left: calc(50% + 20px);" class="slider-btn-index" onclick="currentDiv(3)"></span>
+                        </div>
                     </div>
                     <div class="banner">
                         <img class="banner__img" src="https://cf.shopee.vn/file/744b6c519828b25ecb7838a8c2aabee9"
@@ -348,8 +360,8 @@
                         <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </div>
-                <div class="section__content">
-                    <div class="list-sale-product">
+                <div class="section__content section__content--sale">
+                    <div id="list-sale-product" class="list-sale-product">
                         <a href="" class="sale__product">
                             <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
 
@@ -462,9 +474,25 @@
                                 <p style="margin: 4px 0 0 0;">Giảm</p>
                             </div>
                         </a>
+                        <a href="" class="sale__product">
+                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+
+                            <div class="sale__price">
+                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                <span>360.000</span>
+                            </div>
+                            <div class="sale__quality">
+                                <span class="sale__product-sold">Đã bán 3</span>
+                                <div style="width: 70%" class="sale__product-remain"></div>
+                            </div>
+                            <div class="discount-tag">
+                                <p style="margin: 0; color: red;">30%</p>
+                                <p style="margin: 4px 0 0 0;">Giảm</p>
+                            </div>
+                        </a>
                     </div>
                
-                    <button class="right-btn">
+                    <button class="right-btn" onclick="moveRight()">
                         <i class="fa-solid fa-angle-right"></i>
                     </button>
                 </div>
@@ -943,7 +971,7 @@
 
                 </div>
                 <div class="load-more">
-                    <button class="btn load-more-btn">Xem thêm</button>
+                    <button onclick="moveRight()" class="btn load-more-btn">Xem thêm</button>
                 </div>
 
             </div>
@@ -1080,6 +1108,7 @@
        
         </div>
     </footer>
+    <script src="./assets/js/home.js"></script>
 </body>
 
 </html>

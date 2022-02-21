@@ -29,6 +29,7 @@ a{
 }
 button{
     border: none;
+    cursor: pointer;
 }
 img{
     width: 100%;
@@ -51,11 +52,12 @@ img{
         opacity: 1;
     }
 }
-@keyframes moveOn{
+
+@keyframes moveRight {
     from{
-        color: var(--black-color);
+        transform: translate(0,0);
     }
     to{
-        color: var(--primary-color);
+        transform: translate(-1000px,0);
     }
 }
