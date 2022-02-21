@@ -328,15 +328,15 @@
     width: 1200px;
     margin: 0px auto;
     border-radius: 3px;
-    box-sizing: content-box;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
 }
 .section__heading{
     border-bottom: 1px solid rgba(0,0,0,.05);
     height: 60px;
-    padding: 0 20px;
-    line-height: 60px;
+    padding: 20px;
+    align-items: center;
     font-size: 1.5rem;
     text-transform: uppercase;
     display: flex;
@@ -498,9 +498,9 @@
     /* width: 400px; */
 }
 /* Shop Mall */
-.mall-section{
+/* .mall-section{
     height: 537px;
-}
+} */
 .section__heading--mall{
     color: rgb(163, 6, 6);
     height: 60px;
@@ -553,6 +553,7 @@
 }
 .content-mall{
     display: flex;
+    height: 477px;
 }
 .mall__slider{
     height: 100%;
@@ -666,15 +667,19 @@
 .recommend-nav{
     display: flex;
     justify-content: left;
-    color: red;
+    color: var(--red-color);
     padding: 0;
-    background-color: white;
+    background-color: var(--white-color);
     margin: 0;
+    align-content: center;
 }
-.recommend-nav li{
-    padding: 0 45px;
+.recommend-nav__item{
+    padding: 15px 45px;
+    border-bottom: 4px solid transparent;
 }
-
+.recommend-nav__item--active{
+    border-color: var(--red-color);
+}
 .recommend-product__list{
     display: flex;
     flex-wrap: wrap;
@@ -782,13 +787,59 @@
     width: 390px;
     height: 35px;
     border: 1px solid rgba(221, 221, 221, 0.747);
-    background-color: white;
+    background-color: var(--white-color);
     border-radius: 2px;
     font-size: 1.6rem;
     box-sizing: border-box;
 }
 .footer{
-    background-color: white;
-    height: 200px;
     border-top: 4px solid red;
+}
+.footer__gap{
+    width: 100%;
+    min-height: 100px;
+    background-color: var(--white-color);
+}
+.footer__list{
+    margin-top: 50px;
+    display: flex;
+    margin-bottom: 30px;
+}
+.footer__item{
+    flex: 1;
+    padding: 5px;
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--gray-color);
+}
+.footer__heading{
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+.footer__nav{
+    margin-bottom: 30px;
+}
+.footer__nav-link{
+    line-height: 2.7rem;
+}
+.footer__nav-link:hover{
+    color: var(--primary-color);
+}
+.footer__nav--img{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer__img{
+    width: 55px;
+    height: 29px;
+    object-fit: contain ;
+}
+.footer__download{
+    display: flex;
+}
+.footer__download-app{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
