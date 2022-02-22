@@ -39,18 +39,24 @@ function showSlide() {
   if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" slider-btn-index-active", "")
+
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " slider-btn-index-active";
   setTimeout(showSlide, 3000); // Change image every 2 seconds
 }
 
-// 
 
-function moveRight() {
-    var list = document.getElementById("list-sale-product");
-    left = list.style.left;
-    list.style.transform = 'translate(-1000px, 0)';
-    list.style.animation = 'moveRight 2s'
-    
-}
+// 
+// window.onscroll = function() {myFunction()};
+
+// var header = document.getElementById("header");
+// var sticky = header.offsetTop;
+
+// function myFunction() {
+//   if (window.pageYOffset > sticky) {
+//     header.classList.add("sticky");
+//   } else {
+//     header.classList.remove("sticky");
+//   }
+// }

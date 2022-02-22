@@ -4,6 +4,7 @@
     --gray-color: rgb(143, 143, 143);
     --red-color: rgb(255, 0, 0);
     --primary-color: rgb(252, 63, 6);
+    --border-color: rgb(216, 216, 216);
 }
 *{
     box-sizing: inherit;    
@@ -36,6 +37,11 @@ img{
     height: 100%;
     object-fit: cover;
 }
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
 .header-box{
     display: none;
     position: absolute;
@@ -43,6 +49,50 @@ img{
     background:var(--white-color);
     top: calc(100% + 5px);
     animation: fadeIn ease-in-out 0.4s;
+    z-index: 10;
+}
+/* Modal css */
+.modal{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    z-index: 2;
+    display: none;
+}
+
+.modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    
+}
+
+.modal__body{
+    margin: auto;
+    position: relative;
+}
+
+.btn{
+    height: 36px;
+    min-width: 120px;
+    font-size: 1.3rem;
+    padding: 0;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn--primary{
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.btn--primary:hover{
+    opacity: 0.8;
 }
 @keyframes fadeIn{
     from{
@@ -59,5 +109,13 @@ img{
     }
     to{
         transform: translate(-1000px,0);
+    }
+}
+@keyframes moveLeft {
+    from{
+        transform: translate(-1000px,0);
+    }
+    to{
+        transform: translate(0,0);
     }
 }

@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1240,shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="./assets/css/base.css">
@@ -18,7 +18,7 @@
         <div class="wrapper">
             <nav class="navbar">
                 <ul class="navbar__list">
-                    <li style="padding-left: 0;" class="navbar__item">
+                    <li class="navbar__item">
                         <a href="" class="navbar__link">Kênh người bán</a>
                     </li>
                     <li class="navbar__item navbar__item--separation">
@@ -27,23 +27,20 @@
                     <li class="navbar__item navbar__item--separation navbar-qr">
                         <a href="" class="navbar__link">Tải ứng dụng</a>
                         <div class="header-box qr">
-                            <img src="./assets/img/qr.png"
-                                alt="" class="qr__img">
+                            <img src="./assets/img/qr.png" alt="" class="qr__img">
                             <div class="qr__download">
                                 <a href="">
-                                    <img src="./assets/img/app-store.png"
-                                        alt="" class="qr__download-img">
+                                    <img src="./assets/img/app-store.png" alt="" class="qr__download-img">
                                 </a>
                                 <a href="">
-                                    <img src="./assets/img/chplay.png"
-                                        alt="" class="qr__download-img">
+                                    <img src="./assets/img/chplay.png" alt="" class="qr__download-img">
                                 </a>
 
                             </div>
                         </div>
                     </li>
                     <li class="navbar__item navbar__item--separation">
-                        <span>Kết nối</span>
+                        <span style="margin-right: 4px;">Kết nối</span>
                         <a href="" class="navbar__link">
                             <i class="navbar__icon fa-brands fa-facebook"></i>
                         </a>
@@ -115,11 +112,18 @@
                             <div style="margin-top: 18px;" class="languages__option">English</div>
                         </div>
                     </li>
-                    <li class="navbar__item">
+                    <li class="navbar__item navbar-register">
                         <a href="" class="navbar__link">Đăng ký</a>
                     </li>
-                    <li style="padding-right: 0;" class="navbar__item">
+                    <li style="padding-right: 0;" class="navbar__item navbar-login">
                         <a href="" class="navbar__link navbar__item--separation">Đăng nhập</a>
+                    </li>
+                    <li style="padding-right: 0;" class="navbar__item navbar-user">
+                        <a href="" class="navbar__link navbar-user__link navbar__item--separation">
+                            <img src="./assets/img/user-avt.jpg" alt="" class="navbar-user__img">
+                            <p class="navbar-user__name">Trần Thư</p>
+                            
+                        </a>
                     </li>
                 </ul>
             </nav>
@@ -168,18 +172,17 @@
             <div class="wrapper">
                 <div class="banner-with-slider">
                     <div class="slider">
-                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img1.jpg"
-                            alt="">
-                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img2.png"
-                            alt="">
-                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img3.jpg"
-                            alt="">
+                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img1.jpg" alt="">
+                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img2.png" alt="">
+                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img3.jpg" alt="">
                         <div class="slider-list-btn">
                             <div style="left: 0" class="slider-btn" onclick="plusDivs(-1)">&#10094;</div>
                             <div style="right: 0;" class="slider-btn" onclick="plusDivs(1)">&#10095;</div>
-                            <span style="left: calc(50% - 20px);" class="slider-btn-index" onclick="currentDiv(1)"></span>
+                            <span style="left: calc(50% - 20px);" class="slider-btn-index"
+                                onclick="currentDiv(1)"></span>
                             <span class="slider-btn-index" onclick="currentDiv(2)"></span>
-                            <span style="left: calc(50% + 20px);" class="slider-btn-index" onclick="currentDiv(3)"></span>
+                            <span style="left: calc(50% + 20px);" class="slider-btn-index"
+                                onclick="currentDiv(3)"></span>
                         </div>
                     </div>
                     <div class="banner">
@@ -244,111 +247,118 @@
                     Danh mục
                 </div>
                 <div class="section__content">
-                    <div class="category-list">
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Thời trang nam</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/31234a27876fb89cd522d7e3db1ba5ca_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Điện thoại & Phụ kiện</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/978b9e4cb61c611aaaf58664fae133c5_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Thiết bị điện tử</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/c3f3edfaa9f6dafc4825b77d8449999d_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Máy tính & Laptop</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/ec14dd4fc238e676e43be2a911414d4d_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Máy ảnh & Máy quay phim</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/86c294aae72ca1db5f541790f7796260_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Đồng hồ</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/74ca517e1fa74dc4d974e5d03c3139de_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Giày dép nam</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/7abfbfee3c4844652b4a8245e473d857_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Thiết bị điện gia dụng</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/6cb7e633f8b63757463b676bd19a50e4_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Thể thao & Du lịch</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/3fb459e3449905545701b418e8220334_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Ô tô & Xe máy & Xe đạp</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/75ea42f9eca124e9cb3cde744c060e4d_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Thời trang nữ</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/099edde1ab31df35bc255912bab54a5e_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Mẹ & Bé</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/24b194a695ea59d384768b7b471d563f_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Nhà cửa & Đời sống</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/ef1f336ecc6f97b790d5aae9916dcb72_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Sắc đẹp</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/49119e891a44fa135f5f6f5fd4cfc747_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Sức khỏe</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/48630b7c76a7b62bc070c9e227097847_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Giày dép nữ</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/fa6ada2555e8e51f369718bbc92ccc52_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Túi ví nữ</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/8e71245b9659ea72c1b4e737be5cf42e_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Phụ kiện & Trang sức nữ</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/c432168ee788f903f1ea024487f2c889_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Bách hóa online</span>
-                        </a>
-                        <a href="#" class="category__item">
-                            <img src="https://cf.shopee.vn/file/36013311815c55d303b0e6c62d6a8139_tn" alt=""
-                                class="category__img">
-                            <span class="category__text">Nhà sách online</span>
-                        </a>
+                    <div class="list-wrapper">
+                        <div class="category-list">
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/687f3967b7c2fe6a134a2c11894eea4b_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Thời trang nam</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/31234a27876fb89cd522d7e3db1ba5ca_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Điện thoại & Phụ kiện</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/978b9e4cb61c611aaaf58664fae133c5_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Thiết bị điện tử</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/c3f3edfaa9f6dafc4825b77d8449999d_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Máy tính & Laptop</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/ec14dd4fc238e676e43be2a911414d4d_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Máy ảnh & Máy quay phim</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/86c294aae72ca1db5f541790f7796260_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Đồng hồ</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/74ca517e1fa74dc4d974e5d03c3139de_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Giày dép nam</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/7abfbfee3c4844652b4a8245e473d857_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Thiết bị điện gia dụng</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/6cb7e633f8b63757463b676bd19a50e4_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Thể thao & Du lịch</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/3fb459e3449905545701b418e8220334_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Ô tô & Xe máy & Xe đạp</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/75ea42f9eca124e9cb3cde744c060e4d_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Thời trang nữ</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/099edde1ab31df35bc255912bab54a5e_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Mẹ & Bé</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/24b194a695ea59d384768b7b471d563f_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Nhà cửa & Đời sống</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/ef1f336ecc6f97b790d5aae9916dcb72_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Sắc đẹp</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/49119e891a44fa135f5f6f5fd4cfc747_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Sức khỏe</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/48630b7c76a7b62bc070c9e227097847_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Giày dép nữ</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/fa6ada2555e8e51f369718bbc92ccc52_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Túi ví nữ</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/8e71245b9659ea72c1b4e737be5cf42e_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Phụ kiện & Trang sức nữ</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/c432168ee788f903f1ea024487f2c889_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Bách hóa online</span>
+                            </a>
+                            <a href="#" class="category__item">
+                                <img src="https://cf.shopee.vn/file/36013311815c55d303b0e6c62d6a8139_tn" alt=""
+                                    class="category__img">
+                                <span class="category__text">Nhà sách online</span>
+                            </a>
+                        </div>
+                        <button id="next-btn" class="move-btn next-btn">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                        <button id="next-btn" class="move-btn pre-btn">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
                     </div>
-                    <button class="right-btn">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>
+
+
                 </div>
 
             </div>
@@ -361,139 +371,145 @@
                     </a>
                 </div>
                 <div class="section__content section__content--sale">
-                    <div id="list-sale-product" class="list-sale-product">
-                        <a href="" class="sale__product">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+                    <div class="section__list-wrapper">
+                        <div id="list-sale-product" class="list-sale-product">
+                            <a href="" class="sale__product">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
 
-                            <div class="sale__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
-                            </div>
-                            <div class="sale__quality">
-                                <span class="sale__product-sold">Đã bán 3</span>
-                                <div style="width: 70%" class="sale__product-remain"></div>
-                            </div>
-                            <div class="discount-tag">
-                                <p style="margin: 0; color: red;">30%</p>
-                                <p style="margin: 4px 0 0 0;">Giảm</p>
-                            </div>
-                        </a>
-                        <a href="" class="sale__product">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 3</span>
+                                    <div style="width: 70%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                            <a href="" class="sale__product">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
 
-                            <div class="sale__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
-                            </div>
-                            <div class="sale__quality">
-                                <span class="sale__product-sold">Đã bán 40</span>
-                                <div style="width: 30%" class="sale__product-remain"></div>
-                            </div>
-                            <div class="discount-tag">
-                                <p style="margin: 0; color: red;">30%</p>
-                                <p style="margin: 4px 0 0 0;">Giảm</p>
-                            </div>
-                        </a>
-                        <a href="" class="sale__product">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 40</span>
+                                    <div style="width: 30%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                            <a href="" class="sale__product">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
 
-                            <div class="sale__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
-                            </div>
-                            <div class="sale__quality">
-                                <span class="sale__product-sold">Đã bán 98</span>
-                                <div style="width: 10%" class="sale__product-remain"></div>
-                            </div>
-                            <div class="discount-tag">
-                                <p style="margin: 0; color: red;">30%</p>
-                                <p style="margin: 4px 0 0 0;">Giảm</p>
-                            </div>
-                        </a>
-                        <a href="" class="sale__product">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 98</span>
+                                    <div style="width: 10%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                            <a href="" class="sale__product">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
 
-                            <div class="sale__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
-                            </div>
-                            <div class="sale__quality">
-                                <span class="sale__product-sold">Đã bán 3</span>
-                                <div style="width: 70%" class="sale__product-remain"></div>
-                            </div>
-                            <div class="discount-tag">
-                                <p style="margin: 0; color: red;">30%</p>
-                                <p style="margin: 4px 0 0 0;">Giảm</p>
-                            </div>
-                        </a>
-                        <a href="" class="sale__product">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 3</span>
+                                    <div style="width: 70%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                            <a href="" class="sale__product">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
 
-                            <div class="sale__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
-                            </div>
-                            <div class="sale__quality">
-                                <span class="sale__product-sold">Đã bán 3</span>
-                                <div style="width: 70%" class="sale__product-remain"></div>
-                            </div>
-                            <div class="discount-tag">
-                                <p style="margin: 0; color: red;">30%</p>
-                                <p style="margin: 4px 0 0 0;">Giảm</p>
-                            </div>
-                        </a>
-                        <a href="" class="sale__product">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 3</span>
+                                    <div style="width: 70%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                            <a href="" class="sale__product">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
 
-                            <div class="sale__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
-                            </div>
-                            <div class="sale__quality">
-                                <span class="sale__product-sold">Đã bán 93</span>
-                                <div style="width: 5%" class="sale__product-remain"></div>
-                            </div>
-                            <div class="discount-tag">
-                                <p style="margin: 0; color: red;">30%</p>
-                                <p style="margin: 4px 0 0 0;">Giảm</p>
-                            </div>
-                        </a>
-                        <a href="" class="sale__product">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 93</span>
+                                    <div style="width: 5%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                            <a href="" class="sale__product">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
 
-                            <div class="sale__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
-                            </div>
-                            <div class="sale__quality">
-                                <span class="sale__product-sold">Đã bán 3</span>
-                                <div style="width: 70%" class="sale__product-remain"></div>
-                            </div>
-                            <div class="discount-tag">
-                                <p style="margin: 0; color: red;">30%</p>
-                                <p style="margin: 4px 0 0 0;">Giảm</p>
-                            </div>
-                        </a>
-                        <a href="" class="sale__product">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 3</span>
+                                    <div style="width: 70%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                            <a href="" class="sale__product">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
 
-                            <div class="sale__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
-                            </div>
-                            <div class="sale__quality">
-                                <span class="sale__product-sold">Đã bán 3</span>
-                                <div style="width: 70%" class="sale__product-remain"></div>
-                            </div>
-                            <div class="discount-tag">
-                                <p style="margin: 0; color: red;">30%</p>
-                                <p style="margin: 4px 0 0 0;">Giảm</p>
-                            </div>
-                        </a>
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 3</span>
+                                    <div style="width: 70%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-               
-                    <button class="right-btn" onclick="moveRight()">
+
+
+                    <button id="next-btn" class="move-btn next-btn" onclick="plusList(1)">
                         <i class="fa-solid fa-angle-right"></i>
+                    </button>
+                    <button id="pre-btn" class="move-btn pre-btn" onclick="plusList(-1)">
+                        <i class="fa-solid fa-angle-left"></i>
                     </button>
                 </div>
 
@@ -543,51 +559,58 @@
                     <a href="" class="mall__slider">
                         <img src="https://cf.shopee.vn/file/21f34501780eb4920862db9afb6e74d5" alt="" class="banner-img">
                     </a>
-                    <div class="mall__list">
-                        <a href=""
-                            style="background-image: url(https://cf.shopee.vn/file/393e5137b5431985409623c09c7c6a9a_xhdpi);"
-                            class="mall__list-link">
-                            Vua bếp Tefal
-                        </a>
-                        <a href=""
-                            style="background-image: url(https://cf.shopee.vn/file/11d48981edc0a667a5482f77eb130879_xhdpi);"
-                            class="mall__list-link">
-                            Mua là có quà
-                        </a>
-                        <a href=""
-                            style="background-image: url(https://cf.shopee.vn/file/54cb546ac53ac3940bb76f842e937e0f_xhdpi);"
-                            class="mall__list-link">
-                            Ưa đãi đến 40%
-                        </a>
-                        <a href=""
-                            style="background-image: url(https://cf.shopee.vn/file/317350388cf9f3fa548fd84b5d1b5097_xhdpi);"
-                            class="mall__list-link">
-                            Giảm đến 50%
-                        </a>
-                        <a href=""
-                            style="background-image: url(https://cf.shopee.vn/file/https%3A%2F%2Fcf.shopee.vn%2Ffile%2F6469e30ffbf6ecf04efc183a7d8d0cd7_xhdpi);"
-                            class="mall__list-link">
-                            Ưa đãi đến 40%
-                        </a>
-                        <a href=""
-                            style="background-image: url(https://cf.shopee.vn/file/ae84a92ed8e4d399ae927c78a1410fe8_xhdpi);"
-                            class="mall__list-link">
-                            Mua 1 tặng 1
-                        </a>
-                        <a href=""
-                            style="background-image: url(https://cf.shopee.vn/file/65cdb8dc388e21cc48dd7aaee970516f_xhdpi);"
-                            class="mall__list-link">
-                            Ưu đãi đến 50%++
-                        </a>
-                        <a href=""
-                            style="background-image: url(https://cf.shopee.vn/file/85f27853d397bcf5f06c192d8efdd127_xhdpi);"
-                            class="mall__list-link">
-                            Mua là có quà
-                        </a>
+                    <div class="list-wrapper">
+                        <div class="mall__list">
+                            <a href=""
+                                style="background-image: url(https://cf.shopee.vn/file/393e5137b5431985409623c09c7c6a9a_xhdpi);"
+                                class="mall__list-link">
+                                Vua bếp Tefal
+                            </a>
+                            <a href=""
+                                style="background-image: url(https://cf.shopee.vn/file/11d48981edc0a667a5482f77eb130879_xhdpi);"
+                                class="mall__list-link">
+                                Mua là có quà
+                            </a>
+                            <a href=""
+                                style="background-image: url(https://cf.shopee.vn/file/54cb546ac53ac3940bb76f842e937e0f_xhdpi);"
+                                class="mall__list-link">
+                                Ưa đãi đến 40%
+                            </a>
+                            <a href=""
+                                style="background-image: url(https://cf.shopee.vn/file/317350388cf9f3fa548fd84b5d1b5097_xhdpi);"
+                                class="mall__list-link">
+                                Giảm đến 50%
+                            </a>
+                            <a href=""
+                                style="background-image: url(https://cf.shopee.vn/file/https%3A%2F%2Fcf.shopee.vn%2Ffile%2F6469e30ffbf6ecf04efc183a7d8d0cd7_xhdpi);"
+                                class="mall__list-link">
+                                Ưa đãi đến 40%
+                            </a>
+                            <a href=""
+                                style="background-image: url(https://cf.shopee.vn/file/ae84a92ed8e4d399ae927c78a1410fe8_xhdpi);"
+                                class="mall__list-link">
+                                Mua 1 tặng 1
+                            </a>
+                            <a href=""
+                                style="background-image: url(https://cf.shopee.vn/file/65cdb8dc388e21cc48dd7aaee970516f_xhdpi);"
+                                class="mall__list-link">
+                                Ưu đãi đến 50%++
+                            </a>
+                            <a href=""
+                                style="background-image: url(https://cf.shopee.vn/file/85f27853d397bcf5f06c192d8efdd127_xhdpi);"
+                                class="mall__list-link">
+                                Mua là có quà
+                            </a>
+                        </div>
+                        <button id="next-btn" class="move-btn next-btn" onclick="plusList(1)">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                        <button id="next-btn" class="move-btn pre-btn" onclick="plusList(-1)">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
                     </div>
-                    <button class="right-btn">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>
+
+
                 </div>
 
 
@@ -605,47 +628,52 @@
                         <a href="" class="trend-search__link">
                             <div class="trend-search__desc">
                                 <span>Sổ lò xò A5</span>
-                                <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản phẩm</span>
+                                <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản
+                                    phẩm</span>
                             </div>
-                            
+
                             <img src="https://cf.shopee.vn/file/e83f0feac386990ef8041e224eecda7f" alt=""
-                                    class="trend-search__img">
+                                class="trend-search__img">
                         </a>
                         <a href="" class="trend-search__link">
                             <div class="trend-search__desc">
                                 <span>Sổ lò xò A5</span>
-                                <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản phẩm</span>
+                                <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản
+                                    phẩm</span>
                             </div>
-                            
+
                             <img src="https://cf.shopee.vn/file/e83f0feac386990ef8041e224eecda7f" alt=""
-                                    class="trend-search__img">
+                                class="trend-search__img">
                         </a>
                         <a href="" class="trend-search__link">
                             <div class="trend-search__desc">
                                 <span>Sổ lò xò A5</span>
-                                <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản phẩm</span>
+                                <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản
+                                    phẩm</span>
                             </div>
-                            
+
                             <img src="https://cf.shopee.vn/file/e83f0feac386990ef8041e224eecda7f" alt=""
-                                    class="trend-search__img">
+                                class="trend-search__img">
                         </a>
                         <a href="" class="trend-search__link">
                             <div class="trend-search__desc">
                                 <span>Sổ lò xò A5</span>
-                                <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản phẩm</span>
+                                <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản
+                                    phẩm</span>
                             </div>
-                            
+
                             <img src="https://cf.shopee.vn/file/e83f0feac386990ef8041e224eecda7f" alt=""
-                                    class="trend-search__img">
+                                class="trend-search__img">
                         </a>
                         <a href="" class="trend-search__link">
                             <div class="trend-search__desc">
                                 <span>Sổ lò xò A5</span>
-                                <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản phẩm</span>
+                                <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản
+                                    phẩm</span>
                             </div>
-                            
+
                             <img src="https://cf.shopee.vn/file/e83f0feac386990ef8041e224eecda7f" alt=""
-                                    class="trend-search__img">
+                                class="trend-search__img">
                         </a>
                     </div>
                 </div>
@@ -658,321 +686,327 @@
                         <i class="fa-solid fa-angle-right"></i>
                     </a>
                 </div>
-                <div class="section__content top-search__list">
-                    
-                        <a href="" class="top-search__link">
-                            <div class="top-search__img">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                                <div class="top-tag">
+                <div class="section__content">
+                    <div class="section__list-wrapper">
+                        <div class="top-search__list">
+                            <a href="" class="top-search__link">
+                                <div class="top-search__img">
+                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="top-tag">
+                                    </div>
+                                    <div class="bot-tag">
+                                        <span>Bán 14k+ / tháng</span>
+                                    </div>
                                 </div>
-                                <div class="bot-tag">
-                                    <span>Bán 14k+ / tháng</span>
+                                <div class="top-search__keyword">
+                                    Quần short nữ ống rộng
                                 </div>
-                            </div>
-                            <div class="top-search__keyword">
-                                Quần short nữ ống rộng
-                            </div>
-                        </a>
-                        <a href="" class="top-search__link">
-                            <div class="top-search__img">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                                <div class="top-tag">
+                            </a>
+                            <a href="" class="top-search__link">
+                                <div class="top-search__img">
+                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="top-tag">
+                                    </div>
+                                    <div class="bot-tag">
+                                        <span>Bán 14k+ / tháng</span>
+                                    </div>
                                 </div>
-                                <div class="bot-tag">
-                                    <span>Bán 14k+ / tháng</span>
+                                <div class="top-search__keyword">
+                                    Quần short nữ ống rộng
                                 </div>
-                            </div>
-                            <div class="top-search__keyword">
-                                Quần short nữ ống rộng
-                            </div>
-                        </a>
-                        <a href="" class="top-search__link">
-                            <div class="top-search__img">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                                <div class="top-tag">
+                            </a>
+                            <a href="" class="top-search__link">
+                                <div class="top-search__img">
+                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="top-tag">
+                                    </div>
+                                    <div class="bot-tag">
+                                        <span>Bán 14k+ / tháng</span>
+                                    </div>
                                 </div>
-                                <div class="bot-tag">
-                                    <span>Bán 14k+ / tháng</span>
+                                <div class="top-search__keyword">
+                                    Quần short nữ ống rộng
                                 </div>
-                            </div>
-                            <div class="top-search__keyword">
-                                Quần short nữ ống rộng
-                            </div>
-                        </a>
-                        <a href="" class="top-search__link">
-                            <div class="top-search__img">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                                <div class="top-tag">
+                            </a>
+                            <a href="" class="top-search__link">
+                                <div class="top-search__img">
+                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="top-tag">
+                                    </div>
+                                    <div class="bot-tag">
+                                        <span>Bán 14k+ / tháng</span>
+                                    </div>
                                 </div>
-                                <div class="bot-tag">
-                                    <span>Bán 14k+ / tháng</span>
+                                <div class="top-search__keyword">
+                                    Quần short nữ ống rộng
                                 </div>
-                            </div>
-                            <div class="top-search__keyword">
-                                Quần short nữ ống rộng
-                            </div>
-                        </a>
-                        <a href="" class="top-search__link">
-                            <div class="top-search__img">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                                <div class="top-tag">
+                            </a>
+                            <a href="" class="top-search__link">
+                                <div class="top-search__img">
+                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="top-tag">
+                                    </div>
+                                    <div class="bot-tag">
+                                        <span>Bán 14k+ / tháng</span>
+                                    </div>
                                 </div>
-                                <div class="bot-tag">
-                                    <span>Bán 14k+ / tháng</span>
+                                <div class="top-search__keyword">
+                                    Quần short nữ ống rộng
                                 </div>
-                            </div>
-                            <div class="top-search__keyword">
-                                Quần short nữ ống rộng
-                            </div>
-                        </a>
-                        <a href="" class="top-search__link">
-                            <div class="top-search__img">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                                <div class="top-tag">
+                            </a>
+                            <a href="" class="top-search__link">
+                                <div class="top-search__img">
+                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="top-tag">
+                                    </div>
+                                    <div class="bot-tag">
+                                        <span>Bán 14k+ / tháng</span>
+                                    </div>
                                 </div>
-                                <div class="bot-tag">
-                                    <span>Bán 14k+ / tháng</span>
+                                <div class="top-search__keyword">
+                                    Quần short nữ ống rộng
                                 </div>
-                            </div>
-                            <div class="top-search__keyword">
-                                Quần short nữ ống rộng
-                            </div>
-                        </a>
-                        
-                   
-                    <button class="right-btn">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>
+                            </a>
+
+                        </div>
+                        <button id="next-btn" class="move-btn next-btn" onclick="plusList(1)">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                        <button id="pre-btn" class="move-btn pre-btn" onclick="plusList(-1)">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
+                    </div>
+
+
+
                 </div>
             </div>
             <div class="section section-recommend">
                 <ul class="section__heading recommend-nav">
                     <li class="recommend-nav__item recommend-nav__item--active">Gợi ý hôm nay</li>
                     <li class="recommend-nav__item">
-                        <img style="width: auto; height: 20px;" src="https://cf.shopee.vn/file/dd3e3446b4e1e978507bf3ec776752ec" alt="">
+                        <img style="width: auto; height: 20px;"
+                            src="https://cf.shopee.vn/file/dd3e3446b4e1e978507bf3ec776752ec" alt="">
                     </li>
                 </ul>
-                <div class="section__content recommend-product__list">
-
-                    <a href="" class="product">
-                        <div class="discount-tag--small">
+                <div class="section__content ">
+                    <div class="recommend-product__list">
+                        <a href="" class="product">
+                            <div class="discount-tag--small">
                                 <p style="color: red; margin: 0;">30%</p>
                                 <p style="margin: 0;">Giảm</p>
-                        </div>
-                        <div class="fav-tag">
-                            Yêu thích
-                        </div>
-
-                        <div class="rcm-product-img">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                        </div>
-                        <div class="product__name">
-                            Kem dưỡng thể Nivea
-                        </div>
-                        <div class="product__desc">
-                            <div class="product__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
                             </div>
-                            <div class="product__quality-sold">
-                                <span>Đã bán</span>
-                                <span>2k</span>
-
+                            <div class="fav-tag">
+                                Yêu thích
                             </div>
-                        </div>
-                        <div class="tag-hover">
-                            Tìm sản phẩm tương tự
-                        </div>
-                    </a>
-                    <a href="" class="product">
-                        <div class="discount-tag--small">
+
+                            <div class="rcm-product-img">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                            </div>
+                            <div class="product__name">
+                                Kem dưỡng thể Nivea
+                            </div>
+                            <div class="product__desc">
+                                <div class="product__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="product__quality-sold">
+                                    <span>Đã bán</span>
+                                    <span>2k</span>
+
+                                </div>
+                            </div>
+                            <div class="tag-hover">
+                                Tìm sản phẩm tương tự
+                            </div>
+                        </a>
+                        <a href="" class="product">
+                            <div class="discount-tag--small">
                                 <p style="color: red; margin: 0;">30%</p>
                                 <p style="margin: 0;">Giảm</p>
-                        </div>
-                        <div class="fav-tag">
-                            Yêu thích
-                        </div>
-
-                        <div class="rcm-product-img">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                        </div>
-                        <div class="product__name">
-                            Kem dưỡng thể Nivea
-                        </div>
-                        <div class="product__desc">
-                            <div class="product__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
                             </div>
-                            <div class="product__quality-sold">
-                                <span>Đã bán</span>
-                                <span>2k</span>
-
+                            <div class="fav-tag">
+                                Yêu thích
                             </div>
-                        </div>
-                        <div class="tag-hover">
-                            Tìm sản phẩm tương tự
-                        </div>
-                    </a>
-                    <a href="" class="product">
-                        <div class="discount-tag--small">
+
+                            <div class="rcm-product-img">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                            </div>
+                            <div class="product__name">
+                                Kem dưỡng thể Nivea
+                            </div>
+                            <div class="product__desc">
+                                <div class="product__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="product__quality-sold">
+                                    <span>Đã bán</span>
+                                    <span>2k</span>
+
+                                </div>
+                            </div>
+                            <div class="tag-hover">
+                                Tìm sản phẩm tương tự
+                            </div>
+                        </a>
+                        <a href="" class="product">
+                            <div class="discount-tag--small">
                                 <p style="color: red; margin: 0;">30%</p>
                                 <p style="margin: 0;">Giảm</p>
-                        </div>
-                        <div class="fav-tag">
-                            Yêu thích
-                        </div>
-
-                        <div class="rcm-product-img">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                        </div>
-                        <div class="product__name">
-                            Kem dưỡng thể Nivea
-                        </div>
-                        <div class="product__desc">
-                            <div class="product__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
                             </div>
-                            <div class="product__quality-sold">
-                                <span>Đã bán</span>
-                                <span>2k</span>
-
+                            <div class="fav-tag">
+                                Yêu thích
                             </div>
-                        </div>
-                        <div class="tag-hover">
-                            Tìm sản phẩm tương tự
-                        </div>
-                    </a>
-                    <a href="" class="product">
-                        <div class="discount-tag--small">
+
+                            <div class="rcm-product-img">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                            </div>
+                            <div class="product__name">
+                                Kem dưỡng thể Nivea
+                            </div>
+                            <div class="product__desc">
+                                <div class="product__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="product__quality-sold">
+                                    <span>Đã bán</span>
+                                    <span>2k</span>
+
+                                </div>
+                            </div>
+                            <div class="tag-hover">
+                                Tìm sản phẩm tương tự
+                            </div>
+                        </a>
+                        <a href="" class="product">
+                            <div class="discount-tag--small">
                                 <p style="color: red; margin: 0;">30%</p>
                                 <p style="margin: 0;">Giảm</p>
-                        </div>
-                        <div class="fav-tag">
-                            Yêu thích
-                        </div>
-
-                        <div class="rcm-product-img">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                        </div>
-                        <div class="product__name">
-                            Kem dưỡng thể Nivea
-                        </div>
-                        <div class="product__desc">
-                            <div class="product__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
                             </div>
-                            <div class="product__quality-sold">
-                                <span>Đã bán</span>
-                                <span>2k</span>
-
+                            <div class="fav-tag">
+                                Yêu thích
                             </div>
-                        </div>
-                        <div class="tag-hover">
-                            Tìm sản phẩm tương tự
-                        </div>
-                    </a>
-                    <a href="" class="product">
-                        <div class="discount-tag--small">
+
+                            <div class="rcm-product-img">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                            </div>
+                            <div class="product__name">
+                                Kem dưỡng thể Nivea
+                            </div>
+                            <div class="product__desc">
+                                <div class="product__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="product__quality-sold">
+                                    <span>Đã bán</span>
+                                    <span>2k</span>
+
+                                </div>
+                            </div>
+                            <div class="tag-hover">
+                                Tìm sản phẩm tương tự
+                            </div>
+                        </a>
+                        <a href="" class="product">
+                            <div class="discount-tag--small">
                                 <p style="color: red; margin: 0;">30%</p>
                                 <p style="margin: 0;">Giảm</p>
-                        </div>
-                        <div class="fav-tag">
-                            Yêu thích
-                        </div>
-
-                        <div class="rcm-product-img">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                        </div>
-                        <div class="product__name">
-                            Kem dưỡng thể Nivea
-                        </div>
-                        <div class="product__desc">
-                            <div class="product__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
                             </div>
-                            <div class="product__quality-sold">
-                                <span>Đã bán</span>
-                                <span>2k</span>
-
+                            <div class="fav-tag">
+                                Yêu thích
                             </div>
-                        </div>
-                        <div class="tag-hover">
-                            Tìm sản phẩm tương tự
-                        </div>
-                    </a>
-                    <a href="" class="product">
-                        <div class="discount-tag--small">
+
+                            <div class="rcm-product-img">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                            </div>
+                            <div class="product__name">
+                                Kem dưỡng thể Nivea
+                            </div>
+                            <div class="product__desc">
+                                <div class="product__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="product__quality-sold">
+                                    <span>Đã bán</span>
+                                    <span>2k</span>
+
+                                </div>
+                            </div>
+                            <div class="tag-hover">
+                                Tìm sản phẩm tương tự
+                            </div>
+                        </a>
+                        <a href="" class="product">
+                            <div class="discount-tag--small">
                                 <p style="color: red; margin: 0;">30%</p>
                                 <p style="margin: 0;">Giảm</p>
-                        </div>
-                        <div class="fav-tag">
-                            Yêu thích
-                        </div>
-
-                        <div class="rcm-product-img">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                        </div>
-                        <div class="product__name">
-                            Kem dưỡng thể Nivea
-                        </div>
-                        <div class="product__desc">
-                            <div class="product__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
                             </div>
-                            <div class="product__quality-sold">
-                                <span>Đã bán</span>
-                                <span>2k</span>
-
+                            <div class="fav-tag">
+                                Yêu thích
                             </div>
-                        </div>
-                        <div class="tag-hover">
-                            Tìm sản phẩm tương tự
-                        </div>
-                    </a>
-                    <a href="" class="product">
-                        <div class="discount-tag--small">
+
+                            <div class="rcm-product-img">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                            </div>
+                            <div class="product__name">
+                                Kem dưỡng thể Nivea
+                            </div>
+                            <div class="product__desc">
+                                <div class="product__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="product__quality-sold">
+                                    <span>Đã bán</span>
+                                    <span>2k</span>
+
+                                </div>
+                            </div>
+                            <div class="tag-hover">
+                                Tìm sản phẩm tương tự
+                            </div>
+                        </a>
+                        <a href="" class="product">
+                            <div class="discount-tag--small">
                                 <p style="color: red; margin: 0;">30%</p>
                                 <p style="margin: 0;">Giảm</p>
-                        </div>
-                        <div class="fav-tag">
-                            Yêu thích
-                        </div>
-
-                        <div class="rcm-product-img">
-                            <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                        </div>
-                        <div class="product__name">
-                            Kem dưỡng thể Nivea
-                        </div>
-                        <div class="product__desc">
-                            <div class="product__price">
-                                <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                <span>360.000</span>
                             </div>
-                            <div class="product__quality-sold">
-                                <span>Đã bán</span>
-                                <span>2k</span>
-
+                            <div class="fav-tag">
+                                Yêu thích
                             </div>
-                        </div>
-                        <div class="tag-hover">
-                            Tìm sản phẩm tương tự
-                        </div>
-                    </a>
-                    
-                    
-                    
 
+                            <div class="rcm-product-img">
+                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                            </div>
+                            <div class="product__name">
+                                Kem dưỡng thể Nivea
+                            </div>
+                            <div class="product__desc">
+                                <div class="product__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="product__quality-sold">
+                                    <span>Đã bán</span>
+                                    <span>2k</span>
 
+                                </div>
+                            </div>
+                            <div class="tag-hover">
+                                Tìm sản phẩm tương tự
+                            </div>
+                        </a>
+                    </div>
+                    <div class="load-more">
+                        <button onclick="moveRight()" class="btn load-more-btn">Xem thêm</button>
+                    </div>
                 </div>
-                <div class="load-more">
-                    <button onclick="moveRight()" class="btn load-more-btn">Xem thêm</button>
-                </div>
+
 
             </div>
         </div>
@@ -1047,8 +1081,8 @@
                                     <img class="footer__img" src="./assets/img/shopee-pay.png" alt="">
                                 </a>
                             </li>
-                            
-                            
+
+
                         </ul>
                     </div>
                     <div class="footer__item">
@@ -1071,23 +1105,23 @@
                             </li>
                         </ul>
                     </div>
-                    
+
                 </div>
                 <div class="footer__item">
                     <div class="footer__heading">Theo dõi chúng tôi trên</div>
                     <ul class="footer__nav">
                         <li><a class="footer__nav-link" href="">
-                            <i class="navbar__icon fa-brands fa-facebook"></i>
-                            Facebook
-                        </a></li>
+                                <i class="navbar__icon fa-brands fa-facebook"></i>
+                                Facebook
+                            </a></li>
                         <li><a class="footer__nav-link" href="">
-                            <i class="navbar__icon fa-brands fa-instagram"></i>
-                            Instagram
-                        </a></li>
+                                <i class="navbar__icon fa-brands fa-instagram"></i>
+                                Instagram
+                            </a></li>
                         <li><a class="footer__nav-link" href="">
-                            <i class="navbar__icon fa-brands fa-linkedin"></i>
-                            LinkedIn
-                        </a></li>
+                                <i class="navbar__icon fa-brands fa-linkedin"></i>
+                                LinkedIn
+                            </a></li>
                     </ul>
                 </div>
                 <div class="footer__item">
@@ -1095,19 +1129,104 @@
                     <div class="footer__download">
                         <a href=""><img style="width: 86px; margin-right: 15px;" src="./assets/img/qr.png" alt=""></a>
                         <div class="footer__download-app">
-                            <a href=""><img style="width: 86px; height: auto;" src="./assets/img/app-store.png" alt=""></a>
+                            <a href=""><img style="width: 86px; height: auto;" src="./assets/img/app-store.png"
+                                    alt=""></a>
                             <a href=""><img style="width: 86px; height: auto;" src="./assets/img/chplay.png" alt=""></a>
-                            <a href=""><img style="width: 86px; height: auto;" src="./assets/img/app-gallery.png" alt=""></a>
-                            
+                            <a href=""><img style="width: 86px; height: auto;" src="./assets/img/app-gallery.png"
+                                    alt=""></a>
+
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
-       
+
         </div>
     </footer>
+    <div class="modal">
+        <div class="modal__overlay"></div>
+        <div class="modal__body">
+            <!-- Register form -->
+            <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng ký</h3>
+                        <button class="auth-form__switch">Đăng nhập</button>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Nhập số điện thoại">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                        </div>
+
+                    </div>
+                    <div class="auth-form__police">
+                        Bằng việc đăng ký bạn đã đồng ý với Shopee về
+                        <a href="" class="auth-form__police-link">Điều khoản</a> &
+                        <a href="" class="auth-form__police-link">Chính sách bảo mật</a>
+
+                    </div>
+                    <div class="auth-form__control">
+                        <button class="btn auth-form__control-back">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG KÝ</button>
+                    </div>
+                </div>
+                <div class="auth-form__socials">
+                    <a href="" class="btn btn--with-icon auth-form__socials--facebook">
+                        <img src="./assets/img/facebook.png" class="auth-form__socials-img"></img>
+                        Kết nối với Facebook
+                    </a>
+                    <a href="" class="btn btn--with-icon auth-form__socials--google">
+                        <img class="auth-form__socials-img" src="./assets/img/google.png"/>
+                        Kết nối với Google
+                    </a>
+                </div>
+            </div>
+
+             <!-- Login form -->
+             <div class="auth-form">
+                <div class="auth-form__container">
+                    <div class="auth-form__header">
+                        <h3 class="auth-form__heading">Đăng nhập</h3>
+                        <button class="auth-form__switch">Đăng ký</button>
+                    </div>
+                    <div class="auth-form__form">
+                        <div class="auth-form__group">
+                            <input type="text" class="auth-form__input" placeholder="Nhập số điện thoại">
+                        </div>
+                        <div class="auth-form__group">
+                            <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                        </div>
+                    </div>
+                    <div class="auth-form__help">
+                        <a href="" class="auth-form__forgot-password">Quên mật khẩu</a>
+                        <span class="auth-form__separate"></span>
+                        <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
+                    </div>
+                    <div class="auth-form__control">
+                        <button class="btn auth-form__control-back">TRỞ LẠI</button>
+                        <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                    </div>
+                </div>
+                <div class="auth-form__socials">
+                    <a href="" class="btn btn--with-icon auth-form__socials--facebook">
+                        <img src="./assets/img/facebook.png" class="auth-form__socials-img"></img>
+                        Đăng nhập với Facebook
+                    </a>
+                    <a href="" class="btn btn--with-icon auth-form__socials--google">
+                        <img class="auth-form__socials-img" src="./assets/img/google.png"/>
+                        Đăng nhập với Google
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./assets/js/home.js"></script>
 </body>
 
