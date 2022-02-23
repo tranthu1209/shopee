@@ -130,7 +130,6 @@
     display: flex;
     justify-content: space-between;
     position: relative;
-    z-index: 1;
 }
 .sort-price__options{
     display: none;
@@ -140,6 +139,7 @@
     right: 0;
     background-color: var(--white-color);
     padding: 0 15px;
+    z-index: 1;
 }
 .sort-price__option{
     line-height: 2rem;
