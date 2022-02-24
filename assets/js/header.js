@@ -114,7 +114,7 @@ const createHeader = () =>{
         </ul>
     </nav>
     <div class="header-with-search">
-        <div class="logo">
+        <a href = "index.html" class="logo">
             <svg viewBox="0 0 192 65" class="logo-img">
                 <g fill-rule="evenodd">
                     <path fill="#fff"
@@ -122,7 +122,7 @@ const createHeader = () =>{
                     </path>
                 </g>
             </svg>
-        </div>
+        </a>
         <div class="search">
             <div class="search__searchbar">
                 <input type="text" class="search__searchbar-input" placeholder="Tìm kiếm">

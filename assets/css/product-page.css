@@ -1,0 +1,84 @@
+.product-page{
+    font-size: 1.4rem;
+}
+.product-page-wrapper{
+    margin-top: 140px;
+}
+.page-path{
+
+}
+.page-path__item{
+
+}
+.page-path__separate{
+    font-size: 1.1rem;
+}
+.page-path__link{
+    color: rgb(26, 104, 221);
+    font-weight: 300;
+}
+.product-desc{
+    margin-top: 20px;
+}
+.left-colum{
+    width: 488px;
+    padding: 16px;
+}
+.list-img{
+    display: flex;
+    max-height: 84px;
+    justify-content: space-between;
+    margin-top: 12px;
+    position: relative;
+
+}
+.list-img__img{
+    width: 19%;
+    height: 84px;
+    background-size: contain;
+    border: 2px solid var(--white-color);
+}
+.list-img__img:hover{
+    border-color: var(--primary-color);
+}
+.list-img__btn{
+    position: absolute;
+    top: calc(50% - 1.3rem);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--white-color);
+    font-size: 2rem;
+    height: 2.6rem;
+
+}
+.list-img__btn--pre{
+    left: 0;
+}
+.list-img__btn--next{
+    right: 0;
+}
+.user-interact{
+    margin-top: 28px;
+    display: flex;
+    font-size: 1.6rem;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.social-icon{
+    width: 25px;
+    margin-left: 4px;
+}
+.user-interact--separate{
+    border-left: 2px solid rgb(233, 233, 233);
+    height: 20px;
+}
+.user-interact__share, .user-interact__like{
+    display: flex;
+    align-items: center;
+}
+.like-icon{
+    margin-right: 8px;
+    font-size: 2rem;
+    color: var(--red-color)
+}

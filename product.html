@@ -8,11 +8,72 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/layout.css">
-    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.0.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/product-page.css">
+    <link rel="stylesheet" href="./assets/font/fontawesome-free-6.0.0-web/fontawesome-free-6.0.0-web/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header"></header>
-    <script src="./assets/js/header.js"></script>
+    <header class="header">
+        <script src="./assets/js/header.js"></script>
+    </header>
+    <div class="product-page">
+        <div class="wrapper product-page-wrapper">
+            <div class="page-path">
+                <a href="index.html" class="page-path__item page-path__link">Shopee</a>
+                <i class="page-path__separate ti-angle-right"></i>
+                <span class="page-path__item">Áo khoác nữ</span>
+                <i class="page-path__separate ti-angle-right"></i>
+                <span class="page-path__item">Áo khoác bomber nữ</span>
+                <i class="page-path__separate ti-angle-right"></i>
+                <span class="page-path__item">Áo khoác bomber nữ 2 lớp</span>
+            </div>
+            <div class="section product-desc">
+                <div class="left-colum">
+                    <div class="group-img">
+                        <div class="img-view">
+                            <div class="product__img" style="background-image: url(./assets/img/product-img1.jpg);"></div>
+                        </div>
+                        <div class="list-img">
+                            <div class="list-img__img" style="background-image: url(./assets/img/product-img1.jpg);"></div>
+                            <div class="list-img__img" style="background-image: url(./assets/img/product-img2.jpg);"></div>
+                            <div class="list-img__img" style="background-image: url(./assets/img/product-img3.jpg);"></div>
+                            <div class="list-img__img" style="background-image: url(./assets/img/product-img1.jpg);"></div>
+                            <div class="list-img__img" style="background-image: url(./assets/img/product-img2.jpg);"></div>
+                            <button class="list-img__btn list-img__btn--pre">
+                                <i class="fa-solid fa-angle-left"></i>
+                            </button>
+                            <button class="list-img__btn list-img__btn--next">
+                                <i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="user-interact">
+                        <div class="user-interact__share">
+                            <span>Chia sẻ:</span>
+                            <img src="./assets/img/messenger.png" alt="" class="social-icon">
+                            <img src="./assets/img/facebook-square.png" alt="" class="social-icon">
+                            <img src="./assets/img/pinterest.png" alt="" class="social-icon">
+                            <img src="./assets/img/twitter.png" alt="" class="social-icon">
+                        </div>
+                        <div class="user-interact--separate"></div>
+                        <div class="user-interact__like user-interact__like--liked">
+                            <div style="margin-right: 10px; zoom: 1.4;" class="product__like product__like--liked">
+                                <i class="heart--emty fa-regular fa-heart"></i>
+                                <i class="heart--fill fa-solid fa-heart"></i>
+                            </div>
+                            <span>Đã thích (14.8k)</span> 
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <script src="./assets/js/footer.js"></script>
+    </footer>
+    
+    
 </body>
 </html>

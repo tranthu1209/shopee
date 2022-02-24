@@ -15,6 +15,9 @@
     font-weight: 500;
     margin: 2px 0; 
 }
+.filter-container__heading-icon{
+    font-size: 1.2rem;
+}
 .filter__group{
     padding: 20px 0;
     font-size: 1.4rem;
@@ -124,6 +127,10 @@
 }
 .sort-btn{
     margin: 0 6px;
+    box-shadow: 0 1px 1px 0 rgb(0 0 0/ 5%);
+}
+.sort-btn.btn--primary{
+    background-color: var(--primary-color);
 }
 .sort-price{
     width: 200px;
@@ -166,6 +173,7 @@
 .page-controller__btn{
     font-size: 1rem;
     width: 34px;
+    background-color: var(--white-color);
 }
 .page-controller__btn--pre{
     border-top-right-radius: 0;
@@ -177,6 +185,28 @@
 }
 .product--search{
     width: 188px;
+}
+
+.search__page-controller{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px
+}
+.search__page-controller-btn{
+    margin: 0 15px;
+    font-size: 1.8rem;
+}
+
+.btn--transparent{
+    background-color: transparent;
+    color: #686868;
+}
+.btn--transparent:hover{
+    color: var(--primary-color);
+}
+.search__page-controller-btn--pre,.search__page-controller-btn--next{
+    background-color: transparent;
+    color: #686868;
 }
 
 

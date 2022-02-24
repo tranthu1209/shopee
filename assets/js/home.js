@@ -1,4 +1,4 @@
-var slideIndex = 1;
+var slideIndex = 0;
 showDivs(slideIndex);
 function plusDivs(k){
     showDivs(slideIndex += k);
@@ -8,7 +8,7 @@ function currentDiv(k){
 }
 function showDivs(k) {
     var i;
-    var x = document.getElementsByClassName("slider-img");
+    var x = document.getElementsByClassName("slider__link");
     var dots = document.getElementsByClassName("slider-btn-index");
     if (k>x.length){
         slideIndex = 1;
@@ -30,7 +30,7 @@ showSlide();
 
 function showSlide() {
   var i;
-  var slides = document.getElementsByClassName("slider-img");
+  var slides = document.getElementsByClassName("slider__link");
   var dots = document.getElementsByClassName("slider-btn-index");
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";  
@@ -43,7 +43,7 @@ function showSlide() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " slider-btn-index-active";
-  setTimeout(showSlide, 3000); // Change image every 2 seconds
+  setTimeout(showSlide, 2000); // Change image every 2 seconds
 }
 
 

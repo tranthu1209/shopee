@@ -122,13 +122,13 @@
                         <a href="" class="navbar__link navbar-user__link navbar__item--separation">
                             <img src="./assets/img/user-avt.jpg" alt="" class="navbar-user__img">
                             <p class="navbar-user__name">Trần Thư</p>
-                            
+
                         </a>
                     </li>
                 </ul>
             </nav>
             <div class="header-with-search">
-                <div class="logo">
+                <a href="index.html" class="logo">
                     <svg viewBox="0 0 192 65" class="logo-img">
                         <g fill-rule="evenodd">
                             <path fill="#fff"
@@ -136,7 +136,7 @@
                             </path>
                         </g>
                     </svg>
-                </div>
+                </a>
                 <div class="search">
                     <div class="search__searchbar">
                         <input type="text" class="search__searchbar-input" placeholder="Tìm kiếm">
@@ -171,10 +171,16 @@
         <div class="section-banner-feature">
             <div class="wrapper">
                 <div class="banner-with-slider">
-                    <div class="slider">
-                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img1.jpg" alt="">
-                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img2.png" alt="">
-                        <img style="width: 100%" class="slider-img" src="./assets/img/slider-img3.jpg" alt="">
+                    <div class="slider slider--radius">
+                        <a href="" class="slider__link">
+                            <img src="./assets/img/slider-img1.jpg" alt="" class="img">
+                        </a>
+                        <a href="" class="slider__link">
+                            <img src="./assets/img/slider-img2.png" alt="" class="img">
+                        </a>
+                        <a href="" class="slider__link">
+                            <img src="./assets/img/slider-img3.jpg" alt="" class="img">
+                        </a>
                         <div class="slider-list-btn">
                             <div style="left: 0" class="slider-btn" onclick="plusDivs(-1)">&#10094;</div>
                             <div style="right: 0;" class="slider-btn" onclick="plusDivs(1)">&#10095;</div>
@@ -371,10 +377,11 @@
                     </a>
                 </div>
                 <div class="section__content section__content--sale">
-                    <div class="section__list-wrapper">
+                    <div class="list-wrapper">
                         <div id="list-sale-product" class="list-sale-product">
                             <a href="" class="sale__product">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+                                <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                </div>
 
                                 <div class="sale__price">
                                     <span style="font-size: 1rem; text-decoration: underline;">đ</span>
@@ -390,15 +397,16 @@
                                 </div>
                             </a>
                             <a href="" class="sale__product">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+                                <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                </div>
 
                                 <div class="sale__price">
                                     <span style="font-size: 1rem; text-decoration: underline;">đ</span>
                                     <span>360.000</span>
                                 </div>
                                 <div class="sale__quality">
-                                    <span class="sale__product-sold">Đã bán 40</span>
-                                    <div style="width: 30%" class="sale__product-remain"></div>
+                                    <span class="sale__product-sold">Đã bán 3</span>
+                                    <div style="width: 70%" class="sale__product-remain"></div>
                                 </div>
                                 <div class="discount-tag">
                                     <p style="margin: 0; color: red;">30%</p>
@@ -406,14 +414,83 @@
                                 </div>
                             </a>
                             <a href="" class="sale__product">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
+                                <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                </div>
 
                                 <div class="sale__price">
                                     <span style="font-size: 1rem; text-decoration: underline;">đ</span>
                                     <span>360.000</span>
                                 </div>
                                 <div class="sale__quality">
-                                    <span class="sale__product-sold">Đã bán 98</span>
+                                    <span class="sale__product-sold">Đã bán 3</span>
+                                    <div style="width: 70%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                            <a href="" class="sale__product">
+                                <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                </div>
+
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 3</span>
+                                    <div style="width: 70%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                            <a href="" class="sale__product">
+                                <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                </div>
+
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 3</span>
+                                    <div style="width: 70%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                            <a href="" class="sale__product">
+                                <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                </div>
+
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 3</span>
+                                    <div style="width: 20%" class="sale__product-remain"></div>
+                                </div>
+                                <div class="discount-tag">
+                                    <p style="margin: 0; color: red;">30%</p>
+                                    <p style="margin: 4px 0 0 0;">Giảm</p>
+                                </div>
+                            </a>
+                            <a href="" class="sale__product">
+                                <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                </div>
+
+                                <div class="sale__price">
+                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                    <span>360.000</span>
+                                </div>
+                                <div class="sale__quality">
+                                    <span class="sale__product-sold">Đã bán 35</span>
                                     <div style="width: 10%" class="sale__product-remain"></div>
                                 </div>
                                 <div class="discount-tag">
@@ -421,96 +498,16 @@
                                     <p style="margin: 4px 0 0 0;">Giảm</p>
                                 </div>
                             </a>
-                            <a href="" class="sale__product">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
 
-                                <div class="sale__price">
-                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                    <span>360.000</span>
-                                </div>
-                                <div class="sale__quality">
-                                    <span class="sale__product-sold">Đã bán 3</span>
-                                    <div style="width: 70%" class="sale__product-remain"></div>
-                                </div>
-                                <div class="discount-tag">
-                                    <p style="margin: 0; color: red;">30%</p>
-                                    <p style="margin: 4px 0 0 0;">Giảm</p>
-                                </div>
-                            </a>
-                            <a href="" class="sale__product">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
-
-                                <div class="sale__price">
-                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                    <span>360.000</span>
-                                </div>
-                                <div class="sale__quality">
-                                    <span class="sale__product-sold">Đã bán 3</span>
-                                    <div style="width: 70%" class="sale__product-remain"></div>
-                                </div>
-                                <div class="discount-tag">
-                                    <p style="margin: 0; color: red;">30%</p>
-                                    <p style="margin: 4px 0 0 0;">Giảm</p>
-                                </div>
-                            </a>
-                            <a href="" class="sale__product">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
-
-                                <div class="sale__price">
-                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                    <span>360.000</span>
-                                </div>
-                                <div class="sale__quality">
-                                    <span class="sale__product-sold">Đã bán 93</span>
-                                    <div style="width: 5%" class="sale__product-remain"></div>
-                                </div>
-                                <div class="discount-tag">
-                                    <p style="margin: 0; color: red;">30%</p>
-                                    <p style="margin: 4px 0 0 0;">Giảm</p>
-                                </div>
-                            </a>
-                            <a href="" class="sale__product">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
-
-                                <div class="sale__price">
-                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                    <span>360.000</span>
-                                </div>
-                                <div class="sale__quality">
-                                    <span class="sale__product-sold">Đã bán 3</span>
-                                    <div style="width: 70%" class="sale__product-remain"></div>
-                                </div>
-                                <div class="discount-tag">
-                                    <p style="margin: 0; color: red;">30%</p>
-                                    <p style="margin: 4px 0 0 0;">Giảm</p>
-                                </div>
-                            </a>
-                            <a href="" class="sale__product">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="sale__product-img">
-
-                                <div class="sale__price">
-                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                    <span>360.000</span>
-                                </div>
-                                <div class="sale__quality">
-                                    <span class="sale__product-sold">Đã bán 3</span>
-                                    <div style="width: 70%" class="sale__product-remain"></div>
-                                </div>
-                                <div class="discount-tag">
-                                    <p style="margin: 0; color: red;">30%</p>
-                                    <p style="margin: 4px 0 0 0;">Giảm</p>
-                                </div>
-                            </a>
                         </div>
+                        <button id="next-btn" class="move-btn next-btn" onclick="plusList(1)">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </button>
+                        <button id="next-btn" class="move-btn pre-btn" onclick="plusList(-1)">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </button>
                     </div>
 
-
-                    <button id="next-btn" class="move-btn next-btn" onclick="plusList(1)">
-                        <i class="fa-solid fa-angle-right"></i>
-                    </button>
-                    <button id="pre-btn" class="move-btn pre-btn" onclick="plusList(-1)">
-                        <i class="fa-solid fa-angle-left"></i>
-                    </button>
                 </div>
 
             </div>
@@ -556,9 +553,29 @@
                     </a>
                 </div>
                 <div class="section__content content-mall">
-                    <a href="" class="mall__slider">
-                        <img src="https://cf.shopee.vn/file/21f34501780eb4920862db9afb6e74d5" alt="" class="banner-img">
-                    </a>
+                    <div class="mall__slider">
+                        <div href="" class="slider">
+                            <a href="" class="slider__link">
+                                <img src="./assets/img/mall-slide.png" alt="" class="img">
+                            </a>
+                            <a href="" class="slider__link">
+                                <img src="./assets/img/mall-slide2.png" alt="" class="img">
+                            </a>
+                            <a href="" class="slider__link">
+                                <img src="./assets/img/mall-slide3.png" alt="" class="img">
+                            </a>
+
+                            <div class="slider-list-btn">
+                                <div style="left: 0" class="slider-btn" onclick="plusDivs(-1)">&#10094;</div>
+                                <div style="right: 0;" class="slider-btn" onclick="plusDivs(1)">&#10095;</div>
+                                <span style="left: calc(50% - 20px);" class="slider-btn-index"
+                                    onclick="currentDiv(1)"></span>
+                                <span class="slider-btn-index" onclick="currentDiv(2)"></span>
+                                <span style="left: calc(50% + 20px);" class="slider-btn-index"
+                                    onclick="currentDiv(3)"></span>
+                            </div>
+                        </div>
+                    </div>
                     <div class="list-wrapper">
                         <div class="mall__list">
                             <a href=""
@@ -687,11 +704,13 @@
                     </a>
                 </div>
                 <div class="section__content">
-                    <div class="section__list-wrapper">
+                    <div class="list-wrapper">
                         <div class="top-search__list">
+
                             <a href="" class="top-search__link">
                                 <div class="top-search__img">
-                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);"></div>
                                     <div class="top-tag">
                                     </div>
                                     <div class="bot-tag">
@@ -704,7 +723,8 @@
                             </a>
                             <a href="" class="top-search__link">
                                 <div class="top-search__img">
-                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);"></div>
                                     <div class="top-tag">
                                     </div>
                                     <div class="bot-tag">
@@ -717,7 +737,8 @@
                             </a>
                             <a href="" class="top-search__link">
                                 <div class="top-search__img">
-                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);"></div>
                                     <div class="top-tag">
                                     </div>
                                     <div class="bot-tag">
@@ -730,7 +751,8 @@
                             </a>
                             <a href="" class="top-search__link">
                                 <div class="top-search__img">
-                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);"></div>
                                     <div class="top-tag">
                                     </div>
                                     <div class="bot-tag">
@@ -743,7 +765,8 @@
                             </a>
                             <a href="" class="top-search__link">
                                 <div class="top-search__img">
-                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);"></div>
                                     <div class="top-tag">
                                     </div>
                                     <div class="bot-tag">
@@ -756,7 +779,8 @@
                             </a>
                             <a href="" class="top-search__link">
                                 <div class="top-search__img">
-                                    <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);"></div>
                                     <div class="top-tag">
                                     </div>
                                     <div class="bot-tag">
@@ -767,6 +791,7 @@
                                     Quần short nữ ống rộng
                                 </div>
                             </a>
+
 
                         </div>
                         <button id="next-btn" class="move-btn next-btn" onclick="plusList(1)">
@@ -791,41 +816,42 @@
                 </ul>
                 <div class="section__content ">
                     <div class="list-product">
-                        <a href="" class="product">
-                            <div class="discount-tag--small">
-                                <p style="color: red; margin: 0;">30%</p>
-                                <p style="margin: 0;">Giảm</p>
-                            </div>
-                            <div class="fav-tag">
-                                Yêu thích
-                            </div>
+                        <div class="product product-recommend">
+                            <a href="" class="product__link">
+                                <div class="discount-tag discount-tag--small">
+                                    <p style="color: red; margin: 0;">30%</p>
+                                    <p style="margin: 0;">Giảm</p>
+                                </div>
+                                <div class="fav-tag">
+                                    Yêu thích
+                                </div>
 
-                            <div class="rcm-product-img">
-                                <img src="./assets/img/flash-sale-1.jpg" alt="" class="product-img">
-                            </div>
-                            <div class="product__inf">
-                                <div class="product__name">
-                                    Kem dưỡng thể Nivea
+                                <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                 </div>
-                                <div class="product__discount-pro"></div>
-                                <div class="product__desc">
-                                    <div class="product__price">
-                                        <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                                        <span>360.000</span>
+                                <div class="product__inf">
+                                    <div class="product__name">
+                                        Kem dưỡng thể Nivea
                                     </div>
-                                    <div class="product__quality-sold">
-                                        <span>Đã bán</span>
-                                        <span>2k</span>
-    
+                                    <div class="product__discount-pro"></div>
+                                    <div class="product__desc">
+                                        <div class="product__price">
+                                            <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                            <span>360.000</span>
+                                        </div>
+                                        <div class="product__quality-sold">
+                                            <span>Đã bán</span>
+                                            <span>2k</span>
+
+                                        </div>
+                                    </div>
+                                    <div class="tag-hover">
+                                        Tìm sản phẩm tương tự
                                     </div>
                                 </div>
-                                <div class="tag-hover">
-                                    Tìm sản phẩm tương tự
-                                </div>
-                            </div>
-                            
-                        </a>
-                       
+
+                            </a>
+                        </div>
+
                     </div>
                     <div class="load-more">
                         <button onclick="moveRight()" class="btn load-more-btn">Xem thêm</button>
@@ -967,7 +993,7 @@
             </div>
         </div>
 
-        </div>
+
     </footer>
     <div class="modal">
         <div class="modal__overlay"></div>
@@ -1008,14 +1034,14 @@
                         Kết nối với Facebook
                     </a>
                     <a href="" class="btn btn--with-icon auth-form__socials--google">
-                        <img class="auth-form__socials-img" src="./assets/img/google.png"/>
+                        <img class="auth-form__socials-img" src="./assets/img/google.png" />
                         Kết nối với Google
                     </a>
                 </div>
             </div>
 
-             <!-- Login form -->
-             <div class="auth-form">
+            <!-- Login form -->
+            <div class="auth-form">
                 <div class="auth-form__container">
                     <div class="auth-form__header">
                         <h3 class="auth-form__heading">Đăng nhập</h3>
@@ -1045,7 +1071,7 @@
                         Đăng nhập với Facebook
                     </a>
                     <a href="" class="btn btn--with-icon auth-form__socials--google">
-                        <img class="auth-form__socials-img" src="./assets/img/google.png"/>
+                        <img class="auth-form__socials-img" src="./assets/img/google.png" />
                         Đăng nhập với Google
                     </a>
                 </div>
