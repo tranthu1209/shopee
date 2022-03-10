@@ -231,6 +231,7 @@ img{
 .product__discount-amount{
     background-color: #f69113;
     height: 16px;
+    line-height: 16px;
 }
 .product__price-group{
     margin-top: 10px;
@@ -359,4 +360,38 @@ i.heart--fill{
     to{
         transform: translate(0,0);
     }
+}
+
+
+.flex-r{
+    display: flex;
+    align-items: center;
+}
+
+.page-controller{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px
+}
+.page-controller--small{
+    zoom: 0.8;
+    justify-content: right;
+    margin-top: 26px;
+}
+.search__page-controller-btn{
+    margin: 0 15px;
+    font-size: 1.8rem;
+    
+}
+
+.btn--transparent{
+    background-color: transparent;
+    color: #686868;
+}
+.btn--transparent:hover{
+    color: var(--primary-color);
+}
+.search__page-controller-btn--pre,.search__page-controller-btn--next{
+    background-color: transparent;
+    color: #686868;
 }
