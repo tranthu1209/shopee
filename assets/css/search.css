@@ -1,13 +1,18 @@
+@import 'header.css';
 .search-page{
     box-sizing: border-box;
+    margin-top: 120px;
 }
 .search-page-wrapper{
     display: flex;
-    margin-top: 140px;
 }
-.filter-container{
+.filter-wrapper{
     width: 210px;
     padding-right: 20px;
+    margin-top: 20px;
+}
+.filter-container{
+    padding: 20px 8px;
 }
 .filter-container__heading{
     font-size: 1.7rem;
@@ -210,3 +215,39 @@
 }
 
 
+
+@media (max-width: 1023px) {
+    .cart{
+        display: none;
+    }
+    .header-filter{
+        display: block;
+    }
+    
+    .filter-wrapper{
+        width: 0%;
+        overflow-x: hidden;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: var(--white-color);
+        z-index: 3;
+        margin: 0;
+        overflow-y: scroll;
+        height: 100%;
+        padding: 20px 0px;
+        box-sizing: border-box;
+    }
+    .filter__list{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .filter__item{
+        width: 50%;
+    }
+    .filter-expand{
+        flex: 1;
+        justify-content: center;
+        margin: 0;
+    }
+}

@@ -12,12 +12,17 @@
 html {
     /* 16px */
     font-size: 62.5%;
-    line-height: 1.6rem;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
     font-weight: 400;
     background-color: #f5f5f5;
     color: var(--black-color);
+}
+body{
+    margin: 0;
+}
+.home{
+    
 }
 ul{
     list-style: none;
@@ -39,12 +44,20 @@ img{
 }
 .wrapper{
     width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
-    height: 100%;
 }
 .list-wrapper{
     flex: 1;
     position: relative;
+}
+.list-hor{
+    overflow: hidden;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+}
+.list-hor::-webkit-scrollbar{
+    display: none;
 }
 .list-wrapper:hover .move-btn{
     zoom: 2;
@@ -56,7 +69,8 @@ img{
     border-radius: 2px;
     background:var(--white-color);
     top: calc(100% + 5px);
-    animation: fadeIn ease-in-out 0.4s;
+    transform-origin: top right;
+    animation: Grow ease-in 0.2s;
     z-index: 10;
 }
 /* Modal css */
@@ -265,6 +279,7 @@ i.heart--fill{
     display: flex;
     width: 90px;
     justify-content: space-around;
+    line-height: 100%;
 }
 .rate--small{
     width: 60px;
@@ -315,6 +330,16 @@ i.heart--fill{
         opacity: 0;
     }
     to{
+        opacity: 1;
+    }
+}
+@keyframes Grow {
+    from{
+        transform: scale(0);
+        opacity: 0;
+    }
+    to{
+        transform: scale(1);
         opacity: 1;
     }
 }

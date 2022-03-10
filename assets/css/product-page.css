@@ -19,6 +19,8 @@
 }
 .product-desc{
     margin-top: 20px;
+    display: flex;
+    flex-direction: row;
 }
 .left-colum{
     width: 488px;
@@ -71,7 +73,8 @@
 }
 .user-interact--separate{
     border-left: 2px solid rgb(233, 233, 233);
-    height: 20px;
+    height: 24px;
+    margin: 0 14px;
 }
 .user-interact__share, .user-interact__like{
     display: flex;
@@ -82,3 +85,70 @@
     font-size: 2rem;
     color: var(--red-color)
 }
+.right-column{
+    flex: 1;
+    padding: 20px;
+}
+.product-details__name{
+    font-size: 2rem;
+    line-height: 2rem;
+}
+.tag--fav{
+    font-size: 1.3rem;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 0 2px;
+    border-radius: 2px;
+    vertical-align: middle;
+    display: inline-flex;
+}
+.product-details__user-interact{
+    display: flex;
+    align-items: center;
+    height: 40px;
+    
+}
+.user-interact__item{
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    color: rgb(99, 98, 98);
+}
+.user-interact__item-rate{
+    color: var(--red-color);
+}
+.user-interact__item-rate .rate{
+    color: var(--red-color);
+}
+.user-interact__item span{
+    margin-right: 6px;
+    color: var(--black-color);
+}
+.product-details__prices{
+    background-color: #fafafa;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+
+}
+.product-details__price{
+    margin: 0 0 0 20px;
+    display: flex;
+}
+.product-details__prices--old{
+    text-decoration: line-through;
+    color: gray;
+    font-size: 1.6rem;
+}
+.product-details__prices--current{
+    color: var(--red-color);
+    font-size: 2.8rem;
+}
+.price-unit{
+    zoom: 0.6;
+    align-self: flex-start;
+}
+.price-value{
+    line-height: 100%;
+}
+
