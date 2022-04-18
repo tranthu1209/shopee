@@ -54,7 +54,16 @@
     font-size: 1.5rem;
     margin-right: 5px;
 }
-
+.header-box{
+    display: none;
+    position: absolute;
+    border-radius: 2px;
+    background:var(--white-color);
+    top: calc(100% + 5px);
+    transform-origin: top right;
+    animation: Grow ease-in 0.2s;
+    z-index: 10;
+}
 /* QR code */
 .qr{
     width: 180px;
@@ -203,16 +212,18 @@
 }
 .languages__option--active{
     color: var(--primary-color);
+    
 }
 .navbar-register{
-    display: none
+    /* display: none */
 }
 .navbar-login{
+    /* display: none; */
+}
+
+.navbar-user{
     display: none;
 }
-/* .navbar-user{
-    display: none;
-} */
 .navbar-user__link{
     display: flex;
     align-items: center;

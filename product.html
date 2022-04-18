@@ -17,12 +17,13 @@
 </head>
 
 <body>
+   <div class="app">
     <header class="header">
         <script src="./assets/js/header.js"></script>
     </header>
-    <div class="product-page">
-        <div class="wrapper product-page-wrapper">
-            <div class="page-path">
+    <div class="main">
+        <div class="wrapper product-page">
+            <div class="page-path hide-on-mobile-tablet">
                 <a href="index.html" class="page-path__item page-path__link">Shopee</a>
                 <i class="page-path__separate ti-angle-right"></i>
                 <span class="page-path__item">Áo khoác nữ</span>
@@ -34,11 +35,11 @@
             <div class="section product-desc">
                 <div class="left-colum">
                     <div class="group-img">
-                        <div class="img-view">
+                        <div class="img-view hide-on-mobile-tablet">
                             <div class="product__img" style="background-image: url(./assets/img/product-img1.jpg);">
                             </div>
                         </div>
-                        <div class="list-img">
+                        <div class="list-img res-img">
                             <div class="list-img__img" style="background-image: url(./assets/img/product-img1.jpg);">
                             </div>
                             <div class="list-img__img" style="background-image: url(./assets/img/product-img2.jpg);">
@@ -49,15 +50,15 @@
                             </div>
                             <div class="list-img__img" style="background-image: url(./assets/img/product-img2.jpg);">
                             </div>
-                            <button class="list-img__btn list-img__btn--pre">
+                            <button class="list-img__btn list-img__btn--pre hide-on-mobile-tablet">
                                 <i class="fa-solid fa-angle-left"></i>
                             </button>
-                            <button class="list-img__btn list-img__btn--next">
+                            <button class="list-img__btn list-img__btn--next hide-on-mobile-tablet">
                                 <i class="fa-solid fa-angle-right"></i>
                             </button>
                         </div>
                     </div>
-                    <div class="user-interact">
+                    <div class="user-interact hide-on-mobile-tablet">
                         <div class="user-interact__share">
                             <span>Chia sẻ:</span>
                             <img src="./assets/img/messenger.png" alt="" class="social-icon">
@@ -115,7 +116,7 @@
 
                     </div>
                     <div class="product-details__tb">
-                        <div class="product-details__r">
+                        <div class="product-details__r hide-on-mobile">
                             <div class="product-details__c-1">
                                 Mã Giảm Giá Của Shop
                             </div>
@@ -137,7 +138,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="product-details__r">
+                        <div class="product-details__r hide-on-mobile">
                             <div class="product-details__c-1">
                                 Combo Khuyến Mãi
                             </div>
@@ -146,7 +147,7 @@
                             </div>
                         </div>
                         <div class="product-details__r">
-                            <div class="product-details__c-1">
+                            <div class="product-details__c-1 hide-on-mobile">
                                 Vận chuyển
                             </div>
                             <div class="product-details__c-2">
@@ -175,10 +176,10 @@
                             </div>
                         </div>
                         <div class="product-details__r">
-                            <div class="product-details__c-1">
+                            <div class="product-details__c-1 hide-on-mobile">
                                 Số lượng
                             </div>
-                            <div class="product-details__c-2 flex-r">
+                            <div class="product-details__c-2 flex-r hide-on-mobile">
                                 <div class="group-btn-quant">
                                     <button class="btn btn-quant">+</button>
                                     <span class="btn btn-quant quant">1</span>
@@ -222,7 +223,7 @@
                     </div>
 
                 </div>
-                <div class="right-column shop-desc">
+                <div class="right-column shop-desc hide-on-mobile">
                     <div class="shop-desc-c">
                         <p>
                             <span class="shop-desc__c-1">Đánh giá</span>
@@ -238,7 +239,7 @@
                             <span class="shop-desc__c-1">Tỉ Lệ Phản Hồi</span>
                             <span class="shop-desc__c-2">92%</span>
                         </p>
-                        <p>
+                        <p >
                             <span class="shop-desc__c-1">Thời Gian Phải Hồi</span>
                             <span class="shop-desc__c-2">trong vài giờ</span>
                         </p>
@@ -256,233 +257,953 @@
 
                 </div>
             </div>
-            <div class="section product-inf">
-                <div class="product-inf-item">
-                    <div class="product-inf__head">CHI TIẾT SẢN PHẨM</div>
-                    <div class="product-inf__content">
-                        <p>
-                            <span class="product-inf__content-c-1">Danh Mục</span>
-                            <span class="product-inf__content-c-2">Shopee</span>
-                        </p>
-                        <p>
-                            <span class="product-inf__content-c-1">Xuất xứ</span>
-                            <span class="product-inf__content-c-2">Việt Nam</span>
-                        </p>
-                        <p>
-                            <span class="product-inf__content-c-1">Kho hàng</span>
-                            <span class="product-inf__content-c-2">5128</span>
-                        </p>
-                        <p>
-                            <span class="product-inf__content-c-1">Gửi từ</span>
-                            <span class="product-inf__content-c-2">Huyện Thanh Oai, Hà Nội</span>
-                        </p>
+            <div class="flex-r res-c">
+                <div class="flex-r-c1">
+                    <div class="section product-inf">
+                        <div class="product-inf-item">
+                            <div class="product-inf__head">CHI TIẾT SẢN PHẨM</div>
+                            <div class="product-inf__content">
+                                <p>
+                                    <span class="product-inf__content-c-1">Danh Mục</span>
+                                    <span class="product-inf__content-c-2">Shopee</span>
+                                </p>
+                                <p>
+                                    <span class="product-inf__content-c-1">Xuất xứ</span>
+                                    <span class="product-inf__content-c-2">Việt Nam</span>
+                                </p>
+                                <p>
+                                    <span class="product-inf__content-c-1">Kho hàng</span>
+                                    <span class="product-inf__content-c-2">5128</span>
+                                </p>
+                                <p>
+                                    <span class="product-inf__content-c-1">Gửi từ</span>
+                                    <span class="product-inf__content-c-2">Huyện Thanh Oai, Hà Nội</span>
+                                </p>
+                            </div>
+                            <div class="product-inf__item">
+                                <div class="product-inf__head">MÔ TẢ SẢN PHẨM</div>
+                                <p class="product-inf__content ct">💥 Túi đeo chéo mini da trơn siêu HOT 💥
+🚚 FREESHIP ĐƠN 50K
+
+MÔ TẢ SẢN PHẨM:
+
+✪ Style cực yêu luôn nhé, chiếc túi đựng vừa số tiền bạn có đang được các chị em săn lùng
+✪ Kích thước: bề ngang 15cm, rộng 8cm, chiều cao cả quai túi là 18cm
+✪ Màu sắc: ĐEN, CÀ PHÊ, TRẮNG, NÂU
+✪ Chất liệu: Da Pu
+
+✅   Mincloset  ĐẢM BẢO :
+=================================
+➡ BẢO ĐẢM HÀNG CHẤT 100% - GIÁ RẺ ĐẸP
+➡ Giao hàng ngay khi nhận được đơn hàng - Giao hàng toàn quốc, nhận hàng thanh toán
+➡ Gửi hàng siêu tốc - Luôn kiểm tra hàng trước khi giao - Hỗ trợ đổi trả theo quy định. 
+=================================
+
+  💖 QUYỀN LỢI CỦA KHÁCH HÀNG
+❎ Khách hàng cũ : Mua lần thứ 2 trở đi sẽ được nhận mã giảm giá của shop << ib ngay cho Mincloset  nhé >> để nhận ưu đãi bạn nhaaa 
+❎Chính sách bao đổi trả hàng miễn phí khi sản phẩm kém chất lượng và không giống hình, nhầm size, số lượng
+
+💌 Chat với Mincloset nếu bạn cần thêm thông tin sản phẩm nha 
+📞 Hotline: 0392.497.954
+      Link : https://shopee.vn/min_closet
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="product-inf__item">
-                        <div class="product-inf__head">MÔ TẢ SẢN PHẨM</div>
-                        <p class="product-inf__content ct">THÔNG TIN SẢN PHẨM:  Ốp lưng iphone 5/5s/6/6s/6plus/6splus/7/8/7plus/8plus/x/xs/xs max/11/11pro max/12/12pro max.  
-Mã Sản Phẩm: Ốp lưng iphone trong lỗ viền camera bearbrick 6/6plus/6/6splus/7/7plus/8/8plus/x/xs/11/12/pro/max/plus/promax-Awifi U4-9
- Màu sắc sản phẩm : 
-- Ốp lưng được đóng gói bằng túi nilon thiết kế đẹp.
-- Mực in chất lượng cao,sắc nét, không phai màu, không gây hại cho da,
-- Hình ảnh thiết kế đẹp, phong cách, trẻ trung.
-- Công dụng: thay đổi màu sắc cho điện thoại, giữ điện thoại chắc chắn trên tay, an toàn chống trầy xước,  bảo vệ chiếc ốp khỏi va đập.
-Hướng dẫn sử dụng sản phẩm Ốp lưng iphone 5/5s/6/6s/6plus/6splus/7/8/7plus/8plus/x/xs/xs max/11/11pro max.
-- Không nên để ốp lưng, bao da dưới sàn nhà. 
-- Để nơi thoáng mát sẽ giúp bảo quản.
-- Để xa tầm tay trẻ em.
-- Xuất xứ: Việt Nam
-"AWiFi CAM KẾT
-- Hình ảnh sản phẩm giống 100% .
-- Đảm bảo ốp chất lượng 100%.
-- Ốp được kiểm tra kĩ càng, cẩn thận và tư vấn nhiệt tình trước khi gói hàng giao cho Quý Khách.
-- Hàng có sẵn, giao hàng ngay khi nhận được đơn. 
-- Hoàn tiền nếu sản phẩm không giống với mô tả.
-- Chấp nhận đổi hàng khi dùng không vừa, không hài lòng.
-- Gửi hàng siêu tốc : Awifi với đội ngũ nhân viên hùng hậu cam kết dịch vụ đóng hàng,gói hàng siêu nhanh 
-- Hỗ trợ đổi trả theo quy định.
-Ốp lưng dành cho các dòng máy iphone: iphone 5/5s ; iphone 6/6s ; iphone 6plus/6s plus ; iphone 7plus/8plus ; iphone x/xs ; iphone xs max ; iphone 11 ; iphone 11pro max ; iphone12mini ; iphone12 ; iphone12pro ; iphone12promax .
-Cách nhận biết iphone đang sử dụng:
-- Kích thước ốp iphone 5/5s (5=5s=> chọn 5/5s) : 6x12.5 cm.
-- Kích thước ốp iphone 6/6s (6=6s=> chọn 6/6s)  : 7x14 cm.
-- Kích thước ốp iphone 6plus/6splus (6plus=6splus=> chọn 6plus/6splus) : 80x160 cm.
-- Kích thước ốp iphone 7/8 (7=8=> chọn 7/8)  : 7x14 cm.
-- Kích thước ốp iphone 7plus/8plus 97plus=8plus => chọn 7plus/8plus )  : 80x160 cm.
-- Kích thước ốp iphone x/xs (x=xs=> chọn x/xs)  : 73x145 cm.
-- Kích thước ốp iphone xsmax  : 80x157 cm.
-- Kích thước ốp iphone 11  : 79x153 cm.
-- Kích thước ốp iphone 11 pro max : 80x157 cm.
-- Kích thước ốp iphone 12 : 69x144 cm.
-- Kích thước ốp iphone 12 pro max: 76x158 cm.
-Hướng dẫn sử dụng sản phẩm Ốp lưng iphone 6/6plus/6s/6s plus/7/7plus/8/8plus/x/xs/xs max/11/11 promax/12 /12 pro max - Awifi Case.
-- Không nên để ốp lưng, bao da dưới sàn nhà. 
-- Để nơi thoáng mát sẽ giúp bảo quản.
-- Để xa tầm tay trẻ em.
-
-Quý khách lưu ý:
-- Khi nhận được hàng Quý khách vui lòng bỏ chút thời gian để đánh giá cho shop, để shop có chiều hướng phục vụ tốt hơn cho Quý khách.
-
-Hashtag: #op #lung #iphone #dien #thoai #phu #kien #inhinh #deo #chong #ban #hanquoc #case #iphone5 #iphone5s #iphone6 #iphone6s #iphone6splus #iphone7 #iphone8 #iphone7plus #iphone8plus #iphonex #iphonexsmax #iphone11 #iphone11promax  #opiphone #oplung #oplungiphone #awifi #iphone12mini #iphone12 #iphone12pro #iphone12promax
-                        </p>
+                    <div class="section review">
+                        <div class="review__title">ĐÁNH GIÁ SẢN PHẨM</div>
+                        <div class="review__content">
+                            <div class="review__filter flex-r hide-on-mobile">
+                                <div class="review__rate">
+                                    <p>
+                                        <span class="review__grade">4.9</span>
+                                        <span>trên 5</span>
+                                    </p>
+                                    <p class="rate">
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                        <i class="fa-solid fa-star"></i>
+                                    </p>
+                                </div>
+                                <div class="review__group-option">
+                                    <div class="btn btn--2 review__option">Tất cả</div>
+                                    <div class="btn btn--1 review__option">5 Sao (120)</div>
+                                    <div class="btn btn--1 review__option">4 Sao (120)</div>
+                                    <div class="btn btn--1 review__option">3 Sao (120)</div>
+                                    <div class="btn btn--1 review__option">2 Sao (120)</div>
+                                    <div class="btn btn--1 review__option">1 Sao (120)</div>
+                                    <div class="btn btn--1 review__option">Có Bình Luận (120)</div>
+                                    <div class="btn btn--1 review__option">Có Hình Ảnh / Video (120)</div>
+                                </div>
+        
+        
+        
+                            </div>
+                            <div class="review__comment">
+                                <div class="review__comment-item flex-r">
+                                    <div class="cust-img" style="background-image: url(./assets/img/user-avt.jpg);"></div>
+                                    <div class="comment-content">
+                                        <div class="cust-name">ththh</div>
+                                        <div class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="pur-inf">
+                                            <span class="pur-day">2022-03-12 14:09</span>
+                                            <span>Phân loại hàng: đen</span>
+                                        </div>
+                                        <div class="cust-comment">vì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
+                                            phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu m có thể
+                                            giúp tao quyết địnhvì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
+                                            phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu</div>
+                                        <div class="list-img review__list-img">
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img1.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img2.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img3.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img1.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img2.jpg);">
+                                            </div>
+        
+                                        </div>
+                                        <p class="commnet-like">
+                                            <i class="fa-solid fa-thumbs-up"></i>
+                                            <span class="like-number">6</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="review__comment-item flex-r">
+                                    <div class="cust-img" style="background-image: url(./assets/img/user-avt.jpg);"></div>
+                                    <div class="comment-content">
+                                        <div class="cust-name">ththh</div>
+                                        <div class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="pur-inf">
+                                            <span class="pur-day">2022-03-12 14:09</span>
+                                            <span>Phân loại hàng: đen</span>
+                                        </div>
+                                        <div class="cust-comment">vì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
+                                            phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu m có thể
+                                            giúp tao quyết địnhvì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
+                                            phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu</div>
+                                        <div class="list-img review__list-img">
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img1.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img2.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img3.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img1.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img2.jpg);">
+                                            </div>
+        
+                                        </div>
+                                        <p class="commnet-like">
+                                            <i class="fa-solid fa-thumbs-up"></i>
+                                            <span class="like-number">6</span>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="review__comment-item flex-r">
+                                    <div class="cust-img" style="background-image: url(./assets/img/user-avt.jpg);"></div>
+                                    <div class="comment-content">
+                                        <div class="cust-name">ththh</div>
+                                        <div class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <div class="pur-inf">
+                                            <span class="pur-day">2022-03-12 14:09</span>
+                                            <span>Phân loại hàng: đen</span>
+                                        </div>
+                                        <div class="cust-comment">vì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
+                                            phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu m có thể
+                                            giúp tao quyết địnhvì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
+                                            phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu</div>
+                                        <div class="list-img review__list-img">
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img1.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img2.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img3.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img1.jpg);">
+                                            </div>
+                                            <div class="list-img__img"
+                                                style="background-image: url(./assets/img/product-img2.jpg);">
+                                            </div>
+        
+                                        </div>
+                                        <p class="commnet-like">
+                                            <i class="fa-solid fa-thumbs-up"></i>
+                                            <span class="like-number">6</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-controller page-controller--small">
+                                <button class="btn btn--small search__page-controller-btn search__page-controller-btn--pre"><i
+                                        class="ti-angle-left"></i></button>
+                                <button class="btn btn--small search__page-controller-btn btn--primary">1</button>
+                                <button class="btn btn--small search__page-controller-btn btn--transparent">2</button>
+                                <button class="btn btn--small search__page-controller-btn btn--transparent">3</button>
+                                <button class="btn btn--small search__page-controller-btn btn--transparent">4</button>
+                                <button class="btn btn--small search__page-controller-btn btn--transparent">...</button>
+                                <button class="btn btn--small search__page-controller-btn search__page-controller-btn--next"><i
+                                        class="ti-angle-right"></i></button>
+        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-container">
+                        <div class="product-container__head">
+                            <span class="heading">CÁC SẢN PHẨM KHÁC CỦA SHOP</span>
+                            <a href="" class="see-all-link">
+                                Xem tất cả
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </div>
+                        <div class="list-wrapper product-container__list">
+                            <div class="list-hor">
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                
+                                <button id="next-btn" class="move-btn hide-on-mobile-tablet next-btn">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                                <button id="next-btn" class="move-btn hide-on-mobile-tablet pre-btn">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-container">
+                        <div class="product-container__head">
+                            <span class="heading">SẢN PHẨM TƯƠNG TỰ</span>
+                            <a href="" class="see-all-link">
+                                Xem tất cả
+                                <i class="fa-solid fa-angle-right"></i>
+                            </a>
+                        </div>
+                        <div class="list-wrapper product-container__list">
+                            <div class="list-hor">
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                <div class="product product-6">
+                                    <a href="product.html" class="product__link">
+                                        <div class="discount-tag discount-tag--small">
+                                            <p style="color: red; margin: 0;">30%</p>
+                                            <p style="margin: 0;">Giảm</p>
+                                        </div>
+                                        <div class="fav-tag">
+                                            Yêu thích
+                                        </div>
+        
+                                        <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                        </div>
+                                        <div class="product__inf">
+                                            <div class="product__name">
+                                                Áo khoác gió nam nữ có mũ 2 lớp, áo khoác thể thao chất liệu gió tráng bạc ngăn
+                                                gió
+                                                chống nước chống tia UV MANXURY
+                                            </div>
+                                            <div class="product__promotions">
+                                                <div class="product__discount">
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="" stroke="#f69113" fill="#f69113">
+                                                        </path>
+                                                    </svg>
+                                                    <span class="product__discount-amount">10% Giảm</span>
+                                                    <svg class="product__discount-svg" viewBox="-0.5 -0.5 4 16">
+                                                        <path
+                                                            d="M4 0h-3q-1 0 -1 1a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3v0.333a1.2 1.5 0 0 1 0 3q0 1 1 1h3"
+                                                            stroke-width="1" transform="rotate(180) translate(-3 -15)"
+                                                            stroke="#f69113" fill="#f69113"></path>
+                                                    </svg>
+                                                </div>
+        
+                                            </div>
+                                            <div class="product__desc">
+                                                <div class="product__price">
+                                                    <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                                                    <span>360.000</span>
+                                                </div>
+                                                <span class="product__quality-sold">Đã bán 2k</span>
+                                            </div>
+                                           
+                                        </div>
+        
+                                        
+                                    </a>
+                                </div>
+                                
+                                <button id="next-btn" class="move-btn hide-on-mobile-tablet next-btn">
+                                    <i class="fa-solid fa-angle-right"></i>
+                                </button>
+                                <button id="next-btn" class="move-btn hide-on-mobile-tablet pre-btn">
+                                    <i class="fa-solid fa-angle-left"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="section review">
-                <div class="review__title">ĐÁNH GIÁ SẢN PHẨM</div>
-                <div class="review__content">
-                    <div class="review__filter flex-r">
-                        <div class="review__rate">
-                            <p>
-                                <span class="review__grade">4.9</span>
-                                <span>trên 5</span>
-                            </p>
-                            <p class="rate">
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                                <i class="fa-solid fa-star"></i>
-                            </p>
-                        </div>
-                        <div class="review__group-option">
-                            <div class="btn btn--2 review__option">Tất cả</div>
-                            <div class="btn btn--1 review__option">5 Sao (120)</div>
-                            <div class="btn btn--1 review__option">4 Sao (120)</div>
-                            <div class="btn btn--1 review__option">3 Sao (120)</div>
-                            <div class="btn btn--1 review__option">2 Sao (120)</div>
-                            <div class="btn btn--1 review__option">1 Sao (120)</div>
-                            <div class="btn btn--1 review__option">Có Bình Luận (120)</div>
-                            <div class="btn btn--1 review__option">Có Hình Ảnh / Video (120)</div>
-                        </div>
-
-
-
-                    </div>
-                    <div class="review__comment">
-                        <div class="review__comment-item flex-r">
-                            <div class="cust-img" style="background-image: url(./assets/img/user-avt.jpg);"></div>
-                            <div class="comment-content">
-                                <div class="cust-name">ththh</div>
-                                <div class="rate">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <div class="pur-inf">
-                                    <span class="pur-day">2022-03-12 14:09</span>
-                                    <span>Phân loại hàng: đen</span>
-                                </div>
-                                <div class="cust-comment">vì cuộc đời là những chuỗi việc phải lựa chon nên  Tao đang bị phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu m có thể giúp tao quyết địnhvì cuộc đời là những chuỗi việc phải lựa chon nên  Tao đang bị phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu</div>
-                                <div class="list-img review__list-img">
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img1.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img2.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img3.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img1.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img2.jpg);">
-                                    </div>
+                <div class="flex-r-c2">
+                    <div class="section section-voucher">
+                        <div class="section-voucher__head">Mã giảm giá của shop</div>
+                        <div class="group_voucher">
+                            <div class="voucher">
+                                <div class="left">
                                     
                                 </div>
-                                <p class="commnet-like">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span class="like-number">6</span>
-                                </p>
+                                <div class="right">
+                                    <div class="voucher-text">
+                                        <span class="vt1">Giảm 11%</span>
+                                        <span class="vt2">Đơn tối thiểu 0đ</span>
+                                        <span class="vt3">Giảm tối đa 15kđ</span>
+                                        <span class="vt4">Có hiệu lực từ 15/2</span>
+                                    </div>
+                                    <div class="btn btn--primary btn--small">Lưu</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="review__comment-item flex-r">
-                            <div class="cust-img" style="background-image: url(./assets/img/user-avt.jpg);"></div>
-                            <div class="comment-content">
-                                <div class="cust-name">ththh</div>
-                                <div class="rate">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <div class="pur-inf">
-                                    <span class="pur-day">2022-03-12 14:09</span>
-                                    <span>Phân loại hàng: đen</span>
-                                </div>
-                                <div class="cust-comment">vì cuộc đời là những chuỗi việc phải lựa chon nên  Tao đang bị phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu m có thể giúp tao quyết địnhvì cuộc đời là những chuỗi việc phải lựa chon nên  Tao đang bị phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu</div>
-                                <div class="list-img review__list-img">
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img1.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img2.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img3.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img1.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img2.jpg);">
-                                    </div>
+                            <div class="voucher">
+                                <div class="left">
                                     
                                 </div>
-                                <p class="commnet-like">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span class="like-number">6</span>
-                                </p>
+                                <div class="right">
+                                    <div class="voucher-text">
+                                        <span class="vt1">Giảm 11%</span>
+                                        <span class="vt2">Đơn tối thiểu 0đ</span>
+                                        <span class="vt3">Giảm tối đa 15kđ</span>
+                                        <span class="vt4">Có hiệu lực từ 15/2</span>
+                                    </div>
+                                    <div class="btn btn--primary btn--small">Lưu</div>
+                                </div>
                             </div>
-                        </div>
-                        <div class="review__comment-item flex-r">
-                            <div class="cust-img" style="background-image: url(./assets/img/user-avt.jpg);"></div>
-                            <div class="comment-content">
-                                <div class="cust-name">ththh</div>
-                                <div class="rate">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <div class="pur-inf">
-                                    <span class="pur-day">2022-03-12 14:09</span>
-                                    <span>Phân loại hàng: đen</span>
-                                </div>
-                                <div class="cust-comment">vì cuộc đời là những chuỗi việc phải lựa chon nên  Tao đang bị phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu m có thể giúp tao quyết địnhvì cuộc đời là những chuỗi việc phải lựa chon nên  Tao đang bị phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu</div>
-                                <div class="list-img review__list-img">
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img1.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img2.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img3.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img1.jpg);">
-                                    </div>
-                                    <div class="list-img__img" style="background-image: url(./assets/img/product-img2.jpg);">
-                                    </div>
+                            <div class="voucher">
+                                <div class="left">
                                     
                                 </div>
-                                <p class="commnet-like">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <span class="like-number">6</span>
-                                </p>
+                                <div class="right">
+                                    <div class="voucher-text">
+                                        <span class="vt1">Giảm 11%</span>
+                                        <span class="vt2">Đơn tối thiểu 0đ</span>
+                                        <span class="vt3">Giảm tối đa 15kđ</span>
+                                        <span class="vt4">Có hiệu lực từ 15/2</span>
+                                    </div>
+                                    <div class="btn btn--primary btn--small">Lưu</div>
+                                </div>
+                            </div>
+                            <div class="voucher">
+                                <div class="left">
+                                    
+                                </div>
+                                <div class="right">
+                                    <div class="voucher-text">
+                                        <span class="vt1">Giảm 11%</span>
+                                        <span class="vt2">Đơn tối thiểu 0đ</span>
+                                        <span class="vt3">Giảm tối đa 15kđ</span>
+                                        <span class="vt4">Có hiệu lực từ 15/2</span>
+                                    </div>
+                                    <div class="btn btn--primary btn--small">Lưu</div>
+                                </div>
+                            </div>
+                            <div class="voucher">
+                                <div class="left">
+                                    
+                                </div>
+                                <div class="right">
+                                    <div class="voucher-text">
+                                        <span class="vt1">Giảm 11%</span>
+                                        <span class="vt2">Đơn tối thiểu 0đ</span>
+                                        <span class="vt3">Giảm tối đa 15kđ</span>
+                                        <span class="vt4">Có hiệu lực từ 15/2</span>
+                                    </div>
+                                    <div class="btn btn--primary btn--small">Lưu</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="page-controller page-controller--small">
-                        <button class="btn btn--small search__page-controller-btn search__page-controller-btn--pre"><i class="ti-angle-left"></i></button>
-                        <button class="btn btn--small search__page-controller-btn btn--primary">1</button>
-                        <button class="btn btn--small search__page-controller-btn btn--transparent">2</button>
-                        <button class="btn btn--small search__page-controller-btn btn--transparent">3</button>
-                        <button class="btn btn--small search__page-controller-btn btn--transparent">4</button>
-                        <button class="btn btn--small search__page-controller-btn btn--transparent">...</button>
-                        <button class="btn btn--small search__page-controller-btn search__page-controller-btn--next"><i class="ti-angle-right"></i></button>
-                        
-                    </div>
+                    
                 </div>
             </div>
+            
+            
         </div>
     </div>
-    </div>
-    </div>
+       
     <footer class="footer">
         <script src="./assets/js/footer.js"></script>
     </footer>
+    
+   </div>
 
 
 </body>

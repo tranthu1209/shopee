@@ -1,7 +1,6 @@
 @import 'header.css';
 .search-page{
     box-sizing: border-box;
-    margin-top: 120px;
 }
 .search-page-wrapper{
     display: flex;

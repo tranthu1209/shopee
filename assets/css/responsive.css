@@ -83,14 +83,76 @@
         width: 25%;
         margin: 0;
     }
+    .product-desc{
+        flex-direction: column;
+    }
+    .product-desc>div{
+        width: 100%;
+    }
+    .left-colum{
+        padding: 0;
+    }
+    .list-img{
+        margin-top: 0;
+    }
+    .list-img__img{
+        border: 0;
+    }
+    .res-img{
+        max-height: fit-content;
+        height: auto;
+        overflow-x: scroll;
+    }
+    .res-img .list-img__img{
+        width: 100%;
+        min-width: 100%;
+        padding-top: 100%;
+    }
+    .shop{
+        flex-direction: column;
+    }
+    .res-c{
+        flex-direction: column;
+    }
+    .flex-r-c1{
+        order: 2;
+       width: 100%;
+        overflow: hidden;
+    }
+    .flex-r-c2{
+        order: 1;
+        width: 100%;
+        margin-left: 0;
+    }
+    .section-voucher{
+        width: 100%;
+        margin-left: 0;
+    }
+    .group_voucher{
+        display: flex;
+        overflow-x: scroll;
+        width: 100%;
+        
+    }
+    .voucher{
+        padding-right: 10px;
+        min-width: 220px;
+    }
+
     
 
     
 }
 /* tablet */
 @media (min-width: 740px) and (max-width: 1023px) {
+    html{
+        font-size: 100%;
+    }
     .hide-on-tablet{
         display: none;
+    }
+    .main{
+        margin-top: 68px;
     }
     .header{
         height: 68px;
@@ -135,6 +197,10 @@
     }
     .sort-bar{
         top: 68px;
+    }
+    .product-6{
+        width: calc(100% / 4);
+        min-width: calc(100% /4);
     }
 }
 
@@ -192,7 +258,10 @@
         zoom: 0.8;
     }
 
-    .search-page{
+    .main{
+        margin-top: 50px;
+    }
+    .search-page.main{
         margin-top: 80px;
     }
     .top-search__link{
@@ -211,14 +280,45 @@
         width: calc(100% / 2);
     }
    
-    .search__page-controller{
+    .page-controller{
         zoom: 0.8;
     }
 
     .sort-bar{
         top: 56px;
     }
- 
-    
+    .product-6{
+        width: calc(100% / 2);
+        min-width: calc(100% /2);
+    }
+    .review__list-img{
+        flex-wrap: wrap;
+        height: 168px;
+    }
+    .review__comment-item{
+        padding: 10px 0;
+    }
+    .review__comment-item{
+        zoom: 0.8;
+    }
+    .group-btn-buy{
+        position: fixed;
+        bottom: 0%;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        background-color: var(--white-color);
+    }
+    .group-btn-buy .btn{
+        flex: 1;
+        margin: 0;
+        border-radius: 0;
+    }
+    .footer__list{
+        flex-wrap: wrap;
+    }
+    .footer__item{
+        min-width: calc(100%/2);
+    }
 
 }

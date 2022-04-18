@@ -1,50 +1,4 @@
-var slideIndex = 0;
-showDivs(slideIndex);
-function plusDivs(k){
-    showDivs(slideIndex += k);
-}
-function currentDiv(k){
-    showDivs(slideIndex = k);
-}
-function showDivs(k) {
-    var i;
-    var x = document.getElementsByClassName("slider__link");
-    var dots = document.getElementsByClassName("slider-btn-index");
-    if (k>x.length){
-        slideIndex = 1;
-    }
-    if (k<1){
-        slideIndex = x.length;
-    }
-    for (i = 0; i <x.length; i++){
-        x[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++){
-        dots[i].className = dots[i].className.replace(" slider-btn-index-active", "")
-    }
-    x[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " slider-btn-index-active";
-}
 
-showSlide();
-
-function showSlide() {
-  var i;
-  var slides = document.getElementsByClassName("slider__link");
-  var dots = document.getElementsByClassName("slider-btn-index");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" slider-btn-index-active", "")
-
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " slider-btn-index-active";
-  setTimeout(showSlide, 2000); // Change image every 2 seconds
-}
 
 
 // 
@@ -60,3 +14,24 @@ function showSlide() {
 //     header.classList.remove("sticky");
 //   }
 // }
+
+
+// Register
+function loginFunc() {
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("login-form").style.display = "block";
+    document.getElementById("register-form").style.display = "none";
+}
+function registerFunc() {
+
+    document.getElementById("modal").style.display = "flex";
+    document.getElementById("login-form").style.display = "none";
+    document.getElementById("register-form").style.display = "block";
+
+}
+function backFunc() {
+    document.getElementById("modal").style.display = "none";
+    document.getElementById("login-form").style.display = "none";
+    document.getElementById("register-form").style.display = "none";
+
+}

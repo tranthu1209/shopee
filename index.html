@@ -8,7 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
     <link rel="stylesheet" href="./assets/css/base.css">
-  
+
     <link rel="stylesheet" href="./assets/css/layout.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/fontawesome-free-6.0.0-web/fontawesome-free-6.0.0-web/css/all.min.css" />
@@ -40,7 +40,7 @@
                                     <a href="">
                                         <img src="./assets/img/chplay.png" alt="" class="qr__download-img">
                                     </a>
-    
+
                                 </div>
                             </div>
                         </li>
@@ -69,7 +69,8 @@
                                                 alt="" class="notice__img">
                                             <div class="notice__inf">
                                                 <p class="notice__title">Mua ngay kẻo lỡ</p>
-                                                <p class="notice__desc">Freeship cho đơn từ 0đ và hàng ngàn mã giảm giá hấp
+                                                <p class="notice__desc">Freeship cho đơn từ 0đ và hàng ngàn mã giảm giá
+                                                    hấp
                                                     dẫnnnnnnnnnnnnnnn</p>
                                             </div>
                                         </a>
@@ -80,7 +81,8 @@
                                                 alt="" class="notice__img">
                                             <div class="notice__inf">
                                                 <p class="notice__title">Mua ngay kẻo lỡ</p>
-                                                <p class="notice__desc">Freeship cho đơn từ 0đ và hàng ngàn mã giảm giá hấp
+                                                <p class="notice__desc">Freeship cho đơn từ 0đ và hàng ngàn mã giảm giá
+                                                    hấp
                                                     dẫnnnnnnnnnnnnnnn</p>
                                             </div>
                                         </a>
@@ -91,7 +93,8 @@
                                                 alt="" class="notice__img">
                                             <div class="notice__inf">
                                                 <p class="notice__title">Mua ngay kẻo lỡ</p>
-                                                <p class="notice__desc">Freeship cho đơn từ 0đ và hàng ngàn mã giảm giá hấp
+                                                <p class="notice__desc">Freeship cho đơn từ 0đ và hàng ngàn mã giảm giá
+                                                    hấp
                                                     dẫnnnnnnnnnnnnnnn</p>
                                             </div>
                                         </a>
@@ -117,18 +120,19 @@
                                 <div style="margin-top: 18px;" class="languages__option">English</div>
                             </div>
                         </li>
-                        <li class="navbar__item navbar-register">
-                            <a href="" class="navbar__link">Đăng ký</a>
+                        <li class="navbar__item navbar-register" id="register" onclick="registerFunc()">
+                            <span href="" class="navbar__link">Đăng ký</span>
                         </li>
-                        <li style="padding-right: 0;" class="navbar__item navbar-login">
-                            <a href="" class="navbar__link navbar__item--separation">Đăng nhập</a>
+                        <li style="padding-right: 0;" class="navbar__item navbar-login" id="login"
+                            onclick="loginFunc()">
+                            <span href="" class="navbar__link navbar__item--separation">Đăng nhập</span>
                         </li>
-                        <li style="padding-right: 0;" class="navbar__item navbar-user">
-                            <a href="" class="navbar__link navbar-user__link navbar__item--separation">
+                        <li style="padding-right: 0;" class="navbar__item navbar-user" id="user">
+                            <span href="" class="navbar__link navbar-user__link navbar__item--separation">
                                 <img src="./assets/img/user-avt.jpg" alt="" class="navbar-user__img">
                                 <p class="navbar-user__name">Trần Thư</p>
-    
-                            </a>
+
+                            </span>
                         </li>
                     </ul>
                 </nav>
@@ -199,20 +203,20 @@
                                 </div>
                             </div>
                         </div>
-    
+
                     </div>
                     <div class="header-filter">
                         <i class="ti-filter"></i>
                     </div>
                 </div>
-    
+
             </div>
         </header>
-    
-        <div class="home">
+
+        <div class="home main">
             <div class="section-banner-feature">
                 <div class="banner-wrapper wrapper">
-                    <div class="banner-with-slider">
+                    <div class="banner-with-slider" id="slider-top">
                         <div class="slider slider--radius">
                             <a href="" class="slider__link">
                                 <img src="./assets/img/slider-img1.jpg" alt="" class="img">
@@ -224,13 +228,13 @@
                                 <img src="./assets/img/slider-img3.jpg" alt="" class="img">
                             </a>
                             <div class="slider-list-btn">
-                                <div style="left: 0" class="slider-btn" onclick="plusDivs(-1)">&#10094;</div>
-                                <div style="right: 0;" class="slider-btn" onclick="plusDivs(1)">&#10095;</div>
-                                <span style="left: calc(50% - 20px);" class="slider-btn-index"
-                                    onclick="currentDiv(1)"></span>
-                                <span class="slider-btn-index" onclick="currentDiv(2)"></span>
+                                <div style="left: 0" class="slider-btn slider-btn--left">&#10094;</div>
+                                <div style="right: 0;" class="slider-btn slider-btn--right">&#10095;</div>
+                                <span style="left: calc(50% - 20px);" class="slider-btn-index slider-btn-index--active"
+                                    ></span>
+                                <span class="slider-btn-index" ></span>
                                 <span style="left: calc(50% + 20px);" class="slider-btn-index"
-                                    onclick="currentDiv(3)"></span>
+                                    ></span>
                             </div>
                         </div>
                         <div class="banner hide-on-mobile-tablet">
@@ -239,6 +243,7 @@
                             <img class="banner__img" src="https://laptop88.vn/media/news/1606_Bannervoucher.png" alt="">
                         </div>
                     </div>
+                    
                     <div class="feature list-hor">
                         <a href="" class="feature__item">
                             <img src="https://cf.shopee.vn/file/4e32311e7d872547962d1867d39c9027_xhdpi" alt=""
@@ -290,12 +295,11 @@
                                 class="feature__img">
                             <p class="feature__text">Shopee Premium</p>
                         </a>
-    
+
                     </div>
                 </div>
             </div>
             <div class="wrapper">
-    
                 <div class="section">
                     <div style="color: gray" class="section__heading">
                         Danh mục
@@ -403,7 +407,7 @@
                                         class="category__img">
                                     <span class="category__text">Nhà sách online</span>
                                 </a>
-    
+
                                 <a href="#" class="category__item">
                                     <img src="https://cf.shopee.vn/file/fa6ada2555e8e51f369718bbc92ccc52_tn" alt=""
                                         class="category__img">
@@ -432,13 +436,11 @@
                                 <i class="fa-solid fa-angle-left"></i>
                             </button>
                         </div>
-    
-    
+
+
                     </div>
-    
+
                 </div>
-    
-    
                 <div class="section flash-sale-section">
                     <div class="section__heading section__heading--sale">
                         <div>Flash sale</div>
@@ -451,9 +453,10 @@
                         <div class="list-wrapper">
                             <div id="list-sale-product" class="list-sale-product list-hor">
                                 <a href="" class="sale__product">
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
-    
+
                                     <div class="sale__price">
                                         <span style="font-size: 1rem; text-decoration: underline;">đ</span>
                                         <span>360.000</span>
@@ -468,9 +471,10 @@
                                     </div>
                                 </a>
                                 <a href="" class="sale__product">
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
-    
+
                                     <div class="sale__price">
                                         <span style="font-size: 1rem; text-decoration: underline;">đ</span>
                                         <span>360.000</span>
@@ -485,9 +489,10 @@
                                     </div>
                                 </a>
                                 <a href="" class="sale__product">
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
-    
+
                                     <div class="sale__price">
                                         <span style="font-size: 1rem; text-decoration: underline;">đ</span>
                                         <span>360.000</span>
@@ -502,9 +507,10 @@
                                     </div>
                                 </a>
                                 <a href="" class="sale__product">
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
-    
+
                                     <div class="sale__price">
                                         <span style="font-size: 1rem; text-decoration: underline;">đ</span>
                                         <span>360.000</span>
@@ -519,9 +525,10 @@
                                     </div>
                                 </a>
                                 <a href="" class="sale__product">
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
-    
+
                                     <div class="sale__price">
                                         <span style="font-size: 1rem; text-decoration: underline;">đ</span>
                                         <span>360.000</span>
@@ -536,9 +543,10 @@
                                     </div>
                                 </a>
                                 <a href="" class="sale__product">
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
-    
+
                                     <div class="sale__price">
                                         <span style="font-size: 1rem; text-decoration: underline;">đ</span>
                                         <span>360.000</span>
@@ -553,9 +561,10 @@
                                     </div>
                                 </a>
                                 <a href="" class="sale__product">
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
-    
+
                                     <div class="sale__price">
                                         <span style="font-size: 1rem; text-decoration: underline;">đ</span>
                                         <span>360.000</span>
@@ -569,7 +578,7 @@
                                         <p style="margin: 4px 0 0 0;">Giảm</p>
                                     </div>
                                 </a>
-    
+
                             </div>
                             <button id="next-btn" class="move-btn hide-on-mobile-tablet next-btn" onclick="plusList(1)">
                                 <i class="fa-solid fa-angle-right"></i>
@@ -578,9 +587,9 @@
                                 <i class="fa-solid fa-angle-left"></i>
                             </button>
                         </div>
-    
+
                     </div>
-    
+
                 </div>
                 <div class="section banner-section">
                     <a href="" class="banner-section__link">
@@ -624,7 +633,7 @@
                         </a>
                     </div>
                     <div class="section__content content-mall">
-                        <div class="mall__slider">
+                        <div class="mall__slider" id="mall-slider">
                             <div href="" class="slider">
                                 <a href="" class="slider__link">
                                     <img src="./assets/img/mall-slide.png" alt="" class="img">
@@ -635,15 +644,17 @@
                                 <a href="" class="slider__link">
                                     <img src="./assets/img/mall-slide3.png" alt="" class="img">
                                 </a>
-    
+                                
+
                                 <div class="slider-list-btn">
-                                    <div style="left: 0" class="slider-btn" onclick="plusDivs(-1)">&#10094;</div>
-                                    <div style="right: 0;" class="slider-btn" onclick="plusDivs(1)">&#10095;</div>
+                                    <div style="left: 0" class="slider-btn slider-btn--left">&#10094;</div>
+                                    <div style="right: 0;" class="slider-btn slider-btn--right">&#10095;</div>
                                     <span style="left: calc(50% - 20px);" class="slider-btn-index"
-                                        onclick="currentDiv(1)"></span>
-                                    <span class="slider-btn-index" onclick="currentDiv(2)"></span>
+                                       ></span>
+                                    <span class="slider-btn-index"></span>
+                                    
                                     <span style="left: calc(50% + 20px);" class="slider-btn-index"
-                                        onclick="currentDiv(3)"></span>
+                                        ></span>
                                 </div>
                             </div>
                         </div>
@@ -697,11 +708,11 @@
                                 <i class="fa-solid fa-angle-left"></i>
                             </button>
                         </div>
-    
-    
+
+
                     </div>
-    
-    
+
+
                 </div>
                 <div class="section trend-search">
                     <div style="color: var(--red-color);" class="section__heading">
@@ -719,7 +730,7 @@
                                     <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản
                                         phẩm</span>
                                 </div>
-    
+
                                 <img src="https://cf.shopee.vn/file/e83f0feac386990ef8041e224eecda7f" alt=""
                                     class="trend-search__img">
                             </a>
@@ -729,9 +740,8 @@
                                     <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản
                                         phẩm</span>
                                 </div>
-    
-                                <img src="./assets/img/product-img2.jpg" alt=""
-                                    class="trend-search__img">
+
+                                <img src="./assets/img/product-img2.jpg" alt="" class="trend-search__img">
                             </a>
                             <a href="./search.html" class="trend-search__link">
                                 <div class="trend-search__desc">
@@ -739,7 +749,7 @@
                                     <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản
                                         phẩm</span>
                                 </div>
-    
+
                                 <img src="https://cf.shopee.vn/file/e83f0feac386990ef8041e224eecda7f" alt=""
                                     class="trend-search__img">
                             </a>
@@ -749,7 +759,7 @@
                                     <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản
                                         phẩm</span>
                                 </div>
-    
+
                                 <img src="https://cf.shopee.vn/file/e83f0feac386990ef8041e224eecda7f" alt=""
                                     class="trend-search__img">
                             </a>
@@ -759,11 +769,11 @@
                                     <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">2K + sản
                                         phẩm</span>
                                 </div>
-    
+
                                 <img src="https://cf.shopee.vn/file/e83f0feac386990ef8041e224eecda7f" alt=""
                                     class="trend-search__img">
                             </a>
-                           
+
                         </div>
                     </div>
                 </div>
@@ -778,10 +788,11 @@
                     <div class="section__content">
                         <div class="list-wrapper">
                             <div class="top-search__list list-hor">
-    
+
                                 <a href="" class="top-search__link">
-                                    <div class="top-search__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
-                                        
+                                    <div class="top-search__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
                                         <div class="top-tag">
                                         </div>
                                         <div class="bot-tag">
@@ -793,8 +804,9 @@
                                     </div>
                                 </a>
                                 <a href="" class="top-search__link">
-                                    <div class="top-search__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
-                                        
+                                    <div class="top-search__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
                                         <div class="top-tag">
                                         </div>
                                         <div class="bot-tag">
@@ -806,8 +818,9 @@
                                     </div>
                                 </a>
                                 <a href="" class="top-search__link">
-                                    <div class="top-search__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
-                                        
+                                    <div class="top-search__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
                                         <div class="top-tag">
                                         </div>
                                         <div class="bot-tag">
@@ -819,8 +832,9 @@
                                     </div>
                                 </a>
                                 <a href="" class="top-search__link">
-                                    <div class="top-search__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
-                                        
+                                    <div class="top-search__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
                                         <div class="top-tag">
                                         </div>
                                         <div class="bot-tag">
@@ -832,8 +846,9 @@
                                     </div>
                                 </a>
                                 <a href="" class="top-search__link">
-                                    <div class="top-search__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
-                                        
+                                    <div class="top-search__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
                                         <div class="top-tag">
                                         </div>
                                         <div class="bot-tag">
@@ -845,8 +860,9 @@
                                     </div>
                                 </a>
                                 <a href="" class="top-search__link">
-                                    <div class="top-search__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
-                                        
+                                    <div class="top-search__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
                                         <div class="top-tag">
                                         </div>
                                         <div class="bot-tag">
@@ -858,8 +874,9 @@
                                     </div>
                                 </a>
                                 <a href="" class="top-search__link">
-                                    <div class="top-search__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
-                                        
+                                    <div class="top-search__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
                                         <div class="top-tag">
                                         </div>
                                         <div class="bot-tag">
@@ -870,9 +887,9 @@
                                         Quần short nữ ống rộng
                                     </div>
                                 </a>
-                                
-    
-    
+
+
+
                             </div>
                             <button id="next-btn" class="move-btn hide-on-mobile-tablet next-btn" onclick="plusList(1)">
                                 <i class="fa-solid fa-angle-right"></i>
@@ -881,9 +898,9 @@
                                 <i class="fa-solid fa-angle-left"></i>
                             </button>
                         </div>
-    
-    
-    
+
+
+
                     </div>
                 </div>
                 <div class="section section-recommend">
@@ -897,7 +914,7 @@
                     <div class="section__content ">
                         <div class="list-product">
                             <div class="product product-recommend">
-                                <a href="" class="product__link">
+                                <a href="" class="product__link product__link--hover">
                                     <div class="discount-tag discount-tag--small">
                                         <p style="color: red; margin: 0;">30%</p>
                                         <p style="margin: 0;">Giảm</p>
@@ -905,8 +922,9 @@
                                     <div class="fav-tag">
                                         Yêu thích
                                     </div>
-    
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
                                     <div class="product__inf">
                                         <div class="product__name">
@@ -921,18 +939,18 @@
                                             <div class="product__quality-sold">
                                                 <span>Đã bán</span>
                                                 <span>2k</span>
-    
+
                                             </div>
                                         </div>
                                         <div class="tag-hover">
                                             Tìm sản phẩm tương tự
                                         </div>
                                     </div>
-    
+
                                 </a>
                             </div>
                             <div class="product product-recommend">
-                                <a href="" class="product__link">
+                                <a href="" class="product__link product__link--hover">
                                     <div class="discount-tag discount-tag--small">
                                         <p style="color: red; margin: 0;">30%</p>
                                         <p style="margin: 0;">Giảm</p>
@@ -940,8 +958,9 @@
                                     <div class="fav-tag">
                                         Yêu thích
                                     </div>
-    
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
                                     <div class="product__inf">
                                         <div class="product__name">
@@ -956,18 +975,18 @@
                                             <div class="product__quality-sold">
                                                 <span>Đã bán</span>
                                                 <span>2k</span>
-    
+
                                             </div>
                                         </div>
                                         <div class="tag-hover">
                                             Tìm sản phẩm tương tự
                                         </div>
                                     </div>
-    
+
                                 </a>
                             </div>
                             <div class="product product-recommend">
-                                <a href="" class="product__link">
+                                <a href="" class="product__link product__link--hover">
                                     <div class="discount-tag discount-tag--small">
                                         <p style="color: red; margin: 0;">30%</p>
                                         <p style="margin: 0;">Giảm</p>
@@ -975,8 +994,9 @@
                                     <div class="fav-tag">
                                         Yêu thích
                                     </div>
-    
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
                                     <div class="product__inf">
                                         <div class="product__name">
@@ -991,18 +1011,18 @@
                                             <div class="product__quality-sold">
                                                 <span>Đã bán</span>
                                                 <span>2k</span>
-    
+
                                             </div>
                                         </div>
                                         <div class="tag-hover">
                                             Tìm sản phẩm tương tự
                                         </div>
                                     </div>
-    
+
                                 </a>
                             </div>
                             <div class="product product-recommend">
-                                <a href="" class="product__link">
+                                <a href="" class="product__link product__link--hover">
                                     <div class="discount-tag discount-tag--small">
                                         <p style="color: red; margin: 0;">30%</p>
                                         <p style="margin: 0;">Giảm</p>
@@ -1010,8 +1030,9 @@
                                     <div class="fav-tag">
                                         Yêu thích
                                     </div>
-    
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
                                     <div class="product__inf">
                                         <div class="product__name">
@@ -1026,18 +1047,18 @@
                                             <div class="product__quality-sold">
                                                 <span>Đã bán</span>
                                                 <span>2k</span>
-    
+
                                             </div>
                                         </div>
                                         <div class="tag-hover">
                                             Tìm sản phẩm tương tự
                                         </div>
                                     </div>
-    
+
                                 </a>
                             </div>
                             <div class="product product-recommend">
-                                <a href="" class="product__link">
+                                <a href="" class="product__link product__link--hover">
                                     <div class="discount-tag discount-tag--small">
                                         <p style="color: red; margin: 0;">30%</p>
                                         <p style="margin: 0;">Giảm</p>
@@ -1045,8 +1066,9 @@
                                     <div class="fav-tag">
                                         Yêu thích
                                     </div>
-    
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
                                     <div class="product__inf">
                                         <div class="product__name">
@@ -1061,18 +1083,18 @@
                                             <div class="product__quality-sold">
                                                 <span>Đã bán</span>
                                                 <span>2k</span>
-    
+
                                             </div>
                                         </div>
                                         <div class="tag-hover">
                                             Tìm sản phẩm tương tự
                                         </div>
                                     </div>
-    
+
                                 </a>
                             </div>
                             <div class="product product-recommend">
-                                <a href="" class="product__link">
+                                <a href="" class="product__link product__link--hover">
                                     <div class="discount-tag discount-tag--small">
                                         <p style="color: red; margin: 0;">30%</p>
                                         <p style="margin: 0;">Giảm</p>
@@ -1080,8 +1102,9 @@
                                     <div class="fav-tag">
                                         Yêu thích
                                     </div>
-    
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
                                     <div class="product__inf">
                                         <div class="product__name">
@@ -1096,18 +1119,18 @@
                                             <div class="product__quality-sold">
                                                 <span>Đã bán</span>
                                                 <span>2k</span>
-    
+
                                             </div>
                                         </div>
                                         <div class="tag-hover">
                                             Tìm sản phẩm tương tự
                                         </div>
                                     </div>
-    
+
                                 </a>
                             </div>
                             <div class="product product-recommend">
-                                <a href="" class="product__link">
+                                <a href="" class="product__link product__link--hover">
                                     <div class="discount-tag discount-tag--small">
                                         <p style="color: red; margin: 0;">30%</p>
                                         <p style="margin: 0;">Giảm</p>
@@ -1115,8 +1138,9 @@
                                     <div class="fav-tag">
                                         Yêu thích
                                     </div>
-    
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
                                     <div class="product__inf">
                                         <div class="product__name">
@@ -1131,18 +1155,18 @@
                                             <div class="product__quality-sold">
                                                 <span>Đã bán</span>
                                                 <span>2k</span>
-    
+
                                             </div>
                                         </div>
                                         <div class="tag-hover">
                                             Tìm sản phẩm tương tự
                                         </div>
                                     </div>
-    
+
                                 </a>
                             </div>
                             <div class="product product-recommend">
-                                <a href="" class="product__link">
+                                <a href="" class="product__link product__link--hover">
                                     <div class="discount-tag discount-tag--small">
                                         <p style="color: red; margin: 0;">30%</p>
                                         <p style="margin: 0;">Giảm</p>
@@ -1150,8 +1174,9 @@
                                     <div class="fav-tag">
                                         Yêu thích
                                     </div>
-    
-                                    <div class="product__img" style="background-image: url(./assets/img/flash-sale-1.jpg);">
+
+                                    <div class="product__img"
+                                        style="background-image: url(./assets/img/flash-sale-1.jpg);">
                                     </div>
                                     <div class="product__inf">
                                         <div class="product__name">
@@ -1166,28 +1191,26 @@
                                             <div class="product__quality-sold">
                                                 <span>Đã bán</span>
                                                 <span>2k</span>
-    
+
                                             </div>
                                         </div>
                                         <div class="tag-hover">
                                             Tìm sản phẩm tương tự
                                         </div>
                                     </div>
-    
+
                                 </a>
                             </div>
-    
+
                         </div>
                         <div class="load-more">
                             <button onclick="moveRight()" class="btn load-more-btn">Xem thêm</button>
                         </div>
                     </div>
-    
-    
+
+
                 </div>
             </div>
-    
-    
         </div>
         <footer class="footer hide-on-mobile">
             <div class="footer__gap"></div>
@@ -1257,8 +1280,8 @@
                                         <img class="footer__img" src="./assets/img/shopee-pay.png" alt="">
                                     </a>
                                 </li>
-    
-    
+
+
                             </ul>
                         </div>
                         <div class="footer__item">
@@ -1281,7 +1304,7 @@
                                 </li>
                             </ul>
                         </div>
-    
+
                     </div>
                     <div class="footer__item">
                         <div class="footer__heading">Theo dõi chúng tôi trên</div>
@@ -1303,54 +1326,76 @@
                     <div class="footer__item">
                         <div class="footer__heading">Tải ứng dụng trên shopee ngay thôi</div>
                         <div class="footer__download">
-                            <a href=""><img style="width: 86px; margin-right: 15px;" src="./assets/img/qr.png" alt=""></a>
+                            <a href=""><img style="width: 86px; margin-right: 15px;" src="./assets/img/qr.png"
+                                    alt=""></a>
                             <div class="footer__download-app">
                                 <a href=""><img style="width: 86px; height: auto;" src="./assets/img/app-store.png"
                                         alt=""></a>
-                                <a href=""><img style="width: 86px; height: auto;" src="./assets/img/chplay.png" alt=""></a>
+                                <a href=""><img style="width: 86px; height: auto;" src="./assets/img/chplay.png"
+                                        alt=""></a>
                                 <a href=""><img style="width: 86px; height: auto;" src="./assets/img/app-gallery.png"
                                         alt=""></a>
-    
+
                             </div>
-    
+
                         </div>
                     </div>
                 </div>
             </div>
-    
-    
+
+
         </footer>
-        <div class="modal">
+        <div class="modal" id="modal">
             <div class="modal__overlay"></div>
             <div class="modal__body">
                 <!-- Register form -->
-                <div class="auth-form">
+                <form class="auth-form" id="register-form" onsubmit="submitFunc()">
                     <div class="auth-form__container">
                         <div class="auth-form__header">
                             <h3 class="auth-form__heading">Đăng ký</h3>
-                            <button class="auth-form__switch">Đăng nhập</button>
+                            <button class="auth-form__switch" onclick="loginFunc()">Đăng nhập</button>
                         </div>
                         <div class="auth-form__form">
                             <div class="auth-form__group">
-                                <input type="text" class="auth-form__input" placeholder="Nhập số điện thoại">
+                                <input type="text" id="email" name="email" value="" class="auth-form__input"
+                                    placeholder="Nhập email">
+                                <span class="auth-form__message"></span>
                             </div>
                             <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                                <input type="password" id="password" name="password" value="" class="auth-form__input"
+                                    placeholder="Nhập mật khẩu">
+                                <span class="auth-form__message"></span>
                             </div>
                             <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="Nhập lại mật khẩu">
+                                <input type="password" id="password-confirmation" name="password-confirmation" class="auth-form__input"
+                                    placeholder="Nhập lại mật khẩu">
+                                <span class="auth-form__message"></span>
                             </div>
-    
+                            <div class="auth-form__group">
+                                <div class="flex-r">
+                                    <label for="male">
+                                        <input type="radio" id="male" name="gender" class="auth-form__input" value="male">
+                                        Nam
+                                    </label>
+                                    <label for="female">
+                                        <input type="radio" id="female" name="gender" class="auth-form__input" value="female">
+                                        Nữ
+                                    </label>
+                                </div>
+                                <span class="auth-form__message"></span>
+                            </div>
+
+
                         </div>
                         <div class="auth-form__police">
                             Bằng việc đăng ký bạn đã đồng ý với Shopee về
                             <a href="" class="auth-form__police-link">Điều khoản</a> &
                             <a href="" class="auth-form__police-link">Chính sách bảo mật</a>
-    
+
                         </div>
                         <div class="auth-form__control">
-                            <button class="btn auth-form__control-back">TRỞ LẠI</button>
-                            <button class="btn btn--primary">ĐĂNG KÝ</button>
+                            <button class="btn auth-form__control-back" onclick="backFunc()">TRỞ LẠI</button>
+                            <button class="btn btn--primary button" id="logon" type="submit">ĐĂNG KÝ</button>
                         </div>
                     </div>
                     <div class="auth-form__socials">
@@ -1364,20 +1409,22 @@
                         </a>
                     </div>
                 </div>
-    
+
                 <!-- Login form -->
-                <div class="auth-form">
+                <div class="auth-form" id="login-form">
                     <div class="auth-form__container">
                         <div class="auth-form__header">
                             <h3 class="auth-form__heading">Đăng nhập</h3>
-                            <button class="auth-form__switch">Đăng ký</button>
+                            <button class="auth-form__switch" onclick="registerFunc()">Đăng ký</button>
                         </div>
                         <div class="auth-form__form">
                             <div class="auth-form__group">
-                                <input type="text" class="auth-form__input" placeholder="Nhập số điện thoại">
+                                <input type="text" class="auth-form__input input" placeholder="Nhập số điện thoại">
+                                <span class="auth-form__message"></span>
                             </div>
                             <div class="auth-form__group">
-                                <input type="password" class="auth-form__input" placeholder="Nhập mật khẩu">
+                                <input type="password" class="auth-form__input input" placeholder="Nhập mật khẩu">
+                                <span class="auth-form__message"></span>
                             </div>
                         </div>
                         <div class="auth-form__help">
@@ -1386,8 +1433,8 @@
                             <a href="" class="auth-form__help-link">Cần trợ giúp?</a>
                         </div>
                         <div class="auth-form__control">
-                            <button class="btn auth-form__control-back">TRỞ LẠI</button>
-                            <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                            <button class="btn auth-form__control-back" onclick="backFunc()">TRỞ LẠI</button>
+                            <button class="btn btn--primary button" onclick="checkLogon()">ĐĂNG NHẬP</button>
                         </div>
                     </div>
                     <div class="auth-form__socials">
@@ -1404,8 +1451,36 @@
             </div>
         </div>
         <script src="./assets/js/home.js"></script>
+        <script src="./assets/js/validator.js"></script>
+        <script src="./assets/js/slider.js"></script>
+        <script>
+            Validator({
+                form: "#register-form",
+                errorSelector: ".auth-form__message",
+                formGroupSelector: ".auth-form__group",
+                rules: [
+                    Validator.isRequired("#email"),
+                    Validator.isEmail('#email'), 
+                    Validator.isRequired('#password'),
+                    Validator.isRequired('#password-confirmation'),
+                    Validator.isConfirmed('#password-confirmation', function(){
+                        return document.querySelector('#register-form #password').value;
+                    }, 'Mật khẩu nhập vào không chính xác'),
+                    Validator.isRequired('input[name="gender"]'),
+                ],
+                onSubmit: function(data){
+                    // Call API
+                    console.log(data);
+                }
+            });
+            showSlide({
+                slider: "#top-slider",
+                
+            })
+        </script>
+        
     </div>
-   
+
 </body>
 
 </html>
