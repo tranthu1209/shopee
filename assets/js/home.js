@@ -23,7 +23,6 @@ function loginFunc() {
     document.getElementById("register-form").style.display = "none";
 }
 function registerFunc() {
-
     document.getElementById("modal").style.display = "flex";
     document.getElementById("login-form").style.display = "none";
     document.getElementById("register-form").style.display = "block";

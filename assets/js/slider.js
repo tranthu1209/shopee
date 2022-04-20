@@ -1,51 +1,112 @@
 function showSlide() {
     var sliderElements = document.querySelectorAll(".slider");
     Array.from(sliderElements).forEach(function (sliderElement) {
-        let slideIndex = 0;
-        
-        var x = sliderElement.getElementsByClassName("slider__link");
+        let slideIndex = -1;
+        var slideElements = sliderElement.getElementsByClassName("slider__link");
         var dots = sliderElement.getElementsByClassName("slider-btn-index");
-
-        // Click move btn
         let left = sliderElement.querySelector(".slider-btn--left");
         let right = sliderElement.querySelector(".slider-btn--right");
-        left.addEventListener("click", function(){
+        left.addEventListener("click", function () {
             slideIndex--;
             showDivs(slideIndex);
         });
-        right.addEventListener("click", function(){
+        right.addEventListener("click", function () {
             slideIndex++;
             showDivs(slideIndex);
         })
-        // Click dot
-        Array.from(dots).forEach(function(dot, index){
-            dot.addEventListener("click", function(){
+        Array.from(dots).forEach(function (dot, index) {
+            dot.addEventListener("click", function () {
                 slideIndex = index;
                 showDivs(slideIndex);
             })
         })
-        function showDivs(k){
-            if (k >= x.length) {
+        function showDivs(k) {
+            if (k >= slideElements.length) {
                 slideIndex = 0;
-                k = slideIndex;
             }
             if (k < 0) {
-                slideIndex = x.length - 1;
-                k = slideIndex
+                slideIndex = slideElements.length - 1;
             }
-            var i;
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-                dots[i].className = dots[i].className.replace(" slider-btn-index-active", "")
+
+            for (var i = 0; i < slideElements.length; i++) {
+               
+                slideElements[i].className = slideElements[i].className.replace(" active", "");
+                
+                dots[i].className = dots[i].className.replace(" active", "");
+               
+                if(i == slideIndex){
+                    slideElements[i].className = slideElements[i].className.replace("slider__link", "slider__link active");
+                    
+                    dots[i].className = dots[i].className.replace("slider-btn-index", "slider-btn-index active");
+                }
             }
-            x[k].style.display = "block";
-            dots[k].className += " slider-btn-index-active";
         }
-        setInterval(() => {
-            showDivs(slideIndex);
+        function autoShow() {
             slideIndex++;
-        }, 2000); // Change image every 2 seconds
+            showDivs(slideIndex);
+            setTimeout(autoShow, 3000);
+        }
+        autoShow();
     })
 
 }
+
+// function responsiveSlider() {
+
+//     var sliders = document.querySelectorAll(".slider");
+//     Array.from(sliders).forEach(function (slider) {
+//         var sliderWidth = slider.offsetWidth;
+//         var slideList = slider.querySelector(".slider-wrapper");
+//         var count = 1;
+//         var items = slideList.querySelectorAll(".slider__link").length;
+//         var prev = slider.querySelector(".slider-btn--left");
+//         var next = slider.querySelector(".slider-btn--right");
+//         console.log(next)
+//         window.addEventListener('resize', function () {
+//             sliderWidth = slider.offsetWidth;
+//         });
+
+//         var prevSlide = function () {
+//             if (count > 1) {
+//                 count = count - 2;
+//                 slideList.style.left = "-" + count * sliderWidth + "px";
+//                 count++;
+//             }
+//             else if (count = 1) {
+//                 count = items - 1;
+//                 slideList.style.left = "-" + count * sliderWidth + "px";
+//                 count++;
+//             }
+//         };
+
+//         var nextSlide = function () {
+//             if (count < items) {
+//                 slideList.style.left = "-" + count * sliderWidth + "px";
+//                 count++;
+//             }
+//             else if (count = items) {
+//                 slideList.style.left = "0px";
+//                 count = 1;
+//             }
+//         };
+
+//         next.addEventListener("click", function () {
+//             nextSlide();
+//         });
+
+//         prev.addEventListener("click", function () {
+//             prevSlide();
+//         });
+
+//         setInterval(function () {
+//             nextSlide()
+//         }, 5000);
+//     })
+
+
+// };
+// responsiveSlider();
+// // window.onload = function () {
+// //     responsiveSlider();
+// // }
 

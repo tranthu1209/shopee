@@ -1,0 +1,16 @@
+{
+  "product": [
+    {
+      "id": 0,
+      "title": "Áo khoác nữ thời trang",
+      "imgage": "../assets/img/product-img1.jpg",
+      "price": 200000
+    },
+    {
+      "title": "Quần jeans ống đứng phong cách Hàn Quốc",
+      "price": "350000",
+      "image": "../assets/img/product-img1.jpg",
+      "id": 1
+    }
+  ]
+}
