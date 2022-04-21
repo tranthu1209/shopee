@@ -133,17 +133,19 @@
     border-bottom: 1px solid rgba(0,0,0,.05);
     box-sizing:border-box;
     text-align: center;
+    padding: 5px;
 }
 .category__item:hover{
     box-shadow: 0 0px 8px 1px rgba(0, 0, 0, 0.137);
 }
 .category__img{
-    height: 80px;
     margin-top: 10px;
+    height: 80px;
     object-fit: contain;
 }
 .category__text{
     font-size: 1.4rem;
+    line-height: 2rem;
     color: black;
     text-align: center;
     box-sizing: border-box;
@@ -325,7 +327,7 @@
     justify-content: center;
     padding-bottom: 20px;
     font-size: 2rem;
-    
+    text-align: center;
     
 }
 
@@ -378,6 +380,7 @@
 .top-search__img{
     height: 180px;
     position: relative;
+    background-size: cover;
 }
 
 .top-tag{

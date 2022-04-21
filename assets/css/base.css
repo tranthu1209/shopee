@@ -101,7 +101,7 @@ img{
     /* overflow: hidden; */
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;
-    justify-content: space-between;
+    justify-content: flex-start;
     transition: ease 1s;
 }
 

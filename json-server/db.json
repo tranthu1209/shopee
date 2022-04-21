@@ -3,14 +3,447 @@
     {
       "id": 0,
       "title": "Áo khoác nữ thời trang",
-      "imgage": "../assets/img/product-img1.jpg",
-      "price": 200000
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 20,
+      "stock": 103,
+      "isSale": true,
+      "sold": 12
     },
     {
-      "title": "Quần jeans ống đứng phong cách Hàn Quốc",
-      "price": "350000",
+      "id": 1,
+      "title": "Quần jeans nữ thời trang",
+      "image": "../assets/img/product-img2.jpg",
+      "price": 250000,
+      "discount": 13,
+      "des": "",
+      "sold": 30,
+      "stock": 93,
+      "isSale": false,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
       "image": "../assets/img/product-img1.jpg",
-      "id": 1
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Áo khoác nữ thời trang",
+      "image": "../assets/img/product-img1.jpg",
+      "price": 200000,
+      "discount": 15,
+      "des": "",
+      "sold": 10,
+      "stock": 23,
+      "isSale": true,
+      "sold": 12
+    }
+
+    
+  ],
+  "category": [
+    {
+      "id": 0,
+      "title": "Thời trang nam",
+      "image": "../assets/img/category/thoi-trang-nam.png",
+      "sold": 12
+    },
+    {
+      "id": 1,
+      "title": "Thời trang nữ",
+      "image": "../assets/img/category/thoi-trang-nu.png",
+      "sold": 12
+    },
+    {
+      "id": 2,
+      "title": "Điện thoại & Phụ kiện",
+      "image": "../assets/img/category/dien-thoai.png",
+      "sold": 12
+    },
+    {
+      "id": 3,
+      "title": "Mẹ & Bé",
+      "image": "../assets/img/category/me-be.png",
+      "sold": 12
+    },
+    {
+      "id": 4,
+      "title": "Thiết bị điện tử",
+      "image": "../assets/img/category/thiet-bi-dien-tu.png",
+      "sold": 12
+    },
+    {
+      "id": 5,
+      "title": "Nhà cửa & Đời sống",
+      "image": "../assets/img/category/nha-cua-doi-song.png",
+      "sold": 12
+    },
+    {
+      "id": 6,
+      "title": "Máy tính & Laptop",
+      "image": "../assets/img/category/may-tinh.png",
+      "sold": 12
+    },
+    {
+      "id": 7,
+      "title": "Sắc đẹp",
+      "image": "../assets/img/category/my-pham.png",
+      "sold": 12
+    },
+    {
+      "id": 8,
+      "title": "Máy ảnh & Máy quay phim",
+      "image": "../assets/img/category/may-anh.png",
+      "sold": 12
+    },
+    {
+      "id": 9,
+      "title": "Sức khỏe",
+      "image": "../assets/img/category/suc-khoe.png",
+      "sold": 12
+    },
+    {
+      "id": 10,
+      "title": "Đồng hồ",
+      "image": "../assets/img/category/dong-ho.png",
+      "sold": 12
+    },
+    {
+      "id": 11,
+      "title": "Giày dép nữ",
+      "image": "../assets/img/category/giay-nu.png",
+      "sold": 12
+    },
+    {
+      "id": 12,
+      "title": "Giày dép nam",
+      "image": "../assets/img/category/giay-nam.png",
+      "sold": 12
+    },
+    {
+      "id": 13,
+      "title": "Túi ví nữ",
+      "image": "../assets/img/category/tui-xach-nu.png",
+      "sold": 12
+    },
+    {
+      "id": 14,
+      "title": "Thiết bị điện gia dụng",
+      "image": "../assets/img/category/thiet-bi-da-dung.png",
+      "sold": 12
+    },
+    {
+      "id": 15,
+      "title": "Phụ kiện & Trang sức nữ",
+      "image": "../assets/img/category/phu-kien-nu.png",
+      "sold": 12
+    },
+    {
+      "id": 16,
+      "title": "Thê thao & Du lịch",
+      "image": "../assets/img/category/the-thao.png",
+      "sold": 12
+    },
+    {
+      "id": 17,
+      "title": "Bách hóa online",
+      "image": "../assets/img/category/bach-hoa-online.png",
+      "sold": 12
+    },
+    {
+      "id": 18,
+      "title": "Ô to & Xe máy & Xe đạp",
+      "image": "../assets/img/category/xe-may.png",
+      "sold": 12
+    },
+    {
+      "id": 19,
+      "title": "Nhà sách online",
+      "image": "../assets/img/category/sach.png",
+      "sold": 12
+    },
+    {
+      "id": 20,
+      "title": "Balo & Túi ví nam",
+      "image": "../assets/img/category/tui-xach-nam.png",
+      "sold": 12
+    },
+    {
+      "id": 21,
+      "title": "Thơi trang trẻ em",
+      "image": "../assets/img/category/thoi-trang-tre-em.png",
+      "sold": 12
+    },
+    {
+      "id": 22,
+      "title": "Đồ chơi",
+      "image": "../assets/img/category/do-choi.png",
+      "sold": 12
+    },
+    {
+      "id": 23,
+      "title": "Giat giu & Cham soc nha cua",
+      "image": "../assets/img/category/giat-giu.png",
+      "sold": 12
+    },
+    {
+      "id": 24,
+      "title": "Chăm sóc thu cung",
+      "image": "../assets/img/category/cham-soc-thu-cung.png",
+      "sold": 12
+    },
+    {
+      "id": 24,
+      "title": "Voucher & Dich Vụ",
+      "image": "../assets/img/category/voucher.png",
+      "sold": 12
+    }
+
+  ],
+  "search": [
+    {
+      "key": "Dép quai ngang cao su",
+      "result": 13000,
+      "image": "../assets/img/product/1.jpg",
+      "sold": 12
+    },
+    {
+      "key": "Áo khoác lông cừu",
+      "result": 12000,
+      "image": "../assets/img/product/2.jpg",
+      "sold": 12
+    },
+    {
+      "key": "Áo khoác lông cừu",
+      "result": 12000,
+      "image": "../assets/img/product/2.jpg",
+      "sold": 12
+    },
+    {
+      "key": "Dép",
+      "result": 13000,
+      "image": "../assets/img/product/1.jpg",
+      "sold": 12
+    },
+    {
+      "key": "Dép",
+      "result": 13000,
+      "image": "../assets/img/product/1.jpg",
+      "sold": 12
+    },
+    {
+      "key": "Dép",
+      "result": 13000,
+      "image": "../assets/img/product/1.jpg",
+      "sold": 12
+    },
+    {
+      "key": "Áo khoác lông cừu",
+      "result": 12000,
+      "image": "../assets/img/product/2.jpg",
+      "sold": 12
+    },
+    {
+      "key": "Áo khoác lông cừu",
+      "result": 12000,
+      "image": "../assets/img/product/2.jpg",
+      "sold": 12
+    },
+    {
+      "key": "Dép",
+      "result": 13000,
+      "image": "../assets/img/product/1.jpg",
+      "sold": 12
+    },
+    {
+      "key": "Dép",
+      "result": 13000,
+      "image": "../assets/img/product/1.jpg",
+      "sold": 12
+    },
+    {
+      "key": "Dép",
+      "result": 13000,
+      "image": "../assets/img/product/1.jpg",
+      "sold": 12
     }
   ]
 }

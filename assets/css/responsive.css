@@ -2,7 +2,7 @@
 /* Mobile & tablet */
 @media (max-width: 1023px) {
     .hide-on-mobile-tablet{
-        display: none;
+        display: none !important;
     }
     
     .wrapper{
@@ -37,8 +37,10 @@
     .mall__slider{
         margin: 0;
         min-width: 100%;
+        height: 300px;
     }
     .mall__list{
+        flex-direction: row;
         flex-wrap: nowrap;
         justify-content: flex-start;
         padding: 12px 0;
@@ -50,14 +52,11 @@
         margin: 0 6px;
         box-sizing: border-box;
         height: 100%;
+        min-width: 180px;
     }
     .content-mall{
         height: auto;
     }
-    .mall__slider{
-        height: 180px;
-    }
-   
     .mall__list{
         height: 180px;
     }
@@ -222,12 +221,10 @@
         margin-top: 0;
     }
     .feature{
-        flex-direction: column;
-        flex-wrap: wrap;
-        height: 200px;
+        justify-content: flex-start;
     }
     .feature__item{
-        height: 50%;
+        min-width: 90px;
     }
     .banner{
         display: none;
