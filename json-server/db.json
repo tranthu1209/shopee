@@ -1,223 +1,173 @@
 {
-  "product": [
+  "user": [
+    {
+      "email": "user1@gmail.com",
+      "password": "123",
+      "password-confirmation": "123",
+      "gender": "female",
+      "id": 1,
+      "cart": [
+        {
+          "id": 1,
+          "quantity": "1"
+        },
+        {
+          "id": 2,
+          "quantity": "1"
+        },
+        {
+          "id": 2,
+          "quantity": "1"
+        },
+        {
+          "id": 1,
+          "quantity": "1"
+        },
+        {
+          "id": 2,
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "email": "user2@gmail.com",
+      "password": "123",
+      "password-confirmation": "123",
+      "gender": "female",
+      "id": 2,
+      "cart": [
+        {
+          "id": 2,
+          "quantity": "1"
+        },
+        {
+          "id": 1,
+          "quantity": "1"
+        }
+      ]
+    },
+    {
+      "email": "user3@gmail.com",
+      "password": "12345",
+      "password-confirmation": "12345",
+      "gender": "female",
+      "id": 3
+    },
+    
+    {
+      "email": "user4@gmail.com",
+      "password": "1",
+      "password-confirmation": "1",
+      "gender": "female",
+      "id": 12
+    }
+    
+  ],
+  "shop": [
     {
       "id": 0,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 20,
-      "stock": 103,
-      "isSale": true,
-      "sold": 12
+      "name": "Tefal",
+      "img": "../assets/img/shop/tefal.png",
+      "highlight": "Vua bếp Tefal",
+      "isMall": true
     },
     {
       "id": 1,
-      "title": "Quần jeans nữ thời trang",
-      "image": "../assets/img/product-img2.jpg",
+      "name": "LOREAL",
+      "img": "../assets/img/shop/loreal.png",
+      "highlight": "Mua là có quà",
+      "isMall": true
+    },
+    {
+      "id": 2,
+      "name": "Innisfree",
+      "img": "../assets/img/shop/innisfree.png",
+      "highlight": "Ưa đãi đến 40%",
+      "isMall": true
+    },
+    {
+      "id": 3,
+      "name": "Laneige",
+      "img": "../assets/img/shop/laneige.png",
+      "highlight": "Giảm đến 50%",
+      "isMall": true
+    },
+    {
+      "id": 4,
+      "name": "Maybelline",
+      "img": "../assets/img/shop/maybelline.png",
+      "highlight": "Ưa đãi đến 40%",
+      "isMall": true
+    },
+    {
+      "id": 5,
+      "name": "Perfect Diary",
+      "img": "../assets/img/shop/perfect-diary.png",
+      "highlight": "Mua 1 tặng 1",
+      "isMall": true
+    },
+    {
+      "id": 6,
+      "name": "BbiA",
+      "img": "../assets/img/shop/BbiA.png",
+      "highlight": "Ưu đãi đến 50%++",
+      "isMall": true
+    },
+    {
+      "id": 7,
+      "name": "ANESSA",
+      "img": "../assets/img/shop/anessa.png",
+      "highlight": "Mua là có quà",
+      "isMall": true
+    },
+    {
+      "id": 8,
+      "name": "ViViCo",
+      "img": "../assets/img/shop/anessa.png",
+      "highlight": "Mua là có quà",
+      "isMall": false
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "title": "Áo khoác nỉ mềm mịn thời trang Hàn Quốc",
+      "image": [
+        "../assets/img/product-img1.jpg",
+        "../assets/img/product/2.jpg"
+      ],
       "price": 250000,
       "discount": 13,
-      "des": "",
-      "sold": 30,
+      "tags": [
+        "áo khoác",
+        "thời trang nữ",
+        "áo",
+        "áo khoác nỉ"
+      ],
+      "desc": "💥 Túi đeo chéo mini da trơn siêu HOT 💥\n🚚 FREESHIP ĐƠN 50K\n  MÔ TẢ SẢN PHẨM:\n✪ Style cực yêu luôn nhé, chiếc túi đựng vừa số tiền bạn có đang được các chị em săn lùng\n✪ Kích thước: bề ngang 15cm, rộng 8cm, chiều cao cả quai túi là 18cm\n✪ Màu sắc: ĐEN, CÀ PHÊ, TRẮNG, NÂU\n✪ Chất liệu: Da Pu",
+      "stock": 232,
+      "isSale": true,
+      "sold": 120
+    },
+    {
+      "id": 2,
+      "title": "Túi đeo",
+      "image": [
+        "../assets/img/product-img1.jpg",
+        "../assets/img/product/2.jpg"
+      ],
+      "price": 50000,
+      "discount": 13,
+      "tags": [
+        "thời trang nam",
+        "túi",
+        "túi xách"
+      ],
+      "desc": "💥 Túi đeo chéo mini da trơn siêu HOT 💥\n🚚 FREESHIP ĐƠN 50K\n  MÔ TẢ SẢN PHẨM:\n✪ Style cực yêu luôn nhé, chiếc túi đựng vừa số tiền bạn có đang được các chị em săn lùng\n✪ Kích thước: bề ngang 15cm, rộng 8cm, chiều cao cả quai túi là 18cm\n✪ Màu sắc: ĐEN, CÀ PHÊ, TRẮNG, NÂU\n✪ Chất liệu: Da Pu",
       "stock": 93,
-      "isSale": false,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
-      "isSale": true,
-      "sold": 12
-    },
-    {
-      "id": 3,
-      "title": "Áo khoác nữ thời trang",
-      "image": "../assets/img/product-img1.jpg",
-      "price": 200000,
-      "discount": 15,
-      "des": "",
-      "sold": 10,
-      "stock": 23,
       "isSale": true,
       "sold": 12
     }
-
-    
   ],
   "category": [
     {
@@ -360,13 +310,13 @@
     },
     {
       "id": 23,
-      "title": "Giat giu & Cham soc nha cua",
+      "title": "Giặt giũ & Chăm sóc nhà cửa",
       "image": "../assets/img/category/giat-giu.png",
       "sold": 12
     },
     {
       "id": 24,
-      "title": "Chăm sóc thu cung",
+      "title": "Chăm sóc thú cưng",
       "image": "../assets/img/category/cham-soc-thu-cung.png",
       "sold": 12
     },
@@ -376,7 +326,6 @@
       "image": "../assets/img/category/voucher.png",
       "sold": 12
     }
-
   ],
   "search": [
     {
@@ -444,6 +393,81 @@
       "result": 13000,
       "image": "../assets/img/product/1.jpg",
       "sold": 12
+    }
+  ],
+  "notification": [
+    {
+      "id": 1,
+      "title": "Siêu sale 1/5",
+      "desc": "Freeship cho đơn từ 0đ và hàng ngàn mã giảm giá hấp dẫn",
+      "img": "../assets/img/category/voucher.png",
+      "href": "https://www.facebook.com/profile.php?id=100009836048089"
+    },
+    {
+      "id": 2,
+      "title": "Siêu sale 1/5",
+      "desc": "Freeship cho đơn từ 0đ và hàng ngàn mã giảm giá hấp dẫn",
+      "img": "../assets/img/product/1.jpg",
+      "href": "https://www.facebook.com/profile.php?id=100009836048089"
+    }
+  ],
+  "highlight": [
+    {
+      "id": 1,
+      "title": "Tech Zone - Siêu Thị Điện Tử",
+      "img": "../assets/img/highlight/1.png"
+    },
+    {
+      "id": 2,
+      "title": "Gì cũng rẻ - Từ 1K",
+      "img": "../assets/img/highlight/2.png"
+    },
+    {
+      "id": 3,
+      "title": "Hoàn Xu 20% - Đơn Từ 0Đ",
+      "img": "../assets/img/highlight/3.png"
+    },
+    {
+      "id": 4,
+      "title": "Nạp thẻ hóa đơn",
+      "img": "../assets/img/highlight/4.png"
+    },
+    {
+      "id": 5,
+      "title": "Chọn 7 số trúng tiền triệu",
+      "img": "../assets/img/highlight/5.gif"
+    },
+    {
+      "id": 6,
+      "title": "Freeship Extra đến 70K",
+      "img": "../assets/img/highlight/6.png"
+    },
+    {
+      "id": 7,
+      "title": "Hàng hiệu -50%",
+      "img": "../assets/img/highlight/7.png"
+    },
+    {
+      "id": 8,
+      "title": "Hàng Quốc Tế",
+      "img": "../assets/img/highlight/8.png"
+    },
+    {
+      "id": 9,
+      "title": "Shopee Premium",
+      "img": "../assets/img/highlight/9.png"
+    }
+  ],
+  "cart": [
+    {
+      "owner": "user1@gmail.com",
+      "items": [
+        {
+          "id": 2,
+          "quantity": "1"
+        }
+      ],
+      "id": 1
     }
   ]
 }

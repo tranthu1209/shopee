@@ -1,4 +1,3 @@
-@import 'header.css';
 .search-page{
     box-sizing: border-box;
 }
@@ -161,10 +160,11 @@
 .sort-price:hover .sort-price__options{
     display: block;
 }
-.page-controller{
+.page-controller-top{
     display: flex;
     align-items: center;
 }
+
 .page-controller__state{
     margin-right: 10px;
 }
