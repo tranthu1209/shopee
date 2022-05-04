@@ -11,8 +11,8 @@ $(document).ready(function () {
     getData(renderSearchHistory, searchApi);
     if(sessionStorage.isLogin == "true"){
         $('.app').addClass('logged');
-        // let userName = JSON.parse(sessionStorage.user);
-        // $('.navbar-user__name').text(userName.email);
+        let userName = JSON.parse(sessionStorage.user);
+        $('.navbar-user__name').text(userName.email);
         console.log(sessionStorage.user)
     }else{
         $('.app').removeClass('logged')

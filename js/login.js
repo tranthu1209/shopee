@@ -21,7 +21,7 @@ $('#login').click(function () {
                             sessionStorage.isLogin = "true";
                             sessionStorage.user = JSON.stringify(user);
                             console.log(user)
-                            // location.assign("../index.html");
+                            location.assign("../index.html");
                         }
                             
                     })
