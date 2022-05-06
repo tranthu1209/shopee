@@ -1,3 +1,4 @@
+handelChangeQuantityValue();
 function renderImage(images) {
     $('#product-img').css("background-image", "url(" + images[0] + ")");
     let htmls = images.map(function (img) {
@@ -28,48 +29,31 @@ $('.comment-like i').click(function () {
     }
     $(this).siblings('input').val(count);
 })
-$('#quant-plus').click(function () {
-    let quant = $('#quantity').val();
-    quant++;
-    $('#quantity').val(quant);
-})
-$('#quant-minus').click(function () {
-    let quant = $('#quantity').val();
-    if (quant > 1) {
-        quant--;
-        $('#quantity').val(quant);
-    }
-})
+
+
+
 
 $('#add-to-cart').click(function(){
     let productId = parseInt(sessionStorage.getItem("currentProduct"));
-    let quantity = $('#quantity').val()
-    let product = {id: productId, quantity: quantity};
+    let quantity = Number($('#quantity').val())
+    
     let userData = JSON.parse(sessionStorage.user);
     if(userData.hasOwnProperty('cart')){
-        userData.cart.push(product);
+        let cart = userData.cart;
+        let product = cart.find(function(item){
+            return item.id == productId;
+        })
+        if(product){
+            product.quantity = Number(product.quantity) + quantity;
+        }else{
+            cart.push({id: productId, quantity: quantity})
+        }
+        
     }else{
-        userData.cart = [product];
+        userData.cart = [product]; 
     }
-    console.log(userData)
-    fetch(userApi+'/'+ userData.id, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(userData),
-    })
-   
-        .then(res => res.json)
-        .then(data => {
-            console.log('Success', data);
-            sessionStorage.isLogin = "true";
-            sessionStorage.user = JSON.stringify(data);
-            location.assign("../index.html");
-        })
-        .catch(error => {
-            console.error('Error', error);
-        })
+    // console.log(userData)
+    addProduct(userApi, userData)
     
       
 })

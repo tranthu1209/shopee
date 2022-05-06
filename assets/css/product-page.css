@@ -24,7 +24,7 @@
 }
 
 .left-colum {
-    width: 488px;
+    width: 492px;
     padding: 16px;
 }
 
@@ -38,13 +38,12 @@
 }
 
 .list-img__img {
-    /* height: 100%; */
     width: 84px;
-    /* padding-top: 100%; */
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     border: 2px solid var(--white-color);
+    margin-right: 10px;
 }
 
 .list-img__img.active {

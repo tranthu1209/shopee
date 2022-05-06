@@ -55,6 +55,7 @@ $('#register').click(function () {
             Validator.isRequired('input[name="gender"]'),
         ],
         onSubmit: function (data) {
+            data.cart = [];
             fetch(userApi, {
                 method: 'POST',
                 headers: {
@@ -62,14 +63,14 @@ $('#register').click(function () {
                 },
                 body: JSON.stringify(data),
             })
-                .then(res => res.json)
+                .then(res => res.json())
                 .then(data => {
-                    sessionStorage.user = JSON.stringify(data.email);
+                    sessionStorage.user = JSON.stringify(data)
                     console.log('Success', data);
                     sessionStorage.isLogin = "true";
-                    
                     // location.assign("../index.html");
                 })
+                
                 .catch(error => {
                     console.error('Error', error);
                 })
@@ -80,9 +81,23 @@ $('#register').click(function () {
 
 $('#logout').click(function(){
     sessionStorage.isLogin = 'false';
-    location.assign("../index.html");
+    sessionStorage.user = '';
+    location.assign('../index.html')
+    loadHome();
 })
 
 
+$('.auth-form__switch').click(function(){
+    let formName = $(this).parents('.auth-form').attr('id');
+    if(formName == 'login-form'){
+        $('#register').click();
+    }else{
+        $('#login').click()
+    }
+})
+$('.auth-form__control-back').click(function(){
+    $('.modal').css("display", "none");
+   
+})
 
 

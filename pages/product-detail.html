@@ -15,9 +15,8 @@
     <section class="section product-desc">
         <div class="left-colum">
             <div class="group-img">
-                <div id="product-img" class="img-view hide-on-mobile-tablet">
-                    <div class="product__img">
-                    </div>
+                <div id="product-img" class="img-view product__img hide-on-mobile-tablet">
+                   
                 </div>
                 <div id="list-product-image" class="list-img res-img">
                     <!-- Render list image -->
@@ -152,9 +151,9 @@
                     </div>
                     <div class="product-details__c-2 flex-r hide-on-mobile">
                         <div class="group-btn-quant">
-                            <button id="quant-minus" class="btn btn-quant">-</button>
-                            <input id="quantity" type="number" value="1" class="btn btn-quant quant">
-                            <button id="quant-plus" class="btn btn-quant">+</button>
+                            <button id="quant-minus" class="btn btn-quant minus-btn">-</button>
+                            <input id="quantity" type="number" value="1" min="1" step="1" class="btn btn-quant quant">
+                            <button id="quant-plus" class="btn btn-quant plus-btn">+</button>
                             <span id="inventory-number" class="tml20">1234 sản phẩm có sẵn</span>
                         </div>
 

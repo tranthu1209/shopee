@@ -39,6 +39,10 @@
     line-height: 2rem;
     height: 40px;
 }
+.remove-btn{
+    font-size: 2rem;
+    color: var(--primary-color);
+}
 .payment{
     position: fixed;
     width: 1200px;
