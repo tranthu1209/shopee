@@ -1,28 +1,33 @@
 <link rel="stylesheet" href="../assets/css/cart.css">
 <div class="wrapper">
-    <section class="cart-head row">
-        <input class="checkbox" type="checkbox" name="" id="">
-        <p class="c-4">Sản phẩm</p>
-        <p class="c-1">Đơn Giá</p>
-        <p class="c-1">Số Lượng</p>
-        <p class="c-1">Số Tiền</p>
-        <p class="c-1">Xóa</p>
+    <section class="cart-head row hide-on-mobile">
+        <input class="checkbox c1" type="checkbox" name="" id="">
+        <p class="c2">Sản phẩm</p>
+        <div class="flex-r group-price c3">
+            <p class="c">Đơn Giá</p>
+            <p class="c">Số Lượng</p>
+            <p class="c">Số Tiền</p>
+        </div>
+        
+        <p class="c4">Xóa</p>
     </section>
     <section class="cart-product">
         
     </section>
     
     <section class="payment row">
-        <div class="checkox-group">
-            <input class="checkbox" type="checkbox" name="" id="">
-            <label for="">Chọn Tất Cả</label>
+        <div class="payment-text">
+            <p>
+                Tổng thanh toán(
+                <span id="number-product-chosen">0</span>
+                 Sản phẩm):
+            </p>
+            <p class="text-primary">
+                <span class="currency">₫</span>
+                <span id="payment-total">0</span>
+            </p>
+            
         </div>
-        <p class="payment-text">
-            Tổng thanh toán(
-            <span id="number-product-chosen">0</span>
-            Sản phẩm)
-            <span id="payment-total">0</span>
-        </p>
         <button id="payment-btn" class="btn btn--primary">Mua Hàng</button>
     </section>
 </div>

@@ -1,23 +1,35 @@
 
 
 .checkbox{
-    min-width: 58px;
+    /* min-width: 58px; */
     height: 16px;
     width: 16px;
 }
-
-
-.c-1{
+.flex-r{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    
+}
+.c1, .c4{
+    width: 5%;
+}
+.c2{
+    width: 10%;
+}
+.c3{
     flex: 1;
+}
+.group-price{
+    justify-content: flex-end;
+}
+
+.c{
+    width: 140px;
     text-align: center;
 }
-.c-4{
-    flex: 4;
-    display: flex;
-}
-.c-4 img{
-    
-    width: 80px;
+
+.product.row img{
     object-fit: contain;
 }
 .row{
@@ -38,6 +50,12 @@
     font-size: 1.6rem;
     line-height: 2rem;
     height: 40px;
+    width: 100%;
+    
+}
+.money{
+    line-height: 1.6rem;
+    font-size: 1.6rem;
 }
 .remove-btn{
     font-size: 2rem;
@@ -49,7 +67,7 @@
     bottom: 0;
     align-items: center;
     justify-content: flex-end;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
 }
 .checkox-group{
     display: flex;
@@ -57,11 +75,43 @@
     margin-right: 40px;
 }
 .payment-text{
-    margin-right: 30px;
+    margin-right: 20px;
     float: right;
+    font-size: 2rem;
+    line-height: 2rem;
+    display: flex;
+}
+.payment-text .text-primary{
+    margin-left: 10px;
 }
 #payment-btn{
     width: 200px;
     height: 40px;
-    font-size: 1.6rem;
+    
+}
+
+@media (max-width: 739px){
+    .product.row{
+        padding: 4px;
+    }
+     .c2{
+         min-width: 80px;
+     }
+     .c3{
+        align-items: flex-start;
+         flex-direction: column;
+     }
+     .group-price{
+         justify-content: space-between;
+     }
+     .c{
+         width: 80px;
+     }
+    .btn-quant{
+        padding: 10px;
+    }
+    .c4{
+        align-self: flex-start;
+    }
+    
 }

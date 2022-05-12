@@ -34,7 +34,7 @@ $('.comment-like i').click(function () {
 
 
 $('#add-to-cart').click(function(){
-    let productId = parseInt(sessionStorage.getItem("currentProduct"));
+    let productId = JSON.parse(sessionStorage.currentProduct).id;
     let quantity = Number($('#quantity').val())
     
     let userData = JSON.parse(sessionStorage.user);
@@ -53,7 +53,8 @@ $('#add-to-cart').click(function(){
         userData.cart = [product]; 
     }
     // console.log(userData)
-    addProduct(userApi, userData)
+    addProduct(userApi, userData);
+    $('.notice-card').css('display', 'block');
     
       
 })

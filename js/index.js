@@ -15,7 +15,6 @@ $(document).ready(function () {
         let userData = JSON.parse(sessionStorage.user);
         $('.navbar-user__name').text(userData.email);
         getData(renderCartBox, productApi);
-        $('.cart__product-amount').text(userData.cart.length)
     }else{
         $('.app').removeClass('logged')
     }
@@ -49,6 +48,9 @@ function getData(callback, api) {
             return res.json();
         })
         .then(callback)
+        .catch(err => {
+            console.error('Error', err);
+        })
 }
 
 function renderNotification(data) {
@@ -73,14 +75,13 @@ function renderSearchHistory(data) {
         if (n < 8) {
             n++;
             return `
-            <li class="search__history-item search-link">
+            <li class="search__history-item list__item search-link" onclick="handelClickSearchLink(this)">
                 <a class="search-keyword">${search.key}</a>
             </li>
              `
         }
     })
     $('#list-search-history').prepend(htmls.join(''));
-    handelClickSearchLink();
 }
 function renderHighlight(data) {
     let htmls = data.map(function (highlight) {
@@ -97,7 +98,7 @@ function renderHighlight(data) {
 function renderCategory(data) {
     let htmls = data.map(function (category) {
         return `
-        <div class="category__item list__item search-link">
+        <div class="category__item list__item search-link" onclick="handelClickSearchLink(this)">
             <img src="${category.image}" alt=""
                 class="category__img">
             <span class="category__text search-keyword">${category.title}</span>
@@ -106,7 +107,6 @@ function renderCategory(data) {
     })
     $('#list-category').prepend(htmls.join(""));
     Scroll($('#list-category'), 2);
-    handelClickSearchLink()
     
 }
 function renderSaleProduct(products) {
@@ -124,7 +124,7 @@ function renderSaleProduct(products) {
     
                 <div class="sale__price">
                     <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                    <span>${product.price}</span>
+                    <span>${product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}</span>
                 </div>
                 <div class="sale__quality">
                     <span class="sale__product-sold">Đã bán ${product.sold}</span>
@@ -160,7 +160,7 @@ function renderTrendSearch(data) {
     let htmls = data.map(function (search, index) {
         if (index < 5)
             return `
-            <div class="trend-search__link search-link">
+            <div class="trend-search__link list__item search-link" onclick="handelClickSearchLink(this)">
                 <div class="trend-search__desc">
                     <span class="search-keyword">${search.key}</span>
                     <span style="font-size: 1.1rem; margin-top: 5px; color: var(--gray-color)">${search.result} sản
@@ -172,13 +172,12 @@ function renderTrendSearch(data) {
             </div>`
     })
     $('#list-trend-search').prepend(htmls.join(''));
-    handelClickSearchLink();
 }
 function renderTopSearch(data) {
     let htmls = data.map(function (search, index) {
         if (index < 12)
             return `
-            <div class="top-search__link list__itemm search-link">
+            <div class="top-search__link list__item search-link" onclick="handelClickSearchLink(this)">
                 <div class="top-search__img"
                     style="background-image: url(${search.image})">
 
@@ -194,7 +193,6 @@ function renderTopSearch(data) {
             </div>`;
     })
     $('#list-top-search').prepend(htmls.join(''));
-    handelClickSearchLink();
     Scroll($('#list-top-search'), 1)
 }
 function renderRecommendProduct(data) {
@@ -208,8 +206,8 @@ function renderRecommendProduct(data) {
 
 function createProduct(product){
     return`
-        <div class="product" onclick="loadDetailProduct(${product.id})">
-            <a href="" class="product__link product__link--hover">
+        <div class="product" onclick="getProduct(${product.id})">
+            <div class="product__link product__link--hover">
                 <div class="discount-tag discount-tag--small">
                     <p style="color: red; margin: 0;">30%</p>
                     <p style="margin: 0;">Giảm</p>
@@ -247,8 +245,7 @@ function createProduct(product){
                             <span>400.000</span>
                         </div>
                         <div class="product__price">
-                            <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                            <span>${product.price}</span>
+                            <span>${product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}</span>
                         </div>
                     </div>
                     <div class="product__review">
@@ -274,11 +271,14 @@ function createProduct(product){
                 <div class="tag-hover">
                     Tìm sản phẩm tương tự
                 </div>
-            </a>
+            </div>
         </div>`
 }
 function renderListProduct(data){
-    let filter = $('#search-input').val().toLowerCase();
+    let searchKey = JSON.parse(sessionStorage.searchKey)
+    let filter = searchKey.toLowerCase();
+    $('#search-input').val(searchKey)
+    $('.search__header-keyword').text(searchKey);
     switch(sessionStorage.sortOption){
         case "related":
             break;
@@ -297,7 +297,7 @@ function renderListProduct(data){
     let htmls = data.map(function(product){
         let isInclude = product.tags.some(tag => tag.toLowerCase().includes(filter))
         if(isInclude){
-            return createProduct(product)
+           return createProduct(product);
         }
        
     });
@@ -327,17 +327,33 @@ function loadSearch(){
     $('#main').load('../pages/search.html', function(){
         scrollTop();
         sessionStorage.currentPage = "search";
-        sessionStorage.sortOption = "related"
+        sessionStorage.sortOption = "related";
         getData(renderListProduct, productApi);
     })
 }
-function loadDetailProduct(id) {
+function getProduct(id){
+    fetch(`${productApi}/${id}`)
+        .then(res => res.json())
+        .then(product => {
+            sessionStorage.currentProduct = JSON.stringify(product)
+            loadDetailProduct();
+        })
+}
+
+function loadDetailProduct() {
     $('#search-input').val('');
     sessionStorage.currentPage = "detail-product";
-    sessionStorage.currentProduct =  JSON.stringify(id);
+    const product = JSON.parse(sessionStorage.currentProduct);
     $('#main').load('../pages/product-detail.html', function () {
         scrollTop();
-        getData(renderDetailProduct, productApi);
+        console.log(product);
+        $('#product-name').text(product.title);
+        $('#product-price').text(product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}))
+        $('#number-sole').text(product.sold);
+        $('#inventory-number').text(product.stock);
+        $('#product-desc').text(product.desc);
+        renderImage(product.image);
+        getData(renderRecommendProduct, productApi);
     })
 
 }
@@ -354,24 +370,36 @@ function renderCart(data){
         let htmls = data.map(function(product){
             if(product.id === cart[i].id){
                 let total = product.price*cart[i].quantity;
+                let price = convertNumberToVND(product.price);
+                total = convertNumberToVND(total);
                 return`
                 
                 <div class="product row" id="${product.id}">
                         
-                    <input class="checkbox" type="checkbox" name="" id="">
-                
-                    <div class="c-4">
-                        
-                        <img src="${product.image[0]}" alt="">
-                        <p class="product__name">${product.title}</p></div>
-                    <p class="c-1 product-price">${product.price}</p>
-                    <div class="c-1 group-btn-quant">
-                        <button class="btn btn-quant minus-btn">-</button>
-                        <input type="number" value="${cart[i].quantity}" min="1" step="1" class="btn btn-quant quant">
-                        <button class="btn btn-quant plus-btn">+</button>
+                    <input class="checkbox c1" type="checkbox" name="" id="">
+                    <img class="c2" src="${product.image[0]}" alt="">
+                    <div class="flex-r c3">
+                        <p class="product__name c1">${product.title}</p>
+                        <div class="flex-r group-price">
+                            <p class="c money">
+                                <span class="currency">₫</span>
+                                <span class="product-price">${price}</span>
+                            </p>
+                            <div class="group-btn-quant">
+                                <button class="btn btn-quant minus-btn" onclick="changeQuantity(this, -1)">-</button>
+                                <input type="number" value="${cart[i].quantity}" min="1" step="1" class="btn btn-quant quant">
+                                <button class="btn btn-quant plus-btn" onclick="changeQuantity(this, +1)">+</button>
+                            </div>
+                            <p class="c money text-primary">
+                            <span class="currency">₫</span>
+                            <span class="total">${total}</span>
+                            </p>
+                        </div>
                     </div>
-                    <p class="c-1 total">${total}</p>
-                    <p class="c-1"><i class="fa-regular fa-circle-xmark remove-btn"></i></p>
+                        
+                   
+                    
+                    <p class="c4"><i class="fa-regular fa-circle-xmark remove-btn"></i></p>
                     
                 </div>`
             }
@@ -380,48 +408,11 @@ function renderCart(data){
         $('.cart-product').prepend(htmls.join(''));
 
     }
-    handelChangeQuantityValue();
-    
+    // handelChangeQuantityValue();
     handelRemoveItem();
     handelChecked()
     
 }
-function addProduct(api, data){
-    fetch(api+'/'+data.id, {
-        method: 'PUT',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-    })
-    .then(res => res.json())
-    .then(data => {
-        console.log('Success', data);
-        sessionStorage.user = JSON.stringify(data);
-        
-    })
-    .catch(error => {
-        console.error('Error', error);
-    })
-}
-function renderDetailProduct(products) {
-    let productId = parseInt(sessionStorage.currentProduct);
-    products.map(function(product){
-        if(product.id == productId){
-            console.log(product.id)
-            $(window).scrollTop(0);
-            $('#product-name').text(product.title);
-            $('#product-price').text(product.price)
-            $('#number-sole').text(product.sold);
-            $('#inventory-number').text(product.stock);
-            $('#product-desc').text(product.desc);
-            renderImage(product.image);
-            getData(renderRecommendProduct, productApi);
-            
-        } 
-    });
-}
-
 function renderCartBox(data){
     let cart = JSON.parse(sessionStorage.user).cart;
     if(cart.length == 0){
@@ -434,17 +425,41 @@ function renderCartBox(data){
                     <div class="cart__product">
                         <img src="${product.image[0]}" alt="" class="cart__product-img">
                         <span class="cart__product-name">${product.title}</span>
-                        <span class="cart__product-price">${product.price}</span>
+                        <span class="cart__product-price">${product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}</span>
                     </div>`
                 }
             })
             $('.cart__list-product').prepend(htmls.join(''))
     
         }
+        $('.cart__product-amount').text(cart.length)
     }
     
     
 }
+
+function addProduct(api, data){
+    fetch(`${api}/${data.id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log('Success', data);
+        sessionStorage.user = JSON.stringify(data);
+        $('.cart__list-product').html('');
+        getData(renderCartBox, productApi)
+        
+    })
+    .catch(error => {
+        console.error('Error', error);
+    })
+}
+
+
 
 
 function scrollTop(){
@@ -456,43 +471,46 @@ function scrollTop(){
       });
 }
 
-function handelClickSearchLink(){
-    $('.search-link').click(function(){
-        let filterValue = $(this).find('.search-keyword').text();
-        $('#search-input').val(filterValue);
-        loadSearch();
-    })
+function handelClickSearchLink(element){
+    let filterValue = $(element).find('.search-keyword').text();
+    sessionStorage.searchKey = JSON.stringify(filterValue);
+    loadSearch();
+    
 }
-function handelChangeQuantityValue(){
-    $('.plus-btn').click(function () {
-        let input = $(this).siblings('.quant')
-        let quant = input.val();
-        quant++;
-        input.val(quant);
-        updateTotal()
-    });
-    $('.minus-btn').click(function () {
-        let input = $(this).siblings('.quant');
-        let quant = input.val();
-        if (quant > 1) {
-            quant--;
-            input.val(quant);
-            updateTotal()
+function changeQuantity(element, k){
+    const product = $(element).parents('.product');
+    let userData = JSON.parse(sessionStorage.user);
+    const input = $(element).siblings('.quant');
+    for(let i=0; i<userData.cart.length; i++){
+        if(userData.cart[i].id == product.prop('id')){
+            userData.cart[i].quantity += k;
+            if(userData.cart[i].quantity > 0){
+                input.val(userData.cart[i].quantity);
+                addProduct(userApi, userData);
+                updateTotal(product);
+                updateTotalPayment();
+            }
+            
         }
-    })
+    }
 }
-function updateTotal(){
-    let itemElements = document.querySelectorAll('.product');
-    Array.from(itemElements).forEach(itemElement => {
-        let totalElement = itemElement.querySelector('.total');
-        let total = itemElement.querySelector('.quant').value * itemElement.querySelector('.product-price').innerText;
-        totalElement.innerText = total;
-    })
+function convertNumberToVND(number){
+    number = JSON.stringify(number);
+    return number.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    
+}
+function convertCurrencyToNumber(currency){
+    return Number(currency.split('.').join(''))
+}
+function updateTotal(product){
+    let total = convertCurrencyToNumber(product.find('.product-price').text()) * Number(product.find('.quant').val());
+    product.find('.total').text(convertNumberToVND(total));
     
 }
 function handelRemoveItem(){
     $('.remove-btn').click(function(){
-        let id = $(this).parents('.product').attr('id');
+        let product = $(this).parents('.product');
+        let id = product.attr('id');
         let userData = JSON.parse(sessionStorage.user);
         for(let i=0; i< userData.cart.length; i++){
             if(userData.cart[i].id == id){
@@ -502,26 +520,31 @@ function handelRemoveItem(){
         if(userData.cart.length == 0){
             userData.cart=[];
         }
-        addProduct(userApi, userData)
+        addProduct(userApi, userData);
+        product.remove()
+        updateTotalPayment();
+
 
     })
 }
 function handelChecked(){
-    $('.checkbox').click(function(){
+    $('.checkbox').change(function(){
+
         let itemCart = $(this).parents('.product');
         itemCart.toggleClass('checked');
-        let numberItemChosen = $('.checked').length;
-        let total = Number(itemCart.find('.total').text());
         
-        updateTotalPayment(numberItemChosen, total);
+        updateTotalPayment();
     })
     
 }
-function updateTotalPayment(numberItemChosen, total){
-    let paymentValue = Number($('#payment-total').text());
-    paymentValue += total;
-    $('#payment-total').text(paymentValue);
-    $('#number-product-chosen').text(numberItemChosen);
+function updateTotalPayment(){
+    let total = 0;
+    Array.from($('.checked')).forEach(item =>{
+        let totalItem = convertCurrencyToNumber(item.querySelector('.total').innerText);
+        total += Number(totalItem);
+    })
+    $('#payment-total').text(convertNumberToVND(total));
+    $('#number-product-chosen').text($('.checked').length)
     
     
 }

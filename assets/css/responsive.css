@@ -199,7 +199,7 @@
 /* Mobile */
 @media (max-width: 739px) {
     .hide-on-mobile{
-        display: none;
+        display: none !important;
     }
     header{
         height: 50px;
@@ -301,11 +301,13 @@
         margin: 0;
         border-radius: 0;
     }
+    
     .footer__list{
         flex-wrap: wrap;
     }
     .footer__item{
         min-width: calc(100%/2);
     }
+
 
 }

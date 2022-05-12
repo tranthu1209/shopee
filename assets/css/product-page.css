@@ -277,7 +277,37 @@
 .buy-btn.btn--2 {
     margin-right: 20px;
 }
-
+.notice-card{
+    background-color: #000000b9;
+    top: 50%;
+    position: fixed;
+    margin: auto;
+    color: var(--white-color);
+    border-radius: 2px;
+    padding: 30px;
+    z-index: 1;
+    text-align: center;
+    font-size: 1.6rem;
+    display: none;
+    animation: fadeIn ease .3s, fadeOut linear .3s 3s forwards;
+}
+.check-icon{
+    width: 5rem;
+    height: 5rem;
+    background-color: #019566;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+}
+.check-icon i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 4rem;
+    line-height: 5rem;
+    width: 5rem;
+    color: var(--white-color);
+}
 .shopee-police {
     display: flex;
     padding-top: 20px;
