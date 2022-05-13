@@ -1,10 +1,10 @@
-const notificationApi = 'http://localhost:3000/notification';
-const searchApi = 'http://localhost:3000/search';
-const highlightApi = 'http://localhost:3000/highlight';
-const productApi = 'http://localhost:3000/product';
-const categoryApi = 'http://localhost:3000/category';
-const shopApi = 'http://localhost:3000/shop';
-const userApi = 'http://localhost:3000/user';
+const notificationApi = 'https://json-server-shopee.herokuapp.com/notification';
+const searchApi = 'https://json-server-shopee.herokuapp.com/search';
+const highlightApi = 'https://json-server-shopee.herokuapp.com/highlight';
+const productApi = 'https://json-server-shopee.herokuapp.com/product';
+const categoryApi = 'https://json-server-shopee.herokuapp.com/category';
+const shopApi = 'https://json-server-shopee.herokuapp.com/shop';
+const userApi = 'https://json-server-shopee.herokuapp.com/user';
 
 $(document).ready(function () {
     getData(renderNotification, notificationApi);
@@ -36,6 +36,7 @@ $(document).ready(function () {
     
 })
 $('#search-btn').click(function(){
+    sessionStorage.searchKey = JSON.stringify($('#search-input').val());
     loadSearch();
 })
 
@@ -277,7 +278,7 @@ function createProduct(product){
 function renderListProduct(data){
     let searchKey = JSON.parse(sessionStorage.searchKey)
     let filter = searchKey.toLowerCase();
-    $('#search-input').val(searchKey)
+    $('#search-input').val(searchKey);
     $('.search__header-keyword').text(searchKey);
     switch(sessionStorage.sortOption){
         case "related":
