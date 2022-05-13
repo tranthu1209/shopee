@@ -224,6 +224,8 @@ header{
     border-radius: 50%;
     height: 22px;
     width: 22px;
+    margin-right: 6px;
+    background-color: var(--white-color);
 }
 .navbar-user__name{
     padding: 0;

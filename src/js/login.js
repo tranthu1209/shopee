@@ -89,7 +89,10 @@ $('#logout').click(function(){
 
 $('.auth-form__switch').click(function(){
     let formName = $(this).parents('.auth-form').attr('id');
-    if(formName == 'login-form'){
+    $('.auth-form__message').text('');
+    $('.auth-form__group').removeClass('invalid');
+    $('input').val('');
+    if(formName === 'login-form'){
         $('#register').click();
     }else{
         $('#login').click()
