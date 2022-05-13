@@ -437,6 +437,7 @@ function renderCart(data){
 }
 function renderCartBox(data){
     let cart = JSON.parse(sessionStorage.user).cart;
+    $('.cart__product-amount').text(cart.length);
     if(cart.length == 0){
         $('.cart__content').addClass('cart--empty')
     }else{
@@ -454,7 +455,6 @@ function renderCartBox(data){
             $('.cart__list-product').prepend(htmls.join(''))
     
         }
-        $('.cart__product-amount').text(cart.length)
     }
     
     
