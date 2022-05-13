@@ -54,6 +54,7 @@ function getData(callback, api) {
         })
 }
 
+
 function renderNotification(data) {
     let htmls = data.map(function (notice) {
         return `
@@ -110,12 +111,14 @@ function renderCategory(data) {
     Scroll($('#list-category'), 2);
     
 }
-function renderSaleProduct(products) {
-    var n = 0;
+
+function renderSaleProduct(products, n) {
+    // var n = 0;
     var htmls = products.map(function (product) {
 
-        if (product.isSale && n < 12) {
-            n++;
+        if (product.isSale && n >0) {
+            // n++;
+            n--;
             var salePer = 100 - product.sold / (product.stock + product.sold) * 100;
             return `
             <div class="sale__product list__item" onclick= "getProduct(${product.id})">
@@ -157,9 +160,10 @@ function renderMall(data) {
     $('#list-mall').prepend(htmls.join(''));
     Scroll( $('#list-mall'), 2)
 }
-function renderTrendSearch(data) {
-    let htmls = data.map(function (search, index) {
-        if (index < 5)
+function renderTrendSearch(data, n) {
+    let htmls = data.map(function (search) {
+        if (n>0){
+            n--;
             return `
             <div class="trend-search__link list__item search-link" onclick="handelClickSearchLink(this)">
                 <div class="trend-search__desc">
@@ -171,12 +175,15 @@ function renderTrendSearch(data) {
                 <img src="${search.image}" alt=""
                     class="trend-search__img">
             </div>`
+        }
+            
     })
     $('#list-trend-search').prepend(htmls.join(''));
 }
-function renderTopSearch(data) {
-    let htmls = data.map(function (search, index) {
-        if (index < 12)
+function renderTopSearch(data, n) {
+    let htmls = data.map(function (search) {
+        if (n>0){
+            n--;
             return `
             <div class="top-search__link list__item search-link" onclick="handelClickSearchLink(this)">
                 <div class="top-search__img"
@@ -192,13 +199,16 @@ function renderTopSearch(data) {
                     ${search.key}
                 </div>
             </div>`;
+        }
+            
     })
     $('#list-top-search').prepend(htmls.join(''));
     Scroll($('#list-top-search'), 1)
 }
-function renderRecommendProduct(data) {
+function renderRecommendProduct(data, n) {
     let htmls = data.map(function (product, index) {
-        if (index < 12) {
+        if (n>0) {
+            n--;
             return createProduct(product)
         };
     });
@@ -315,11 +325,20 @@ function loadHome() {
         scrollTop();
         getData(renderHighlight, highlightApi);
         getData(renderCategory, categoryApi);
-        getData(renderSaleProduct, productApi);
+        // getData(renderSaleProduct, productApi);
+        getData((data)=>{
+            renderSaleProduct(data, 10);
+        }, productApi);
         getData(renderMall, shopApi);
-        getData(renderTrendSearch, searchApi);
-        getData(renderTopSearch, searchApi);
-        getData(renderRecommendProduct, productApi);
+        getData((data)=>{
+            renderTrendSearch(data, 5)
+        }, searchApi);
+        getData((data)=>{
+            renderTopSearch(data, 12)
+        }, searchApi);
+        getData((data)=>{
+            renderRecommendProduct(data, 24)
+        }, productApi);
         showSlide();
         
     })
@@ -341,20 +360,22 @@ function getProduct(id){
         })
 }
 
+
 function loadDetailProduct() {
     $('#search-input').val('');
     sessionStorage.currentPage = "detail-product";
     const product = JSON.parse(sessionStorage.currentProduct);
     $('#main').load('../pages/product-detail.html', function () {
         scrollTop();
-        console.log(product);
         $('#product-name').text(product.title);
         $('#product-price').text(product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}))
         $('#number-sole').text(product.sold);
         $('#inventory-number').text(product.stock);
         $('#product-desc').text(product.desc);
         renderImage(product.image);
-        getData(renderRecommendProduct, productApi);
+        getData((data)=>{
+            renderRecommendProduct(data, 12)
+        }, productApi);
     })
 
 }
@@ -482,18 +503,30 @@ function changeQuantity(element, k){
     const product = $(element).parents('.product');
     let userData = JSON.parse(sessionStorage.user);
     const input = $(element).siblings('.quant');
-    for(let i=0; i<userData.cart.length; i++){
-        if(userData.cart[i].id == product.prop('id')){
-            userData.cart[i].quantity += k;
-            if(userData.cart[i].quantity > 0){
-                input.val(userData.cart[i].quantity);
-                addProduct(userApi, userData);
-                updateTotal(product);
-                updateTotalPayment();
+    let quant = Number(input.val());
+    quant += k;
+    if(quant == 0){
+        quant = 1;
+    }
+    input.val(quant);
+    if(sessionStorage.currentPage === 'cart'){
+        for(let i=0; i<userData.cart.length; i++){
+            if(userData.cart[i].id == product.prop('id')){
+                userData.cart[i].quantity = quant;
+                if(userData.cart[i].quantity > 0){
+                    // input.val(userData.cart[i].quantity);
+                    addProduct(userApi, userData);
+                    updateTotal(product);
+                    updateTotalPayment();
+                }
+                
             }
-            
         }
     }
+   
+}
+function updateCart(){
+    
 }
 function convertNumberToVND(number){
     number = JSON.stringify(number);
@@ -605,7 +638,7 @@ function showSlide() {
 
 // Scroll new list product when click button next or pre
 function Scroll(listElement, numberRow) {
-    const parentElement = listElement.parents('.list-wrapper')
+    const parentElement = listElement.parents('.list-wrapper');
     const nextBtn = parentElement.find('#next-btn');
     const preBtn = parentElement.find('#pre-btn');
     const itemWidth = listElement.find('.list__item').outerWidth();
@@ -614,7 +647,6 @@ function Scroll(listElement, numberRow) {
     var numberItemOverflow = numberItemRow - numberItemView;
     var position = 0;
     nextBtn.click(function () {
-        console.log('ss')
         preBtn.addClass("active");
         if (numberItemOverflow >= numberItemView) {
             position = position + (numberItemView - 1) * itemWidth;
@@ -622,7 +654,6 @@ function Scroll(listElement, numberRow) {
 
         }
         else {
-            console.log(listElement);
             position = position + numberItemOverflow * itemWidth;
             numberItemOverflow = 0;
             nextBtn.removeClass('active');
@@ -640,7 +671,8 @@ function Scroll(listElement, numberRow) {
             numberItemOverflow = numberItemRow - numberItemView;
             preBtn.removeClass('active');
         }
-        listElement.css("transform",  "translateX(-"+position+"px)")
+        listElement.css("transform",  "translateX(-"+position+"px)");
+
     })
 }
 
