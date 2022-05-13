@@ -68,7 +68,7 @@ $('#register').click(function () {
                     sessionStorage.user = JSON.stringify(data)
                     console.log('Success', data);
                     sessionStorage.isLogin = "true";
-                    // location.assign("../index.html");
+                    location.assign("../index.html");
                 })
                 
                 .catch(error => {
