@@ -6,20 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/base.css">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
-    
+
 </head>
 
 <body>
     <div class="app logged">
         <header>
             <div class="wrapper">
-                <nav class="navbar hide-on-mobile-tablet">
-                    <ul class="navbar__list">
+                <nav class="navbar">
+                    <ul class="navbar__list hide-on-mobile-tablet">
                         <li class="navbar__item">
                             <span class="navbar__link">Kênh người bán</span>
                         </li>
@@ -52,30 +54,33 @@
                         </li>
                     </ul>
                     <ul class="navbar__list">
+                        <li class="navbar__item home-btn" onclick="loadHome()">
+                            <i class="fa-solid fa-house"></i>
+                            <span> Home</span>
+                        </li>
                         <li class="navbar__item navbar-notice header-hover">
-                            <span class="navbar__link">
-                                <i class="navbar__icon fa-solid fa-bell"></i>
-                                Thông báo
-                            </span>
+
+                            <i class="navbar__icon fa-solid fa-bell"></i>
+                            <span>Thông báo</span>
+
                             <div class="header-box notice">
                                 <div class="notice__heading">Thông báo mới nhận</div>
                                 <ul class="notice__list" id="notice-list">
-                                    
-                                <button class="notice__more-btn">Xem thêm</button>
+
+                                    <button class="notice__more-btn">Xem thêm</button>
                             </div>
                         </li>
                         <li class="navbar__item">
-                            <a href="" class="navbar__link">
-                                <i class="navbar__icon fa-regular fa-circle-question"></i>
-                                Hỗ trợ
-                            </a>
+                            <i class="navbar__icon fa-regular fa-circle-question"></i>
+                            <span>Hỗ trợ</span>
+
                         </li>
-                        <li class="navbar__item navbar-languages header-hover">
-                            <span class="navbar__link">
-                                <i class="navbar__icon fa-solid fa-globe"></i>
-                                Tiếng Việt
-                                <i class="navbar__icon fa-solid fa-angle-down"></i>
-                            </span>
+                        <li class="navbar__item navbar-languages header-hover hide-on-mobile-tablet">
+
+                            <i class="navbar__icon fa-solid fa-globe"></i>
+                            Tiếng Việt
+                            <i class="navbar__icon fa-solid fa-angle-down"></i>
+
                             <div class="header-box languages">
                                 <p class="header-box__option">Tiếng Việt</ư>
                                 <p class="header-box__option">English</p>
@@ -88,7 +93,7 @@
                             <span class="navbar__link ">Đăng nhập</span>
                         </li>
                         <li class="navbar__item navbar-user navbar__item--separation header-hover" id="user">
-                            <img src="./img/user-avt.png" alt="" class="navbar-user__img">
+                            <i class="navbar__icon fa-regular fa-circle-user"></i>
                             <span class="navbar__link navbar-user__name">Trần Thư</span>
                             <div class="header-box user">
                                 <p class="header-box__option">Tài khoản của tôi</ư>
@@ -109,7 +114,8 @@
                     </div>
                     <div class="search">
                         <div class="search__searchbar">
-                            <input id="search-input" type="text" class="search__searchbar-input" placeholder="Tìm kiếm" value="">
+                            <input id="search-input" type="text" class="search__searchbar-input" placeholder="Tìm kiếm"
+                                value="">
                             <button id="search-btn" class="search__searchbar-btn">
                                 <i class="search-btn-icon fa-solid fa-magnifying-glass"></i>
                             </button>
@@ -135,10 +141,10 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
+
                     <div class="header-filter">
-                        <i class="ti-filter"></i>
+                        <i class="fa-solid fa-filter filter-btn"></i>
                     </div>
                 </div>
 
@@ -147,7 +153,7 @@
         <main id="main">
 
         </main>
-        <footer class="hide-on-mobile">
+        <footer class="hide-on-mobile-tablet">
             <div class="footer__gap"></div>
             <div class="wrapper">
                 <div class="footer__list">
@@ -261,13 +267,10 @@
                     <div class="footer__item">
                         <div class="footer__heading">Tải ứng dụng trên shopee ngay thôi</div>
                         <div class="footer__download">
-                            <a href=""><img style="width: 86px; margin-right: 15px;" src="./img/qr.png"
-                                    alt=""></a>
+                            <a href=""><img style="width: 86px; margin-right: 15px;" src="./img/qr.png" alt=""></a>
                             <div class="footer__download-app">
-                                <a href=""><img style="width: 86px; height: auto;" src="./img/app-store.png"
-                                        alt=""></a>
-                                <a href=""><img style="width: 86px; height: auto;" src="./img/chplay.png"
-                                        alt=""></a>
+                                <a href=""><img style="width: 86px; height: auto;" src="./img/app-store.png" alt=""></a>
+                                <a href=""><img style="width: 86px; height: auto;" src="./img/chplay.png" alt=""></a>
                                 <a href=""><img style="width: 86px; height: auto;" src="./img/app-gallery.png"
                                         alt=""></a>
 

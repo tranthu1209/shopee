@@ -1,4 +1,3 @@
-
 <link rel="stylesheet" href="../css/product-page.css">
 <script src="../js/product-detail.js"></script>
 <div class="wrapper product-page">
@@ -15,21 +14,22 @@
         <div class="left-colum">
             <div class="group-img">
                 <div id="product-img" class="img-view product__img hide-on-mobile-tablet">
-                   
+
                 </div>
-                <div class="list-wrapper list-img res-img">
+                <div class="list-wrapper res-img">
                     <div class="list-hor">
-                        <div id="list-product-image" class="scroll-list">
+                        <div id="list-img-top" class="scroll-list list-img">
                             <!-- Render list image -->
                         </div>
                     </div>
                     <button id="pre-btn" class="pre-btn list-img__btn list-img__btn--pre hide-on-mobile-tablet">
                         <i class="fa-solid fa-angle-left"></i>
                     </button>
-                    <button id="next-btn" class="next-btn active list-img__btn list-img__btn--next hide-on-mobile-tablet">
+                    <button id="next-btn"
+                        class="next-btn active list-img__btn list-img__btn--next hide-on-mobile-tablet">
                         <i class="fa-solid fa-angle-right"></i>
                     </button>
-                    
+
                 </div>
             </div>
             <div class="user-interact hide-on-mobile-tablet">
@@ -54,7 +54,8 @@
         <div class="right-column">
             <div class="product-details__name">
                 <span class="tag--fav">Yêu thích</span>
-                <span id="product-name">[Mã 252FASHIONSALE giảm 12% đơn 99K] Áo gió nữ phối màu cá tính dù 2 lớp 256</span>
+                <span id="product-name">[Mã 252FASHIONSALE giảm 12% đơn 99K] Áo gió nữ phối màu cá tính dù 2 lớp
+                    256</span>
             </div>
             <div class="product-details__user-interact">
                 <div class="user-interact__item user-interact__item-rate ">
@@ -155,9 +156,11 @@
                     </div>
                     <div class="product-details__c-2 flex-r hide-on-mobile">
                         <div class="group-btn-quant">
-                            <button id="quant-minus" class="btn btn-quant minus-btn" onclick="changeQuantity(this, -1)">-</button>
+                            <button id="quant-minus" class="btn btn-quant minus-btn"
+                                onclick="changeQuantity(this, -1)">-</button>
                             <input id="quantity" type="number" value="1" min="1" step="1" class="btn btn-quant quant">
-                            <button id="quant-plus" class="btn btn-quant plus-btn" onclick="changeQuantity(this, +1)">+</button>
+                            <button id="quant-plus" class="btn btn-quant plus-btn"
+                                onclick="changeQuantity(this, +1)">+</button>
                             <span id="inventory-number" class="tml20">1234 sản phẩm có sẵn</span>
                         </div>
 
@@ -319,23 +322,45 @@
                                     phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu m có thể
                                     giúp tao quyết địnhvì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
                                     phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu</div>
-                                <div class="list-img review__list-img">
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img1.jpg);">
+                                <div class="list-wrapper res-img">
+                                    <div class="list-hor">
+                                        <div  class="list-img">
+                                            <!-- Render list image -->
+                                        </div>
                                     </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img2.jpg);">
-                                    </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img3.jpg);">
-                                    </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img1.jpg);">
-                                    </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img2.jpg);">
-                                    </div>
+                                </div>
 
+                                <p class="comment-like">
+                                    <i class="fa-solid fa-thumbs-up"></i>
+                                    <input disabled type="number" class="like-value" value="0">
+                                </p>
+                            </div>
+                        </div>
+                        <div class="review__comment-item flex-r">
+                            <div class="cust-img" style="background-image: url(./img/user-avt.jpg);"></div>
+                            <div class="comment-content">
+                                <div class="cust-name">ththh</div>
+                                <div class="rate">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <div class="pur-inf">
+                                    <span class="pur-day">2022-03-12 14:09</span>
+                                    <span>Phân loại hàng: đen</span>
+                                </div>
+                                <div class="cust-comment">vì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
+                                    phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu m có thể
+                                    giúp tao quyết địnhvì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
+                                    phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu</div>
+                                <div class="list-wrapper res-img">
+                                    <div class="list-hor">
+                                        <div id="list-product-image" class="list-img">
+                                            <!-- Render list image -->
+                                        </div>
+                                    </div>
                                 </div>
                                 <p class="comment-like">
                                     <i class="fa-solid fa-thumbs-up"></i>
@@ -362,64 +387,11 @@
                                     phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu m có thể
                                     giúp tao quyết địnhvì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
                                     phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu</div>
-                                <div class="list-img review__list-img">
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img1.jpg);">
-                                    </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img2.jpg);">
-                                    </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img3.jpg);">
-                                    </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img1.jpg);">
-                                    </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img2.jpg);">
-                                    </div>
-
-                                </div>
-                                <p class="comment-like">
-                                    <i class="fa-solid fa-thumbs-up"></i>
-                                    <input disabled type="number" class="like-value" value="0">
-                                </p>
-                            </div>
-                        </div>
-                        <div class="review__comment-item flex-r">
-                            <div class="cust-img" style="background-image: url(./img/user-avt.jpg);"></div>
-                            <div class="comment-content">
-                                <div class="cust-name">ththh</div>
-                                <div class="rate">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <div class="pur-inf">
-                                    <span class="pur-day">2022-03-12 14:09</span>
-                                    <span>Phân loại hàng: đen</span>
-                                </div>
-                                <div class="cust-comment">vì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
-                                    phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu m có thể
-                                    giúp tao quyết địnhvì cuộc đời là những chuỗi việc phải lựa chon nên Tao đang bị
-                                    phân vân và bế tắc trong cuộc sống này và nhân danh 1 đám người bạn liệu</div>
-                                <div class="list-img review__list-img">
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img1.jpg);">
-                                    </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img2.jpg);">
-                                    </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img3.jpg);">
-                                    </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img1.jpg);">
-                                    </div>
-                                    <div class="list-img__img"
-                                        style="background-image: url(./img/product-img2.jpg);">
+                                <div class="list-wrapper res-img">
+                                    <div class="list-hor">
+                                        <div id="list-product-image" class="list-img">
+                                            <!-- Render list image -->
+                                        </div>
                                     </div>
                                 </div>
                                 <p class="comment-like">
@@ -477,7 +449,7 @@
                 <div class="list-wrapper product-container__list">
                     <div class="list-hor">
                         <div class="scroll-list list-product product-6">
-                           <!-- Render list product -->
+                            <!-- Render list product -->
                         </div>
 
                         <button id="next-btn" class="move-btn hide-on-mobile-tablet next-btn active">
@@ -584,4 +556,3 @@
         </div>
     </div>
 </div>
-

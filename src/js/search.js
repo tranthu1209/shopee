@@ -8,4 +8,11 @@ $('.sort-btn').click(function(){
         getData(renderListProduct, productApi)
     }
 })
+$('.filter-btn').click(()=>{
+    $('.modal').css('display', 'flex')
+    $('.filter-wrapper').css('width', '90%')
+})
+$('.modal').click(()=>{
+    $('.filter-wrapper').css('width', '0')
+})
 

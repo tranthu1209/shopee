@@ -202,7 +202,6 @@
     .header-filter{
         display: block;
     }
-    
     .filter-wrapper{
         width: 0%;
         overflow-x: hidden;
@@ -230,4 +229,45 @@
         justify-content: center;
         margin: 0;
     }
+    .sort-bar{
+        position: fixed;
+        
+        z-index: 1;
+        width: 100%;
+        padding: 0;
+        height: auto;
+    }
+    .sort-option{
+        padding: 0;
+        margin: 0;
+    }
+    .sort-btn{
+        width: 25%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+    #main{
+        margin-top: 104px;
+    }
+    .product{
+        min-width: calc(100% / 4);
+    }
+    .sort-bar{
+        top: 68px;
+    }
+}
+
+@media (max-width: 739px) {
+    #main{
+        margin-top: 80px;
+    }
+    .search-page.main{
+        margin-top: 80px;
+    }
+    .sort-bar{
+        top: 56px;
+    }
+
 }

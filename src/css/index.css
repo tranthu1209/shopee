@@ -256,6 +256,7 @@ header{
     margin-top: 10px;
     
 }
+
 .search__searchbar{
     background-color: var(--white-color);
     height: 40px;
@@ -413,7 +414,7 @@ header{
 }
 .header-filter{
     font-size: 1.8rem;
-    flex: 1;
+    width: 50px;
     height: 100%;
     display: none;
     text-align: center;
@@ -508,6 +509,7 @@ footer{
     border-radius: 5px;
     overflow: hidden;
     margin: auto;
+    display: none;
 }
 .auth-form__container{
     padding: 30px 32px;
@@ -623,4 +625,96 @@ input[type = "radio"]{
     align-items: center;
     font-size: 1.2rem;
     
+}
+.home-btn{
+    display: none;
+}
+@media (max-width: 1023px){
+    #main{
+        margin-bottom: 60px;
+    }
+    .header-with-search{
+        height: 100%;
+       
+    }
+    .navbar{
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--white-color);
+        color: var(--black-color);
+    }
+    .navbar__list{
+        width: 100%;
+        justify-content: space-between;
+    }
+    .navbar__item--separation::after{
+        display: none;
+    }
+    .navbar .header-box{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        height: calc(100% - 100px);
+    }
+    .navbar__item{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .home-btn{
+        display: flex;
+    }
+    .cart{
+        width: 78px;
+    }
+    
+   
+}
+@media (min-width: 740px) and (max-width: 1023px){
+    header{
+        height: 68px;
+    }
+    .search{
+        width: 60%;
+    }
+    .header-with-search{
+        padding: 8px 20px;
+       
+    }
+    .cart{
+        text-align: right;
+    }
+    #main{
+        margin-top: 68px;
+    }
+}
+
+@media (max-width: 739px){
+    header{
+        height: 50px;
+    }
+    .header-with-search{
+        padding: 8px;
+       
+    }
+    .logo{
+        display: none;
+    }
+   
+    .search{
+        width: 86%;
+        margin-top: 0;
+    }
+    #main{
+        margin-top: 50px;
+    }
+    .footer__list{
+        flex-wrap: wrap;
+    }
+    .footer__item{
+        min-width: calc(100%/2);
+    }
+    .auth-form{
+        width: 100%;
+    }
 }

@@ -43,6 +43,9 @@ $('#search-btn').click(function(){
 $('.cart-wrapper, .view-cart-btn').click(function(){
     loadCart();
 })
+$('.modal').click(()=>{
+    $('.modal').css('display', 'none')
+})
 function getData(callback, api) {
     fetch(api)
         .then(function (res) {
@@ -641,11 +644,12 @@ function Scroll(listElement, numberRow) {
     const parentElement = listElement.parents('.list-wrapper');
     const nextBtn = parentElement.find('#next-btn');
     const preBtn = parentElement.find('#pre-btn');
-    const itemWidth = listElement.find('.list__item').outerWidth();
+    const itemWidth = listElement.find('.list__item').outerWidth(true);
     const numberItemView = listElement.outerWidth() / itemWidth;
     const numberItemRow = Math.round(listElement.find('.list__item').length / numberRow);
     var numberItemOverflow = numberItemRow - numberItemView;
     var position = 0;
+    console.log(itemWidth);
     nextBtn.click(function () {
         preBtn.addClass("active");
         if (numberItemOverflow >= numberItemView) {

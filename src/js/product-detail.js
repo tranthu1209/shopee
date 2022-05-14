@@ -4,19 +4,19 @@ function renderImage(images) {
     let htmls = images.map(function (img) {
         return `
         <div class="list__item">
-            <img class="list-img__img" src="${img}" alt="">
+            <img src="${img}" alt="">
         </div>
         `
     });
     
-    $('#list-product-image').prepend(htmls.join(''));
+    $('.list-img').prepend(htmls.join(''));
     setTimeout(()=>{
-        Scroll($('#list-product-image'), 1)
+        Scroll($('#list-img-top'), 1)
     }, 100)
    
-    $('#list-product-image .list-img__img').mouseenter(function () {
+    $('#list-img-top img').mouseenter(function () {
         let src = $(this).attr('src');
-        $('.list-img__img').removeClass('active')
+        $('#list-img-top img').removeClass('active')
         $(this).addClass('active');
         $('#product-img').css("background-image", "url(" + src + ")");
     });
