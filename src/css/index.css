@@ -500,7 +500,6 @@ footer{
 .modal__body{
     margin: auto;
     position: relative;
-    width: 100%;
     z-index: 3;
 }
 .auth-form{
@@ -573,7 +572,7 @@ footer{
 }
 .btn--with-icon{
     flex: 1;
-    height: 32px;
+    min-height: 32px;
     margin: 6px;
     
 }
@@ -715,6 +714,9 @@ input[type = "radio"]{
         min-width: calc(100%/2);
     }
     .auth-form{
-        width: 100%;
+        width: 100vw;
+    }
+    .auth-form__socials{
+        flex-direction: column;
     }
 }

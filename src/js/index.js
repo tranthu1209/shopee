@@ -43,7 +43,7 @@ $('#search-btn').click(function(){
 $('.cart-wrapper, .view-cart-btn').click(function(){
     loadCart();
 })
-$('.modal').click(()=>{
+$('.modal__overlay').click(()=>{
     $('.modal').css('display', 'none')
 })
 function getData(callback, api) {
@@ -649,7 +649,6 @@ function Scroll(listElement, numberRow) {
     const numberItemRow = Math.round(listElement.find('.list__item').length / numberRow);
     var numberItemOverflow = numberItemRow - numberItemView;
     var position = 0;
-    console.log(itemWidth);
     nextBtn.click(function () {
         preBtn.addClass("active");
         if (numberItemOverflow >= numberItemView) {
