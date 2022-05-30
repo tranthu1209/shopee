@@ -9,17 +9,17 @@ const userApi = 'https://json-server-shopee.herokuapp.com/user';
 $(document).ready(function () {
     getData(renderNotification, notificationApi);
     getData(renderSearchHistory, searchApi);
-    
-    if(sessionStorage.isLogin == "true"){
+
+    if (sessionStorage.isLogin == "true") {
         $('.app').addClass('logged');
         let userData = JSON.parse(sessionStorage.user);
         $('.navbar-user__name').text(userData.email);
         getData(renderCartBox, productApi);
-    }else{
+    } else {
         $('.app').removeClass('logged')
     }
     let index = sessionStorage.currentPage;
-    switch(index){
+    switch (index) {
         case "detail-product":
             let id = parseInt(sessionStorage.currentProduct);
             loadDetailProduct(id);
@@ -33,17 +33,17 @@ $(document).ready(function () {
         default:
             loadHome()
     }
-    
+
 })
-$('#search-btn').click(function(){
+$('#search-btn').click(function () {
     sessionStorage.searchKey = JSON.stringify($('#search-input').val());
     loadSearch();
 })
 
-$('.cart-wrapper, .view-cart-btn').click(function(){
+$('.cart-wrapper, .view-cart-btn').click(function () {
     loadCart();
 })
-$('.modal__overlay').click(()=>{
+$('.modal__overlay').click(() => {
     $('.modal').css('display', 'none')
 })
 function getData(callback, api) {
@@ -112,14 +112,14 @@ function renderCategory(data) {
     })
     $('#list-category').prepend(htmls.join(""));
     Scroll($('#list-category'), 2);
-    
+
 }
 
 function renderSaleProduct(products, n) {
     // var n = 0;
     var htmls = products.map(function (product) {
 
-        if (product.isSale && n >0) {
+        if (product.isSale && n > 0) {
             // n++;
             n--;
             var salePer = 100 - product.sold / (product.stock + product.sold) * 100;
@@ -131,7 +131,7 @@ function renderSaleProduct(products, n) {
     
                 <div class="sale__price">
                     <span style="font-size: 1rem; text-decoration: underline;">đ</span>
-                    <span>${product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}</span>
+                    <span>${convertNumberToVND(product.price)}</span>
                 </div>
                 <div class="sale__quality">
                     <span class="sale__product-sold">Đã bán ${product.sold}</span>
@@ -161,11 +161,11 @@ function renderMall(data) {
         }
     });
     $('#list-mall').prepend(htmls.join(''));
-    Scroll( $('#list-mall'), 2)
+    Scroll($('#list-mall'), 2)
 }
 function renderTrendSearch(data, n) {
     let htmls = data.map(function (search) {
-        if (n>0){
+        if (n > 0) {
             n--;
             return `
             <div class="trend-search__link list__item search-link" onclick="handelClickSearchLink(this)">
@@ -179,13 +179,13 @@ function renderTrendSearch(data, n) {
                     class="trend-search__img">
             </div>`
         }
-            
+
     })
     $('#list-trend-search').prepend(htmls.join(''));
 }
 function renderTopSearch(data, n) {
     let htmls = data.map(function (search) {
-        if (n>0){
+        if (n > 0) {
             n--;
             return `
             <div class="top-search__link list__item search-link" onclick="handelClickSearchLink(this)">
@@ -203,14 +203,14 @@ function renderTopSearch(data, n) {
                 </div>
             </div>`;
         }
-            
+
     })
     $('#list-top-search').prepend(htmls.join(''));
     Scroll($('#list-top-search'), 1)
 }
 function renderRecommendProduct(data, n) {
     let htmls = data.map(function (product, index) {
-        if (n>0) {
+        if (n > 0) {
             n--;
             return createProduct(product)
         };
@@ -218,10 +218,10 @@ function renderRecommendProduct(data, n) {
     $('.list-product').prepend(htmls.join(''));
 }
 
-function createProduct(product){
-    return`
+function createProduct(product) {
+    return `
         <div class="product" onclick="getProduct(${product.id})">
-            <div class="product__link product__link--hover">
+            <div class="product__link">
                 <div class="discount-tag discount-tag--small">
                     <p style="color: red; margin: 0;">30%</p>
                     <p style="margin: 0;">Giảm</p>
@@ -259,7 +259,8 @@ function createProduct(product){
                             <span>400.000</span>
                         </div>
                         <div class="product__price">
-                            <span>${product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}</span>
+                            <span style="font-size: 1rem; text-decoration: underline;">đ</span>
+                            <span>${convertNumberToVND(product.price)}</span>
                         </div>
                     </div>
                     <div class="product__review">
@@ -288,36 +289,36 @@ function createProduct(product){
             </div>
         </div>`
 }
-function renderListProduct(data){
+function renderListProduct(data) {
     let searchKey = JSON.parse(sessionStorage.searchKey)
     let filter = searchKey.toLowerCase();
     $('#search-input').val(searchKey);
     $('.search__header-keyword').text(searchKey);
-    switch(sessionStorage.sortOption){
+    switch (sessionStorage.sortOption) {
         case "related":
             break;
         case "sold":
-            data.sort((a,b) => b.sold - a.sold);
+            data.sort((a, b) => b.sold - a.sold);
             break;
         case "price descending":
-            data.sort((a,b) => a.price - b.price);
+            data.sort((a, b) => a.price - b.price);
             break;
         case "price ascending":
-            data.sort((a,b) => b.price - a.price);
+            data.sort((a, b) => b.price - a.price);
             break;
         default:
             break;
     }
-    let htmls = data.map(function(product){
+    let htmls = data.map(function (product) {
         let isInclude = product.tags.some(tag => tag.toLowerCase().includes(filter))
-        if(isInclude){
-           return createProduct(product);
+        if (isInclude) {
+            return createProduct(product);
         }
-       
+
     });
     $('.list-product').prepend(htmls.join(''));
-    
-    
+
+
 
 }
 /* -------------------Routing----------------- */
@@ -329,32 +330,32 @@ function loadHome() {
         getData(renderHighlight, highlightApi);
         getData(renderCategory, categoryApi);
         // getData(renderSaleProduct, productApi);
-        getData((data)=>{
+        getData((data) => {
             renderSaleProduct(data, 10);
         }, productApi);
         getData(renderMall, shopApi);
-        getData((data)=>{
+        getData((data) => {
             renderTrendSearch(data, 5)
         }, searchApi);
-        getData((data)=>{
+        getData((data) => {
             renderTopSearch(data, 12)
         }, searchApi);
-        getData((data)=>{
+        getData((data) => {
             renderRecommendProduct(data, 24)
         }, productApi);
         showSlide();
-        
+
     })
 }
-function loadSearch(){
-    $('#main').load('../pages/search.html', function(){
+function loadSearch() {
+    $('#main').load('../pages/search.html', function () {
         scrollTop();
         sessionStorage.currentPage = "search";
         sessionStorage.sortOption = "related";
         getData(renderListProduct, productApi);
     })
 }
-function getProduct(id){
+function getProduct(id) {
     fetch(`${productApi}/${id}`)
         .then(res => res.json())
         .then(product => {
@@ -371,33 +372,33 @@ function loadDetailProduct() {
     $('#main').load('../pages/product-detail.html', function () {
         scrollTop();
         $('#product-name').text(product.title);
-        $('#product-price').text(product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'}))
+        $('#product-price').text(convertNumberToVND(product.price))
         $('#number-sole').text(product.sold);
         $('#inventory-number').text(product.stock);
         $('#product-desc').text(product.desc);
         renderImage(product.image);
-        getData((data)=>{
+        getData((data) => {
             renderRecommendProduct(data, 12)
         }, productApi);
     })
 
 }
-function loadCart(){
+function loadCart() {
     sessionStorage.currentPage = "cart";
-    $('#main').load('../pages/cart.html', function(){
+    $('#main').load('../pages/cart.html', function () {
         scrollTop();
         getData(renderCart, productApi);
     })
 }
-function renderCart(data){
+function renderCart(data) {
     let cart = JSON.parse(sessionStorage.user).cart;
-    for(let i=0; i<cart.length; i++){
-        let htmls = data.map(function(product){
-            if(product.id === cart[i].id){
-                let total = product.price*cart[i].quantity;
+    for (let i = 0; i < cart.length; i++) {
+        let htmls = data.map(function (product) {
+            if (product.id === cart[i].id) {
+                let total = product.price * cart[i].quantity;
                 let price = convertNumberToVND(product.price);
                 total = convertNumberToVND(total);
-                return`
+                return `
                 
                 <div class="product row" id="${product.id}">
                         
@@ -428,7 +429,7 @@ function renderCart(data){
                     
                 </div>`
             }
-            
+
         })
         $('.cart-product').prepend(htmls.join(''));
 
@@ -436,34 +437,34 @@ function renderCart(data){
     // handelChangeQuantityValue();
     handelRemoveItem();
     handelChecked()
-    
+
 }
-function renderCartBox(data){
+function renderCartBox(data) {
     let cart = JSON.parse(sessionStorage.user).cart;
     $('.cart__product-amount').text(cart.length);
-    if(cart.length == 0){
+    if (cart.length == 0) {
         $('.cart__content').addClass('cart--empty')
-    }else{
-        for(let i=0; i<cart.length && i<4; i++){
-            let htmls = data.map(function(product){
-                if(product.id === cart[i].id){
-                    return`
+    } else {
+        for (let i = 0; i < cart.length && i < 4; i++) {
+            let htmls = data.map(function (product) {
+                if (product.id === cart[i].id) {
+                    return `
                     <div class="cart__product">
                         <img src="${product.image[0]}" alt="" class="cart__product-img">
                         <span class="cart__product-name">${product.title}</span>
-                        <span class="cart__product-price">${product.price.toLocaleString('vi', {style : 'currency', currency : 'VND'})}</span>
+                        <span class="cart__product-price">${product.price.toLocaleString('vi', { style: 'currency', currency: 'VND' })}</span>
                     </div>`
                 }
             })
             $('.cart__list-product').prepend(htmls.join(''))
-    
+
         }
     }
-    
-    
+
+
 }
 
-function addProduct(api, data){
+function addProduct(api, data) {
     fetch(`${api}/${data.id}`, {
         method: 'PUT',
         headers: {
@@ -471,91 +472,91 @@ function addProduct(api, data){
         },
         body: JSON.stringify(data),
     })
-    .then(res => res.json())
-    .then(data => {
-        console.log('Success', data);
-        sessionStorage.user = JSON.stringify(data);
-        $('.cart__list-product').html('');
-        getData(renderCartBox, productApi)
-        
-    })
-    .catch(error => {
-        console.error('Error', error);
-    })
+        .then(res => res.json())
+        .then(data => {
+            console.log('Success', data);
+            sessionStorage.user = JSON.stringify(data);
+            $('.cart__list-product').html('');
+            getData(renderCartBox, productApi)
+
+        })
+        .catch(error => {
+            console.error('Error', error);
+        })
 }
 
 
 
 
-function scrollTop(){
+function scrollTop() {
     $('html, body').animate({
         scrollTop: 0
-      }, 300, function(){
-   
-       
-      });
+    }, 300, function () {
+
+
+    });
 }
 
-function handelClickSearchLink(element){
+function handelClickSearchLink(element) {
     let filterValue = $(element).find('.search-keyword').text();
     sessionStorage.searchKey = JSON.stringify(filterValue);
     loadSearch();
-    
+
 }
-function changeQuantity(element, k){
+function changeQuantity(element, k) {
     const product = $(element).parents('.product');
     let userData = JSON.parse(sessionStorage.user);
     const input = $(element).siblings('.quant');
     let quant = Number(input.val());
     quant += k;
-    if(quant == 0){
+    if (quant == 0) {
         quant = 1;
     }
     input.val(quant);
-    if(sessionStorage.currentPage === 'cart'){
-        for(let i=0; i<userData.cart.length; i++){
-            if(userData.cart[i].id == product.prop('id')){
+    if (sessionStorage.currentPage === 'cart') {
+        for (let i = 0; i < userData.cart.length; i++) {
+            if (userData.cart[i].id == product.prop('id')) {
                 userData.cart[i].quantity = quant;
-                if(userData.cart[i].quantity > 0){
+                if (userData.cart[i].quantity > 0) {
                     // input.val(userData.cart[i].quantity);
                     addProduct(userApi, userData);
                     updateTotal(product);
                     updateTotalPayment();
                 }
-                
+
             }
         }
     }
-   
+
 }
-function updateCart(){
-    
+function updateCart() {
+
 }
-function convertNumberToVND(number){
+function convertNumberToVND(number) {
     number = JSON.stringify(number);
     return number.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-    
+
 }
-function convertCurrencyToNumber(currency){
+function convertCurrencyToNumber(currency) {
     return Number(currency.split('.').join(''))
 }
-function updateTotal(product){
+function updateTotal(product) {
     let total = convertCurrencyToNumber(product.find('.product-price').text()) * Number(product.find('.quant').val());
     product.find('.total').text(convertNumberToVND(total));
-    
+
 }
-function handelRemoveItem(){
-    $('.remove-btn').click(function(){
+function handelRemoveItem() {
+    $('.remove-btn').click(function () {
         let product = $(this).parents('.product');
         let id = product.attr('id');
         let userData = JSON.parse(sessionStorage.user);
-        for(let i=0; i< userData.cart.length; i++){
-            if(userData.cart[i].id == id){
-                userData.cart.splice(i,1);
+        for (let i = 0; i < userData.cart.length; i++) {
+            if (userData.cart[i].id == id) {
+                userData.cart.splice(i, 1);
             }
         }
-        if(userData.cart.length == 0){
-            userData.cart=[];
+        if (userData.cart.length == 0) {
+            userData.cart = [];
         }
         addProduct(userApi, userData);
         product.remove()
@@ -564,26 +565,26 @@ function handelRemoveItem(){
 
     })
 }
-function handelChecked(){
-    $('.checkbox').change(function(){
+function handelChecked() {
+    $('.checkbox').change(function () {
 
         let itemCart = $(this).parents('.product');
         itemCart.toggleClass('checked');
-        
+
         updateTotalPayment();
     })
-    
+
 }
-function updateTotalPayment(){
+function updateTotalPayment() {
     let total = 0;
-    Array.from($('.checked')).forEach(item =>{
+    Array.from($('.checked')).forEach(item => {
         let totalItem = convertCurrencyToNumber(item.querySelector('.total').innerText);
         total += Number(totalItem);
     })
     $('#payment-total').text(convertNumberToVND(total));
     $('#number-product-chosen').text($('.checked').length)
-    
-    
+
+
 }
 function showSlide() {
     var sliderElements = document.querySelectorAll(".slider");
@@ -616,14 +617,14 @@ function showSlide() {
             }
 
             for (var i = 0; i < slideElements.length; i++) {
-               
+
                 slideElements[i].className = slideElements[i].className.replace(" active", "");
-                
+
                 dots[i].className = dots[i].className.replace(" active", "");
-               
-                if(i == slideIndex){
+
+                if (i == slideIndex) {
                     slideElements[i].className = slideElements[i].className.replace("slider__link", "slider__link active");
-                    
+
                     dots[i].className = dots[i].className.replace("slider-btn-index", "slider-btn-index active");
                 }
             }
@@ -661,7 +662,7 @@ function Scroll(listElement, numberRow) {
             numberItemOverflow = 0;
             nextBtn.removeClass('active');
         }
-        listElement.css("transform", "translateX(-"+position+"px)")
+        listElement.css("transform", "translateX(-" + position + "px)")
     });
     preBtn.click(function () {
         numberItemOverflow = numberItemOverflow + (numberItemView - 1);
@@ -674,7 +675,7 @@ function Scroll(listElement, numberRow) {
             numberItemOverflow = numberItemRow - numberItemView;
             preBtn.removeClass('active');
         }
-        listElement.css("transform",  "translateX(-"+position+"px)");
+        listElement.css("transform", "translateX(-" + position + "px)");
 
     })
 }

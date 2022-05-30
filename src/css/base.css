@@ -166,7 +166,7 @@ input[type = "number"]::-webkit-inner-spin-button{
     cursor: pointer;
 }
 .product-5 .product{
-    width: calc(100% / 5);
+    min-width: calc(100% / 5);
 }
 .product-6 .product{
     padding: 4px;
@@ -178,15 +178,9 @@ input[type = "number"]::-webkit-inner-spin-button{
     margin: 0;
 }
 
-.product__link--hover:hover{
-    border-color: red;
-    margin-top: 3px;
-    margin-bottom: 7px;
-}
 
-.product__link--hover:hover .tag-hover{
-    display: block;
-}
+
+
 .product__link{
     display: block;
     position: relative;
@@ -194,6 +188,14 @@ input[type = "number"]::-webkit-inner-spin-button{
     border-radius: 2px;
     background-color: var(--white-color);
     margin: 5px;
+}
+.product-hover .product__link:hover{
+    border-color: red;
+    margin-top: 3px;
+    margin-bottom: 7px;
+}
+.product-hover .product__link:hover .tag-hover{
+    display: block;
 }
 .discount-tag{
     position: absolute;
